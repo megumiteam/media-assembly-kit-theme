@@ -1,0 +1,19 @@
+{
+  "name": "media-assembly-kit",
+  "title": "Media Assembly Kit",
+  "description": "Megumi Media Assembly Kit Theme.",
+  "version": "0.1.0",
+  "homepage": "https://www.digitalcube.jp/",
+  "author": {
+    "name": "DigitalCube Co.,Ltd",
+    "url": "https://www.digitalcube.jp/"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.0",
+    "gulp-compass": "^2.0.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-replace": "^0.5.0"
+  },
+  "keywords": []
+}
