@@ -14,35 +14,22 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<?php do_action( 'mak_before_primary' ); ?>
+		<?php mak_category_induction_post_list(); ?>
 		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php mak_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
+			<?php mak_archive_title(); ?>
+			<?php do_action( 'mak_before_main' ); ?>
+			<?php if ( have_posts() ) : ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php do_action( 'mak_before_loop' ); ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php do_action( 'mak_after_loop' ); ?>
+				<?php endwhile; ?>
+			<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); ?>
+			<?php endif; ?>
+			<?php do_action( 'mak_after_main' ); ?>
 		</main><!-- #main -->
-		<?php do_action( 'mak_after_primary' ); ?>
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+		<?php if ( $wp_query->found_posts === 0 ) : mak_whats_new(); endif; ?>
+		<?php mak_content_nav(); ?>
+	</div>
 <?php get_footer(); ?>

@@ -4,39 +4,26 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( mak_get_thumbnail_class() . ' archive-article' ); ?>>
+	<?php do_action( 'mak_before_archive_entry' ); ?>
+	<?php mak_entry_thumbnail(); ?>
 	<header class="entry-header">
-		<?php do_action( 'mak_before_entry_header' ); ?>
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php mak_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-		<?php do_action( 'mak_after_entry_header' ); ?>
+		<?php do_action( 'mak_before_archive_entry_header' ); ?>
+		<?php mak_entry_terms( array( 'separator' => '', 'showcolor' => true, 'class' => ' color-cat' ) ); ?>
+		<h1 class="entry-title"><a href="<?php mak_summary_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<?php mak_entry_terms( array( 'term_name' => 'media', 'separator' => '' ) ); ?>
+		<?php mak_entry_data(); ?>
+		<?php do_action( 'mak_after_archive_entry_header' ); ?>
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php do_action( 'mak_before_entry_content' ); ?>
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'mak' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'mak' ),
-				'after'  => '</div>',
-			) );
-		?>
-		<?php do_action( 'mak_after_entry_content' ); ?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php mak_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<section class="entry-summary trunk8" data-lines="2">
+		<?php do_action( 'mak_before_archive_entry_content' ); ?>
+		<?php the_excerpt(); ?>
+		<?php do_action( 'mak_after_archive_entry_content' ); ?>
+	</section><!-- .entry-summary -->
+	<?php if ( has_action( 'mak_archive_entry_footer' ) ) : ?>
+		<footer class="entry-footer">
+			<?php do_action( 'mak_archive_entry_footer' ); ?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
+	<?php do_action( 'mak_after_archive_entry' ); ?>
 </article><!-- #post-## -->

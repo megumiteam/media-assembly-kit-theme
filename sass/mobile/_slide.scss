@@ -1,0 +1,52 @@
+#slide-box {
+	margin-top: 5px;
+	overflow: hidden;
+	background: #fff;
+	position: relative;
+}
+#slide {
+	@extend %ul;
+
+	li {
+		position: relative;
+	}
+	.title {
+		@include fz( 15 );
+		color: #fff;
+		margin: 0;
+		padding: 8px 10px;
+		background: #e197a0;
+		@include opacity(.85);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.thumbnail {
+		margin: 0;
+		background: #fff;
+
+		img {
+			display: block;
+		}
+	}
+	.slide-content {
+		> div,
+		.entry-date,
+		.view-more {
+			display: none;
+		}
+	}
+}
+.loading {
+	color: #999;
+	text-align: center;
+	position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	margin: auto;
+	width: 200px;
+	height: 100px
+}

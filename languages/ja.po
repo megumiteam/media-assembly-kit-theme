@@ -3,9 +3,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-12-08 02:19:00+00:00\n"
-"Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
+"POT-Creation-Date: 2014-12-15 09:29:34+00:00\n"
+"Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
 "MIME-Version: 1.0\n"
@@ -13,301 +13,680 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 
-#: 404.php:15
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "お探しのページが見つかりません。"
+#: 404.php:16 content-none.php:14
+msgid "Not Found"
+msgstr "何も見つかりませんでした"
 
-#: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+#: 404.php:21 content-none.php:17
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
 
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr "よく使われているカテゴリー"
-
-#. translators: %1$s: smiley
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "月別アーカイブを見てみてください。%1$s"
-
-#: comments.php:28
+#: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "「%2$s」への%1$s件のフィードバック"
 msgstr[1] "「%2$s」への%1$s件のフィードバック"
 
-#: comments.php:35 comments.php:52
+#: comments.php:36 comments.php:56
 msgid "Comment navigation"
 msgstr "コメントナビゲーション"
 
-#: comments.php:36 comments.php:53
+#: comments.php:37 comments.php:57
 msgid "&larr; Older Comments"
 msgstr "&larr; 以前のコメント"
 
-#: comments.php:37 comments.php:54
+#: comments.php:38 comments.php:58
 msgid "Newer Comments &rarr;"
 msgstr "新しいコメント &rarr;"
 
-#: comments.php:64
+#: comments.php:68
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
-#: content-none.php:13
-msgid "Nothing Found"
-msgstr "何も見つかりませんでした"
+#: content-summary.php:25 inc/template-tags.php:385
+msgid "Read the full story"
+msgstr "続きを読む"
 
-#: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"最初の投稿を公開する準備ができましたか ?<a href=\"%1$s\">こちらからスタートし"
-"ましょう</a>。"
+#: functions.php:59
+msgid "Global Menu"
+msgstr "グローバルメニュー"
 
-#: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"検索キーワードに一致するコンテンツが見つかりませんでした。他のキーワードをお"
-"試しください。"
+#: functions.php:60
+msgid "Media Menu"
+msgstr "メディアメニュー"
 
-#: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
+#: functions.php:61
+msgid "Footer Menu"
+msgstr "フッターメニュー"
 
-#: content-page.php:18 content-single.php:20 content.php:29
-msgid "Pages:"
-msgstr "ページ:"
+#: functions.php:62
+msgid "Mobile Footer Menu"
+msgstr "モバイルフッターメニュー"
 
-#: content-page.php:25 inc/template-tags.php:122
-msgid "Edit"
-msgstr "編集"
-
-#. translators: %s: Name of current post
-#: content.php:22
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "%sの続きを読む <span class=\"meta-nav\">&rarr;</span>"
-
-#: footer.php:15
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:15
-msgid "Proudly powered by %s"
-msgstr "Proudly powered by %s"
-
-#: footer.php:17
-msgid "Theme: %1$s by %2$s."
-msgstr "テーマ: %1$s by %2$s."
-
-#: functions.php:53 header.php:31
-msgid "Primary Menu"
-msgstr "メインメニュー"
-
-#: functions.php:88
-msgid "Sidebar"
-msgstr "サイドバー"
-
-#: header.php:22
-msgid "Skip to content"
-msgstr "コンテンツへスキップ"
-
-#: inc/extras.php:64
-msgid "Page %s"
-msgstr "ページ %s"
-
-#: inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr "投稿ナビゲーション"
-
-#: inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> 以前の投稿"
-
-#: inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:52
-msgid "Post navigation"
-msgstr "投稿ナビゲーション"
-
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#: inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:82
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "投稿日時: %s"
-
-#: inc/template-tags.php:87
-msgctxt "post author"
-msgid "by %s"
-msgstr "投稿者: %s"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:104 inc/template-tags.php:110
-msgid ", "
-msgstr ", "
-
-#: inc/template-tags.php:106
-msgid "Posted in %1$s"
-msgstr "カテゴリー: %1$s"
-
-#: inc/template-tags.php:112
-msgid "Tagged %1$s"
-msgstr "タグ: %1$s"
-
-#: inc/template-tags.php:118
-msgid "Leave a comment"
-msgstr "コメントをどうぞ"
-
-#: inc/template-tags.php:118
-msgid "1 Comment"
-msgstr "1件のコメント"
-
-#: inc/template-tags.php:118
-msgid "% Comments"
-msgstr "%件のコメント"
-
-#: inc/template-tags.php:139
-msgid "Category: %s"
-msgstr "カテゴリーアーカイブ: %s"
-
-#: inc/template-tags.php:141
-msgid "Tag: %s"
-msgstr "タグアーカイブ: %s"
-
-#: inc/template-tags.php:143
-msgid "Author: %s"
-msgstr "投稿者アーカイブ: %s"
-
-#: inc/template-tags.php:145
-msgid "Year: %s"
-msgstr "%s年のアーカイブ"
-
-#: inc/template-tags.php:145
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: inc/template-tags.php:147
-msgid "Month: %s"
-msgstr "%sのアーカイブ"
-
-#: inc/template-tags.php:147
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "Y年F"
-
-#: inc/template-tags.php:149
-msgid "Day: %s"
-msgstr "%sのアーカイブ"
-
-#: inc/template-tags.php:149
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:151
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr "アサイド"
-
-#: inc/template-tags.php:153
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr "ギャラリー"
-
-#: inc/template-tags.php:155
-msgctxt "post format archive title"
+#: inc/admin-parts.php:100
 msgid "Images"
 msgstr "画像"
 
-#: inc/template-tags.php:157
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr "動画"
+#: inc/admin-parts.php:101
+msgid "Delete"
+msgstr "消去"
 
-#: inc/template-tags.php:159
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr "引用"
+#: inc/filter-hook.php:29
+msgid "Page %s"
+msgstr "ページ %s"
 
-#: inc/template-tags.php:161
-msgctxt "post format archive title"
-msgid "Links"
-msgstr "リンク"
-
-#: inc/template-tags.php:163
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr "ステータス"
-
-#: inc/template-tags.php:165
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr "オーディオ"
-
-#: inc/template-tags.php:167
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr "チャット"
-
-#: inc/template-tags.php:169
-msgid "Archives: %s"
-msgstr "アーカイブ: %s"
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:173
-msgid "%1$s: %2$s"
-msgstr "%1$s アーカイブ: %2$s"
-
-#: inc/template-tags.php:175
-msgid "Archives"
-msgstr "アーカイブ"
-
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr "検索結果: %s"
-
-#. Theme Name of the plugin/theme
-msgid "_s"
+#: inc/manage-acf-field-group.php:242
+msgid "Add %s Contents"
 msgstr ""
 
+#: inc/manage-custom-taxonomy-field.php:34
+#: inc/manage-custom-taxonomy-field.php:64
+msgid "Options"
+msgstr "オプション"
+
+#: inc/manage-custom-taxonomy-field.php:40
+msgid "Category Color"
+msgstr "カテゴリーの色"
+
+#: inc/manage-custom-taxonomy-field.php:70
+msgid "Media Logo"
+msgstr "メディアのロゴ"
+
+#: inc/manage-custom-taxonomy-field.php:81
+msgid "Initial category"
+msgstr "初期カテゴリー"
+
+#: inc/manage-post-type.php:29
+msgid "Slide"
+msgstr "スライド"
+
+#: inc/manage-post-type.php:44
+msgid "Carousel Panel"
+msgstr "カルーセル"
+
+#: inc/manage-post-type.php:59
+msgid "Pickups"
+msgstr "ピックアップ"
+
+#: inc/manage-post-type.php:74
+msgid "Induction frame"
+msgstr "誘導枠"
+
+#: inc/manage-post-type.php:98
+msgid "%s Induction"
+msgstr "%s 誘導枠"
+
+#: inc/manage-post-type.php:114
+msgid "Media"
+msgstr "メディア"
+
+#: inc/manage-post-type.php:124
+msgid "Related Menu"
+msgstr "媒体リンク"
+
+#: inc/manage-theme-options.php:22 inc/manage-theme-options.php:28
+#: inc/manage-theme-options.php:40
+msgid "Theme Options"
+msgstr "テーマオプション"
+
+#: inc/manage-theme-options.php:64
+msgid "General"
+msgstr "一般設定"
+
+#: inc/manage-theme-options.php:70
+msgid "HOME pages show at most"
+msgstr "ホームの1ページに表示する最大投稿数"
+
+#: inc/manage-theme-options.php:81
+msgid "Blog pages show at most"
+msgstr "1ページに表示する最大投稿数"
+
+#: inc/manage-theme-options.php:92
+msgid "Mobile Blog pages show at most"
+msgstr "モバイルの1ページに表示する最大投稿数"
+
+#: inc/manage-theme-options.php:103
+msgid "Slide show at most"
+msgstr "スライドの表示数"
+
+#: inc/manage-theme-options.php:114
+msgid "Slide Speed"
+msgstr "スライドのアニメーション速度"
+
+#: inc/manage-theme-options.php:125
+msgid "Slide Pause"
+msgstr "スライド切替タイミング"
+
+#: inc/manage-theme-options.php:136
+msgid "Carousel Panel show at most"
+msgstr "カルーセルの表示数"
+
+#: inc/manage-theme-options.php:147
+msgid "Carousel Panel Speed"
+msgstr "カルーセルのアニメーション速度"
+
+#: inc/manage-theme-options.php:158
+msgid "Carousel Panel Pause"
+msgstr "カルーセル切替タイミング"
+
+#: inc/manage-theme-options.php:169
+msgid "Category Induction frame show at most"
+msgstr "カテゴリー誘導枠の表示数"
+
+#: inc/manage-theme-options.php:180
+msgid "Related Posts show at most"
+msgstr "関連記事の表示数"
+
+#: inc/manage-theme-options.php:191
+msgid "Mobile Related Posts show at most"
+msgstr "モバイル関連記事の表示数"
+
+#: inc/manage-theme-options.php:202
+msgid "Editors Choice Posts show at most"
+msgstr "Editors Choice の表示数"
+
+#: inc/manage-theme-options.php:213
+msgid "Mobile Editors Choice Posts show at most"
+msgstr "モバイル Editors Choice の表示数"
+
+#: inc/manage-theme-options.php:224
+msgid "Editors Choice Speed"
+msgstr "Editors Choice アニメーション速度"
+
+#: inc/manage-theme-options.php:235
+msgid "Editors Choice Pause"
+msgstr "Editors Choice 切替タイミング"
+
+#: inc/manage-theme-options.php:246
+msgid "PC Halfway Number"
+msgstr "アーカイブ途中に広告を表示する位置"
+
+#: inc/manage-theme-options.php:257
+msgid "Mobile Halfway Number"
+msgstr "モバイルアーカイブ途中に広告を表示する位置"
+
+#: inc/manage-theme-options.php:269
+msgid "Site Settings"
+msgstr "サイト設定"
+
+#: inc/manage-theme-options.php:275
+msgid "Favicon Image"
+msgstr "Favicon 画像"
+
+#: inc/manage-theme-options.php:286
+msgid "apple-touch-icon Image"
+msgstr "apple-touch-icon 画像"
+
+#: inc/manage-theme-options.php:297
+msgid "Google Analytics Code"
+msgstr "Google Analytics コード"
+
+#: inc/manage-theme-options.php:308
+msgid "Google Webmaster Tools Verification"
+msgstr "Google Webmaster Tools 認証"
+
+#: inc/manage-theme-options.php:315 inc/manage-theme-options.php:327
+msgid "Enter your meta key \"content\" value to verify your site."
+msgstr "認証用の meta \"content\" の値を入力してください。"
+
+#: inc/manage-theme-options.php:320
+msgid "Bing Webmaster Center Verification"
+msgstr "Bing Webmaster Center 認証"
+
+#: inc/manage-theme-options.php:333
+msgid "Background"
+msgstr "背景"
+
+#: inc/manage-theme-options.php:339
+msgid "Background Image"
+msgstr "背景画像"
+
+#: inc/manage-theme-options.php:350
+msgid "Background Color"
+msgstr "背景色"
+
+#: inc/manage-theme-options.php:361
+msgid "Background Repeat"
+msgstr "背景画像のリピート"
+
+#: inc/manage-theme-options.php:368
+msgid "No Repeat"
+msgstr "no-repeat"
+
+#: inc/manage-theme-options.php:369
+msgid "Repeat Horizontally"
+msgstr "repeat-x"
+
+#: inc/manage-theme-options.php:370
+msgid "Repeat Vertically"
+msgstr "repeat-y"
+
+#: inc/manage-theme-options.php:371
+msgid "Repeat All"
+msgstr "Repeat All"
+
+#: inc/manage-theme-options.php:377
+msgid "Background Position"
+msgstr "背景画像の表示開始位置"
+
+#: inc/manage-theme-options.php:384
+msgid "Top Left"
+msgstr ""
+
+#: inc/manage-theme-options.php:385
+msgid "Top Center"
+msgstr "Top Left"
+
+#: inc/manage-theme-options.php:386
+msgid "Top Right"
+msgstr "Top Right"
+
+#: inc/manage-theme-options.php:387
+msgid "Middle Left"
+msgstr "Middle Left"
+
+#: inc/manage-theme-options.php:388
+msgid "Middle Center"
+msgstr "Middle Center"
+
+#: inc/manage-theme-options.php:389
+msgid "Middle Right"
+msgstr "Middle Right"
+
+#: inc/manage-theme-options.php:390
+msgid "Bottom Left"
+msgstr "Bottom Left"
+
+#: inc/manage-theme-options.php:391
+msgid "Bottom Center"
+msgstr "Bottom Center"
+
+#: inc/manage-theme-options.php:392
+msgid "Bottom Right"
+msgstr "Bottom Right"
+
+#: inc/manage-theme-options.php:398
+msgid "Background Attachment"
+msgstr "背景画像の固定・移動"
+
+#: inc/manage-theme-options.php:405
+msgid "Scroll Normally"
+msgstr "スクロール"
+
+#: inc/manage-theme-options.php:406
+msgid "Fixed in Place"
+msgstr "固定"
+
+#: inc/manage-theme-options.php:412
+msgid "Background Link URL"
+msgstr "背景リンク先"
+
+#: inc/manage-theme-options.php:423
+msgid "Background Link Target"
+msgstr "背景リンクターゲット"
+
+#: inc/manage-theme-options.php:436
+msgid "Social"
+msgstr "ソーシャル"
+
+#: inc/manage-theme-options.php:442
+msgid "Twitter URL"
+msgstr "Twitter URL"
+
+#: inc/manage-theme-options.php:453
+msgid "Twitter via"
+msgstr "Twitter via"
+
+#: inc/manage-theme-options.php:464
+msgid "Facebook URL"
+msgstr "Facebook ページ"
+
+#: inc/manage-theme-options.php:475
+msgid "YouTube URL"
+msgstr "YouTube URL"
+
+#: inc/manage-theme-options.php:486
+msgid "Pinterest URL"
+msgstr "Pinterest URL"
+
+#: inc/manage-theme-options.php:497
+msgid "appId"
+msgstr "Facebook appid"
+
+#: inc/manage-theme-options.php:508
+msgid "OGP Title"
+msgstr "OGP タイトルの設定"
+
+#: inc/manage-theme-options.php:520
+msgid "OGP Description"
+msgstr "OGP ディスクリプションの設定"
+
+#: inc/manage-theme-options.php:531
+msgid "OGP Keyword"
+msgstr "OGP キーワードの設定"
+
+#: inc/manage-theme-options.php:542
+msgid "OGP Image"
+msgstr "OGP 画像の設定"
+
+#: inc/manage-theme-options.php:553 inc/parts-author.php:19
+#: inc/parts-author.php:40 inc/parts-author.php:73
+msgid "Writer"
+msgstr "ライターリスト"
+
+#: inc/manage-theme-options.php:559
+msgid "Writer Role"
+msgstr "権限を選択"
+
+#: inc/manage-theme-options.php:572
+msgid "Category"
+msgstr "カテゴリー"
+
+#: inc/manage-theme-options.php:584
+msgid "To view the %s induction frame"
+msgstr "%s の誘導枠表示設定"
+
+#: inc/manage-theme-options.php:595
+msgid "To view the %s Editors Choice"
+msgstr "%s の Editors Choice 表示設定"
+
+#: inc/manage-theme-options.php:605
+msgid "%s Short Title"
+msgstr "%s の短いタイトル"
+
+#: inc/manage-theme-options.php:617
+msgid "%s Category Color"
+msgstr "%s の色"
+
+#: inc/manage-theme-options.php:630
+msgid "Other"
+msgstr "その他"
+
+#: inc/manage-theme-options.php:636
+msgid "Copyright"
+msgstr "Copyright"
+
+#: inc/manage-theme-options.php:648
+msgid "Mobile Copyright"
+msgstr "Mobile Copyright"
+
+#: inc/manage-theme-options.php:660
+msgid "Copyright Year"
+msgstr "Copyright Year"
+
+#: inc/manage_scripts_styles.php:15
+msgctxt "Oswald: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/manage_widget_area.php:13
+msgid "PC HOME Sideber"
+msgstr "PC HOME サイドバー"
+
+#: inc/manage_widget_area.php:22
+msgid "PC Sideber"
+msgstr "PC サイドバー"
+
+#: inc/manage_widget_area.php:31
+msgid "Mobile"
+msgstr "モバイルエリア"
+
+#: inc/manage_widget_area.php:40
+msgid "Mobile Summary"
+msgstr "モバイルサマリーエリア"
+
+#: inc/manage_widget_area.php:49
+msgid "Mobile Single"
+msgstr "モバイルシングルエリア"
+
+#: inc/parts-author.php:18
+msgid "Writer Widget"
+msgstr "ライターリスト"
+
+#: inc/parts-author.php:44 inc/parts-editor-choice.php:74
+#: inc/parts-induction-posts.php:55 inc/parts-ranking-posts.php:59
+msgid "Title:"
+msgstr "タイトル:"
+
+#: inc/parts-author.php:47 inc/parts-editor-choice.php:77
+#: inc/parts-ranking-posts.php:62
+msgid "Number to show:"
+msgstr "表示する数:"
+
+#: inc/parts-author.php:51
+msgid "Random?"
+msgstr "ランダム"
+
+#: inc/parts-category-posts.php:37
+msgid "TOP"
+msgstr "トップ"
+
+#: inc/parts-category-posts.php:128 inc/template-tags.php:312
+msgid "The following articles list"
+msgstr "もっと読む"
+
+#: inc/parts-editor-choice.php:50
+msgid "Editor's Choice Widget"
+msgstr "Editor's Choice ウィジェット"
+
+#: inc/parts-editor-choice.php:51 inc/parts-editor-choice.php:71
+#: inc/parts-editor-choice.php:99
+msgid "Editor's Choice"
+msgstr "Editor's Choice"
+
+#: inc/parts-external-site.php:32
+msgid "This article provides original articles"
+msgstr "この記事の提供元の関連記事"
+
+#: inc/parts-induction-posts.php:32
+msgid "Induction Post Widget"
+msgstr "誘導枠ウィジェット"
+
+#: inc/parts-induction-posts.php:33
+msgid "Induction post"
+msgstr "誘導枠"
+
+#: inc/parts-induction-posts.php:57
+msgid "Select a Page:"
+msgstr "ページを選択:"
+
+#: inc/parts-induction-posts.php:65
+msgid "Select Page"
+msgstr "ページを選択"
+
+#: inc/parts-pickup.php:31
+msgid "Pickup"
+msgstr "Pickup"
+
+#: inc/parts-ranking-posts.php:36
+msgid "Ranking Widget"
+msgstr "ランキングウィジェット"
+
+#: inc/parts-ranking-posts.php:37 inc/parts-ranking-posts.php:57
+#: inc/parts-ranking-posts.php:80
+msgid "Ranking"
+msgstr "Ranking"
+
+#: inc/parts-ranking-posts.php:127
+msgid "For You"
+msgstr "For You"
+
+#: inc/parts-ranking-posts.php:128
+msgid "Total"
+msgstr "Total"
+
+#: inc/parts-related-posts.php:42
+msgid "Recommend"
+msgstr "Recommend"
+
+#: inc/parts-slide.php:101
+msgid "&#187; View more"
+msgstr "&#187; もっと見る"
+
+#: inc/parts-watts-new.php:56 inc/template-tags.php:66
+msgid "What's New"
+msgstr "What's New"
+
+#: inc/register_post_type.php:13
+msgctxt "post type general name"
+msgid "%s"
+msgstr "%s"
+
+#: inc/register_post_type.php:14
+msgctxt "post type singular name"
+msgid "%s"
+msgstr ""
+
+#: inc/register_post_type.php:15
+msgctxt "%s"
+msgid "Add New"
+msgstr "新規追加"
+
+#: inc/register_post_type.php:16 inc/register_taxonomy.php:23
+msgid "Add New %s"
+msgstr "新規%sを追加"
+
+#: inc/register_post_type.php:17 inc/register_taxonomy.php:20
+msgid "Edit %s"
+msgstr "%sの編集"
+
+#: inc/register_post_type.php:18
+msgid "New %s"
+msgstr "新規%s"
+
+#: inc/register_post_type.php:19 inc/register_taxonomy.php:21
+msgid "View %s"
+msgstr "%sを表示"
+
+#: inc/register_post_type.php:20 inc/register_taxonomy.php:15
+msgid "Search %s"
+msgstr "%sを検索"
+
+#: inc/register_post_type.php:21 inc/register_taxonomy.php:28
+msgid "No %s found."
+msgstr "%sが見つかりませんでした。"
+
+#: inc/register_post_type.php:22
+msgid "No %s found in Trash."
+msgstr "ゴミ箱内に%sが見つかりませんでした。"
+
+#: inc/register_post_type.php:23 inc/register_taxonomy.php:19
+msgid "Parent %s:"
+msgstr "親%s:"
+
+#: inc/register_post_type.php:24 inc/register_taxonomy.php:17
+msgid "All %s"
+msgstr "%s一覧"
+
+#: inc/register_post_type.php:25
+msgctxt "add new on admin bar"
+msgid "%s"
+msgstr "%s"
+
+#: inc/register_taxonomy.php:13
+msgctxt "taxonomy general name"
+msgid "%s"
+msgstr "%s"
+
+#: inc/register_taxonomy.php:14
+msgctxt "taxonomy singular name"
+msgid "%s"
+msgstr "%s"
+
+#: inc/register_taxonomy.php:16
+msgid "Popular %s"
+msgstr "人気の%s"
+
+#: inc/register_taxonomy.php:18
+msgid "Parent %s"
+msgstr "親%s"
+
+#: inc/register_taxonomy.php:22
+msgid "Update %s"
+msgstr "%sを更新"
+
+#: inc/register_taxonomy.php:24
+msgid "New %s Name"
+msgstr "新規%s名"
+
+#: inc/register_taxonomy.php:25
+msgid "Separate %s with commas"
+msgstr "%sが複数ある場合はコンマで区切ってください"
+
+#: inc/register_taxonomy.php:26
+msgid "Add or remove %s"
+msgstr "%sの追加もしくは削除"
+
+#: inc/register_taxonomy.php:27
+msgid "Choose from the most used %s"
+msgstr "よく使われている%sから選択"
+
+#: inc/template-tags.php:84
+msgid "Search Results for: %s"
+msgstr "「%s」の検索結果"
+
+#: inc/template-tags.php:209
+msgid "View all posts in %s"
+msgstr "%sのすべての投稿を見る"
+
+#: inc/template-tags.php:271
+msgid "Photo enlargement"
+msgstr "写真拡大"
+
+#: inc/template-tags.php:282
+msgid "Permalink to %s"
+msgstr "%sへのパーマリンク"
+
+#: inc/template-tags.php:320
+msgid "<i class=\"fa fa-chevron-left\"></i>Previous Page"
+msgstr "<i class=\"fa fa-chevron-left\"></i>前のページ"
+
+#: inc/template-tags.php:322 inc/template-tags.php:363
+msgid "To the top of the page"
+msgstr "トップへ"
+
+#: inc/template-tags.php:325
+msgid "Next Page<i class=\"fa fa-chevron-right\"></i>"
+msgstr "次のページ<i class=\"fa fa-chevron-right\"></i>"
+
+#: inc/template-tags.php:350
+msgid "&lt;"
+msgstr "&lt;"
+
+#: inc/template-tags.php:351
+msgid "&gt;"
+msgstr "&gt;"
+
+#: inc/template-tags.php:361
+msgid "Previous article"
+msgstr "前の記事"
+
+#: inc/template-tags.php:366
+msgid "Next article"
+msgstr "次の記事"
+
+#: searchform.php:3
+msgid "Search"
+msgstr "検索"
+
+#. Theme Name of the plugin/theme
+msgid "Media Assembly Kit"
+msgstr ""
+
+#. #-#-#-#-#  mak.pot (Media Assembly Kit 0.1.0)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+#. #-#-#-#-#  mak.pot (Media Assembly Kit 0.1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://www.digitalcube.jp/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
+msgid "Megumi Media Assembly Kit Theme."
 msgstr ""
-"<code>_s</code>（アンダースコアーズ）というスターター・テーマです。親テーマ用"
-"ではなく、改変のベースとなるテーマとして作られています。これをもとに変更を加"
-"えて、次世代のすばらしい WordPress テーマを作るためのコードの参考にしてくださ"
-"い。"
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "DigitalCube Co.,Ltd"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "http://automattic.com/"
-msgstr ""

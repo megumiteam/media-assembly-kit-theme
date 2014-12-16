@@ -37,23 +37,29 @@ function mak_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+
+	set_post_thumbnail_size( 125, 140, true );
+	add_image_size( 'mobile-thumbnail', 190, 200, true ); // Mobile @2x
+	add_image_size( 'square-218-image', 218, 248, true );
+	add_image_size( 'square-193-image', 193, 100, true ); // Mobile @2x
+	add_image_size( 'square-175-image', 350, 450, true ); // Mobile @2x
+	add_image_size( 'square-148-image', 148, 148, true );
+	add_image_size( 'square-100-image', 100, 70, true );
+	add_image_size( 'square-90-image', 90, 60, true );
+	add_image_size( 'square-70-image', 70, 70, true );
+	add_image_size( 'slide-main-image', 700, 350, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'mak' ),
+		'global-menu'         => __( 'Global Menu', 'mak' ),
+		'media-menu'          => __( 'Media Menu', 'mak' ),
+		'footer-menu'         => __( 'Footer Menu', 'mak' ),
+		'mobile-footer-menu'  => __( 'Mobile Footer Menu', 'mak' ),
 	) );
 
 	/*
@@ -61,116 +67,113 @@ function mak_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+		'search-form', 'comment-form', 'comment-list',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'mak_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // mak_setup
 add_action( 'after_setup_theme', 'mak_setup' );
 
 /**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * load categories in the theme options.
  */
-function mak_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'mak' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
+function mak_options_categories( $values = array(), $args = array(), $parent = 0 ) {
+	$default = array(
+		'orderby'    => 'term_order',
+		'hide_empty' => false,
+		'order'      => 'ASC',
+		'parent'     => $parent,
+		'child'      => true,
+	);
+	$args    = wp_parse_args( $args, $default );
+	extract($args);
+
+	$categories = get_terms( 'category', $args );
+	if ( empty( $categories ) )
+		return $values;
+
+	foreach ( $categories as $category ) {
+		$term_id = $category->term_id;
+		$name    = $category->name;
+		$slug    = $category->slug;
+		if ( $slug == 'pr' ) {
+			continue;
+		}
+		$value   = array( 'term_id' => $term_id, 'name' => $name, 'slug' => $slug );
+		array_push( $values, $value );
+		if ( $child )
+			$values = mak_options_categories( $values, $$args, $term_id );
+	}
+	return $values;
 }
-add_action( 'widgets_init', 'mak_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * load the file in the inc directory
  */
-function mak_scripts() {
+function mak_theme_require() {
 
-	$mak_theme_data = wp_get_theme();
-	$mak_theme_ver  = $mak_theme_data->get( 'Version' );
-
-	$mak_stylesheet = get_stylesheet_uri();
-
-	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) ) { // WP_DEBUG = ture
-		$mak_stylesheet = get_template_directory_uri() . '/css/style.css';
+	/* global require function */
+	if ( file_exists( get_template_directory() . '/inc/') ) {
+		$dir = get_template_directory() . '/inc/';
+		$handle = opendir( $dir );
+		while ( false !== ( $ent = readdir( $handle ) ) ) {
+			if ( !is_dir( $ent ) && strtolower( substr( $ent, -4 ) ) == ".php" ) {
+				require $dir . $ent;
+			}
+		}
+		closedir( $handle );
 	}
 
-	wp_enqueue_style(
-		'mak-style',
-		$mak_stylesheet,
-		array(),
-		$mak_theme_ver
-	);
-
-	wp_enqueue_script(
-		'mak-navigation',
-		get_template_directory_uri() . '/js/navigation.js',
-		array(),
-		'20120206',
-		true
-	);
-
-	wp_enqueue_script(
-		'mak-skip-link-focus-fix',
-		get_template_directory_uri() . '/js/skip-link-focus-fix.js',
-		array(),
-		'20130115',
-		true
-	);
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	/* Parent require function */
+	if ( !is_child_theme() && file_exists( get_template_directory() . '/parent_inc/') ) {
+		$dir = get_template_directory() . '/parent_inc/';
+		$handle = opendir( $dir );
+		while ( false !== ( $ent = readdir( $handle ) ) ) {
+			if ( !is_dir( $ent ) && strtolower( substr( $ent, -4 ) ) == ".php" ) {
+				require $dir . $ent;
+			}
+		}
+		closedir( $handle );
 	}
 
-	wp_enqueue_script(
-		'mak-script',
-		get_stylesheet_directory_uri() . '/js/media-assembly-kit.js',
-		array('jquery'),
-		$mak_theme_ver,
-		true
-	);
+	/* Child require function */
+	if( is_child_theme() && file_exists( get_stylesheet_directory() . '/child_inc/') ) {
+		$dir = get_stylesheet_directory() . '/child_inc/';
+		$handle = opendir( $dir );
+		while ( false !== ( $ent = readdir( $handle ) ) ) {
+			if ( !is_dir( $ent ) && strtolower( substr( $ent, -4 ) ) == ".php" ) {
+				require $dir . $ent;
+			}
+		}
+		closedir( $handle );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'mak_scripts' );
+add_action( 'after_setup_theme', 'mak_theme_require' );
 
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
+if ( !function_exists( 'mak_file_time_stamp' ) ) :
+	/**
+	 * Gets the time stamp of the file
+	 */
+	function mak_file_time_stamp( $file = null, $args = array() ) {
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
+		$default = array(
+			'path'  => null,
+			'child' => false,
+		);
+		$args    = wp_parse_args( $args, $default );
+		extract($args);
 
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
+		if ( !$path && $child )
+			$path = get_stylesheet_directory();
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
+		if ( !$path && !$child )
+			$path = get_template_directory();
 
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
+		$value = null;
+		$file = $path . '/' . $file;
+		if ( file_exists( $file ) ) {
+			$value = filemtime( $file );
+		}
+		return $value;
+	}
+endif; // mak_file_time_stamp

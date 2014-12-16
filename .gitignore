@@ -1,2 +1,5 @@
 node_modules
 .sass-cache
+languages/LINGUAS
+languages/Makefile
+bower_components

@@ -1,0 +1,12 @@
+/* Module
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* header */
+// Logo start
+.site-title {
+
+	a {
+		background-image: image-url('site-logo-mobile@2x.png');
+		@include background-size( 207px 51px );
+	}
+}
+// Logo end

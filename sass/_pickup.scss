@@ -1,0 +1,37 @@
+#pickup-box {
+	margin-top: 20px;
+}
+#pickup {
+	@extend %ul;
+	@extend %clearfix;
+
+	li {
+		width: 193px;
+		margin-left: 19px;
+		float: left;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.title {
+		@include fz(14);
+		//font-weight: bold;
+		font-weight: normal;
+	}
+	.thumbnail {
+
+		img {
+			display: block;
+		}
+	}
+}
+.error404 {
+
+	#pickup-box {
+		border: 1px #b4b4b4 solid;
+		padding: 25px 30px;
+		background: #fff;
+		@extend %dropshadow-01;
+	}
+}

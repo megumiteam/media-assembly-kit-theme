@@ -1,0 +1,78 @@
+#carousel-box {
+	border: 1px #b4b4b4 solid;
+	padding: 20px 0;
+	background: #fff;
+	@extend %dropshadow-01;
+	position: relative;
+}
+#carousel {
+	height: 70px;
+	overflow: hidden;
+	@extend %ul;
+	@extend %clearfix;
+
+	p {
+		margin: 0;
+	}
+	li {
+		width: 273px;
+		float: left;
+		@extend %clearfix;
+	}
+	.title {
+		@include fz(14);
+		font-weight: normal;
+	}
+	.thumbnail-true {
+
+		.title {
+			width: 100%;
+			margin: 0 0 0 -100px;
+			padding: 0 0 0 110px;
+			float: left;
+		}
+		.thumbnail {
+			width: 100px;
+			float: left;
+
+			img {
+				display: block;
+			}
+		}
+	}
+}
+.bx-controls-direction {
+
+	a {
+		width: 38px;
+		height: 38px;
+		text-align: center;
+		margin-top: -19px;
+		@include border-radius(19px);
+		background: #c8cc2e;
+		display: block;
+		position: absolute;
+		top: 50%;
+
+		&.bx-prev {
+			left: -19px;
+
+			i {
+				padding-right: 3px;
+			}
+		}
+		&.bx-next {
+			right: -19px;
+
+			i {
+				padding-left: 3px;
+			}
+		}
+		i {
+			color: #fff;
+			@include fz(26);
+			margin-right: 0;
+			padding-top: 6px;
+		}
+	}
+}

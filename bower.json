@@ -1,0 +1,43 @@
+{
+  "name": "media-assembly-kit",
+  "title": "Media Assembly Kit",
+  "description": "Megumi Media Assembly Kit Theme.",
+  "version": "0.1.0",
+  "homepage": "https://www.digitalcube.jp/",
+  "author": {
+    "name": "DigitalCube Co.,Ltd",
+    "url": "https://www.digitalcube.jp/"
+  },
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "normalize.css": "~3.0.2",
+    "magnific-popup": "~1.0.0",
+    "imagesloaded": "~3.1.8",
+    "bxslider-4": "~4.1.2",
+    "trunk8": "~1.3.3",
+    "fitvids": "~1.1.0"
+  },
+  "overrides": {
+    "jquery": {
+      "ignore": "*"
+    },
+    "eventEmitter": {
+      "ignore": "*"
+    },
+    "eventie": {
+      "ignore": "*"
+    },
+    "magnific-popup": {
+      "main": [
+        "dist/jquery.magnific-popup.min.js",
+        "dist/magnific-popup.css"
+      ]
+    },
+    "imagesloaded": {
+      "main": "imagesloaded.pkgd.min.js"
+    },
+    "bxslider-4": {
+      "main": "jquery.bxslider.min.js"
+    }
+  }
+}

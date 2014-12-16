@@ -2,10 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Media Assembly Kit 1.0\n"
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-12-08 02:19:00+00:00\n"
+"Project-Id-Version: Media Assembly Kit 0.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
+"POT-Creation-Date: 2014-12-15 09:29:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,292 +12,678 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: 404.php:15
-msgid "Oops! That page can&rsquo;t be found."
+#: 404.php:16 content-none.php:14
+msgid "Not Found"
 msgstr ""
 
-#: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+#: 404.php:21 content-none.php:17
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: comments.php:28
+#: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:52
+#: comments.php:36 comments.php:56
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
+#: comments.php:37 comments.php:57
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:38 comments.php:58
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:68
 msgid "Comments are closed."
 msgstr ""
 
-#: content-none.php:13
-msgid "Nothing Found"
+#: content-summary.php:25 inc/template-tags.php:385
+msgid "Read the full story"
 msgstr ""
 
-#: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: functions.php:59
+msgid "Global Menu"
 msgstr ""
 
-#: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#: functions.php:60
+msgid "Media Menu"
 msgstr ""
 
-#: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+#: functions.php:61
+msgid "Footer Menu"
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:29
-msgid "Pages:"
+#: functions.php:62
+msgid "Mobile Footer Menu"
 msgstr ""
 
-#: content-page.php:25 inc/template-tags.php:122
-msgid "Edit"
-msgstr ""
-
-#. translators: %s: Name of current post
-#: content.php:22
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: footer.php:15
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:15
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:17
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: functions.php:53 header.php:31
-msgid "Primary Menu"
-msgstr ""
-
-#: functions.php:88
-msgid "Sidebar"
-msgstr ""
-
-#: header.php:22
-msgid "Skip to content"
-msgstr ""
-
-#: inc/extras.php:64
-msgid "Page %s"
-msgstr ""
-
-#: inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr ""
-
-#: inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
-
-#: inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:52
-msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
-
-#: inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:82
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:87
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:104 inc/template-tags.php:110
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:106
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:112
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:118
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:118
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:118
-msgid "% Comments"
-msgstr ""
-
-#: inc/template-tags.php:139
-msgid "Category: %s"
-msgstr ""
-
-#: inc/template-tags.php:141
-msgid "Tag: %s"
-msgstr ""
-
-#: inc/template-tags.php:143
-msgid "Author: %s"
-msgstr ""
-
-#: inc/template-tags.php:145
-msgid "Year: %s"
-msgstr ""
-
-#: inc/template-tags.php:145
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:147
-msgid "Month: %s"
-msgstr ""
-
-#: inc/template-tags.php:147
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: inc/template-tags.php:149
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:149
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:151
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr ""
-
-#: inc/template-tags.php:153
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr ""
-
-#: inc/template-tags.php:155
-msgctxt "post format archive title"
+#: inc/admin-parts.php:100
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:157
-msgctxt "post format archive title"
-msgid "Videos"
+#: inc/admin-parts.php:101
+msgid "Delete"
 msgstr ""
 
-#: inc/template-tags.php:159
-msgctxt "post format archive title"
-msgid "Quotes"
+#: inc/filter-hook.php:29
+msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:161
-msgctxt "post format archive title"
-msgid "Links"
+#: inc/manage-acf-field-group.php:242
+msgid "Add %s Contents"
 msgstr ""
 
-#: inc/template-tags.php:163
-msgctxt "post format archive title"
-msgid "Statuses"
+#: inc/manage-custom-taxonomy-field.php:34
+#: inc/manage-custom-taxonomy-field.php:64
+msgid "Options"
 msgstr ""
 
-#: inc/template-tags.php:165
-msgctxt "post format archive title"
-msgid "Audio"
+#: inc/manage-custom-taxonomy-field.php:40
+msgid "Category Color"
 msgstr ""
 
-#: inc/template-tags.php:167
-msgctxt "post format archive title"
-msgid "Chats"
+#: inc/manage-custom-taxonomy-field.php:70
+msgid "Media Logo"
 msgstr ""
 
-#: inc/template-tags.php:169
-msgid "Archives: %s"
+#: inc/manage-custom-taxonomy-field.php:81
+msgid "Initial category"
 msgstr ""
 
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:173
-msgid "%1$s: %2$s"
+#: inc/manage-post-type.php:29
+msgid "Slide"
 msgstr ""
 
-#: inc/template-tags.php:175
-msgid "Archives"
+#: inc/manage-post-type.php:44
+msgid "Carousel Panel"
 msgstr ""
 
-#: search.php:16
+#: inc/manage-post-type.php:59
+msgid "Pickups"
+msgstr ""
+
+#: inc/manage-post-type.php:74
+msgid "Induction frame"
+msgstr ""
+
+#: inc/manage-post-type.php:98
+msgid "%s Induction"
+msgstr ""
+
+#: inc/manage-post-type.php:114
+msgid "Media"
+msgstr ""
+
+#: inc/manage-post-type.php:124
+msgid "Related Menu"
+msgstr ""
+
+#: inc/manage-theme-options.php:22 inc/manage-theme-options.php:28
+#: inc/manage-theme-options.php:40
+msgid "Theme Options"
+msgstr ""
+
+#: inc/manage-theme-options.php:64
+msgid "General"
+msgstr ""
+
+#: inc/manage-theme-options.php:70
+msgid "HOME pages show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:81
+msgid "Blog pages show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:92
+msgid "Mobile Blog pages show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:103
+msgid "Slide show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:114
+msgid "Slide Speed"
+msgstr ""
+
+#: inc/manage-theme-options.php:125
+msgid "Slide Pause"
+msgstr ""
+
+#: inc/manage-theme-options.php:136
+msgid "Carousel Panel show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:147
+msgid "Carousel Panel Speed"
+msgstr ""
+
+#: inc/manage-theme-options.php:158
+msgid "Carousel Panel Pause"
+msgstr ""
+
+#: inc/manage-theme-options.php:169
+msgid "Category Induction frame show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:180
+msgid "Related Posts show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:191
+msgid "Mobile Related Posts show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:202
+msgid "Editors Choice Posts show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:213
+msgid "Mobile Editors Choice Posts show at most"
+msgstr ""
+
+#: inc/manage-theme-options.php:224
+msgid "Editors Choice Speed"
+msgstr ""
+
+#: inc/manage-theme-options.php:235
+msgid "Editors Choice Pause"
+msgstr ""
+
+#: inc/manage-theme-options.php:246
+msgid "PC Halfway Number"
+msgstr ""
+
+#: inc/manage-theme-options.php:257
+msgid "Mobile Halfway Number"
+msgstr ""
+
+#: inc/manage-theme-options.php:269
+msgid "Site Settings"
+msgstr ""
+
+#: inc/manage-theme-options.php:275
+msgid "Favicon Image"
+msgstr ""
+
+#: inc/manage-theme-options.php:286
+msgid "apple-touch-icon Image"
+msgstr ""
+
+#: inc/manage-theme-options.php:297
+msgid "Google Analytics Code"
+msgstr ""
+
+#: inc/manage-theme-options.php:308
+msgid "Google Webmaster Tools Verification"
+msgstr ""
+
+#: inc/manage-theme-options.php:315 inc/manage-theme-options.php:327
+msgid "Enter your meta key \"content\" value to verify your site."
+msgstr ""
+
+#: inc/manage-theme-options.php:320
+msgid "Bing Webmaster Center Verification"
+msgstr ""
+
+#: inc/manage-theme-options.php:333
+msgid "Background"
+msgstr ""
+
+#: inc/manage-theme-options.php:339
+msgid "Background Image"
+msgstr ""
+
+#: inc/manage-theme-options.php:350
+msgid "Background Color"
+msgstr ""
+
+#: inc/manage-theme-options.php:361
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/manage-theme-options.php:368
+msgid "No Repeat"
+msgstr ""
+
+#: inc/manage-theme-options.php:369
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/manage-theme-options.php:370
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/manage-theme-options.php:371
+msgid "Repeat All"
+msgstr ""
+
+#: inc/manage-theme-options.php:377
+msgid "Background Position"
+msgstr ""
+
+#: inc/manage-theme-options.php:384
+msgid "Top Left"
+msgstr ""
+
+#: inc/manage-theme-options.php:385
+msgid "Top Center"
+msgstr ""
+
+#: inc/manage-theme-options.php:386
+msgid "Top Right"
+msgstr ""
+
+#: inc/manage-theme-options.php:387
+msgid "Middle Left"
+msgstr ""
+
+#: inc/manage-theme-options.php:388
+msgid "Middle Center"
+msgstr ""
+
+#: inc/manage-theme-options.php:389
+msgid "Middle Right"
+msgstr ""
+
+#: inc/manage-theme-options.php:390
+msgid "Bottom Left"
+msgstr ""
+
+#: inc/manage-theme-options.php:391
+msgid "Bottom Center"
+msgstr ""
+
+#: inc/manage-theme-options.php:392
+msgid "Bottom Right"
+msgstr ""
+
+#: inc/manage-theme-options.php:398
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/manage-theme-options.php:405
+msgid "Scroll Normally"
+msgstr ""
+
+#: inc/manage-theme-options.php:406
+msgid "Fixed in Place"
+msgstr ""
+
+#: inc/manage-theme-options.php:412
+msgid "Background Link URL"
+msgstr ""
+
+#: inc/manage-theme-options.php:423
+msgid "Background Link Target"
+msgstr ""
+
+#: inc/manage-theme-options.php:436
+msgid "Social"
+msgstr ""
+
+#: inc/manage-theme-options.php:442
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/manage-theme-options.php:453
+msgid "Twitter via"
+msgstr ""
+
+#: inc/manage-theme-options.php:464
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/manage-theme-options.php:475
+msgid "YouTube URL"
+msgstr ""
+
+#: inc/manage-theme-options.php:486
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/manage-theme-options.php:497
+msgid "appId"
+msgstr ""
+
+#: inc/manage-theme-options.php:508
+msgid "OGP Title"
+msgstr ""
+
+#: inc/manage-theme-options.php:520
+msgid "OGP Description"
+msgstr ""
+
+#: inc/manage-theme-options.php:531
+msgid "OGP Keyword"
+msgstr ""
+
+#: inc/manage-theme-options.php:542
+msgid "OGP Image"
+msgstr ""
+
+#: inc/manage-theme-options.php:553 inc/parts-author.php:19
+#: inc/parts-author.php:40 inc/parts-author.php:73
+msgid "Writer"
+msgstr ""
+
+#: inc/manage-theme-options.php:559
+msgid "Writer Role"
+msgstr ""
+
+#: inc/manage-theme-options.php:572
+msgid "Category"
+msgstr ""
+
+#: inc/manage-theme-options.php:584
+msgid "To view the %s induction frame"
+msgstr ""
+
+#: inc/manage-theme-options.php:595
+msgid "To view the %s Editors Choice"
+msgstr ""
+
+#: inc/manage-theme-options.php:605
+msgid "%s Short Title"
+msgstr ""
+
+#: inc/manage-theme-options.php:617
+msgid "%s Category Color"
+msgstr ""
+
+#: inc/manage-theme-options.php:630
+msgid "Other"
+msgstr ""
+
+#: inc/manage-theme-options.php:636
+msgid "Copyright"
+msgstr ""
+
+#: inc/manage-theme-options.php:648
+msgid "Mobile Copyright"
+msgstr ""
+
+#: inc/manage-theme-options.php:660
+msgid "Copyright Year"
+msgstr ""
+
+#: inc/manage_scripts_styles.php:15
+msgctxt "Oswald: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/manage_widget_area.php:13
+msgid "PC HOME Sideber"
+msgstr ""
+
+#: inc/manage_widget_area.php:22
+msgid "PC Sideber"
+msgstr ""
+
+#: inc/manage_widget_area.php:31
+msgid "Mobile"
+msgstr ""
+
+#: inc/manage_widget_area.php:40
+msgid "Mobile Summary"
+msgstr ""
+
+#: inc/manage_widget_area.php:49
+msgid "Mobile Single"
+msgstr ""
+
+#: inc/parts-author.php:18
+msgid "Writer Widget"
+msgstr ""
+
+#: inc/parts-author.php:44 inc/parts-editor-choice.php:74
+#: inc/parts-induction-posts.php:55 inc/parts-ranking-posts.php:59
+msgid "Title:"
+msgstr ""
+
+#: inc/parts-author.php:47 inc/parts-editor-choice.php:77
+#: inc/parts-ranking-posts.php:62
+msgid "Number to show:"
+msgstr ""
+
+#: inc/parts-author.php:51
+msgid "Random?"
+msgstr ""
+
+#: inc/parts-category-posts.php:37
+msgid "TOP"
+msgstr ""
+
+#: inc/parts-category-posts.php:128 inc/template-tags.php:312
+msgid "The following articles list"
+msgstr ""
+
+#: inc/parts-editor-choice.php:50
+msgid "Editor's Choice Widget"
+msgstr ""
+
+#: inc/parts-editor-choice.php:51 inc/parts-editor-choice.php:71
+#: inc/parts-editor-choice.php:99
+msgid "Editor's Choice"
+msgstr ""
+
+#: inc/parts-external-site.php:32
+msgid "This article provides original articles"
+msgstr ""
+
+#: inc/parts-induction-posts.php:32
+msgid "Induction Post Widget"
+msgstr ""
+
+#: inc/parts-induction-posts.php:33
+msgid "Induction post"
+msgstr ""
+
+#: inc/parts-induction-posts.php:57
+msgid "Select a Page:"
+msgstr ""
+
+#: inc/parts-induction-posts.php:65
+msgid "Select Page"
+msgstr ""
+
+#: inc/parts-pickup.php:31
+msgid "Pickup"
+msgstr ""
+
+#: inc/parts-ranking-posts.php:36
+msgid "Ranking Widget"
+msgstr ""
+
+#: inc/parts-ranking-posts.php:37 inc/parts-ranking-posts.php:57
+#: inc/parts-ranking-posts.php:80
+msgid "Ranking"
+msgstr ""
+
+#: inc/parts-ranking-posts.php:127
+msgid "For You"
+msgstr ""
+
+#: inc/parts-ranking-posts.php:128
+msgid "Total"
+msgstr ""
+
+#: inc/parts-related-posts.php:42
+msgid "Recommend"
+msgstr ""
+
+#: inc/parts-slide.php:101
+msgid "&#187; View more"
+msgstr ""
+
+#: inc/parts-watts-new.php:56 inc/template-tags.php:66
+msgid "What's New"
+msgstr ""
+
+#: inc/register_post_type.php:13
+msgctxt "post type general name"
+msgid "%s"
+msgstr ""
+
+#: inc/register_post_type.php:14
+msgctxt "post type singular name"
+msgid "%s"
+msgstr ""
+
+#: inc/register_post_type.php:15
+msgctxt "%s"
+msgid "Add New"
+msgstr ""
+
+#: inc/register_post_type.php:16 inc/register_taxonomy.php:23
+msgid "Add New %s"
+msgstr ""
+
+#: inc/register_post_type.php:17 inc/register_taxonomy.php:20
+msgid "Edit %s"
+msgstr ""
+
+#: inc/register_post_type.php:18
+msgid "New %s"
+msgstr ""
+
+#: inc/register_post_type.php:19 inc/register_taxonomy.php:21
+msgid "View %s"
+msgstr ""
+
+#: inc/register_post_type.php:20 inc/register_taxonomy.php:15
+msgid "Search %s"
+msgstr ""
+
+#: inc/register_post_type.php:21 inc/register_taxonomy.php:28
+msgid "No %s found."
+msgstr ""
+
+#: inc/register_post_type.php:22
+msgid "No %s found in Trash."
+msgstr ""
+
+#: inc/register_post_type.php:23 inc/register_taxonomy.php:19
+msgid "Parent %s:"
+msgstr ""
+
+#: inc/register_post_type.php:24 inc/register_taxonomy.php:17
+msgid "All %s"
+msgstr ""
+
+#: inc/register_post_type.php:25
+msgctxt "add new on admin bar"
+msgid "%s"
+msgstr ""
+
+#: inc/register_taxonomy.php:13
+msgctxt "taxonomy general name"
+msgid "%s"
+msgstr ""
+
+#: inc/register_taxonomy.php:14
+msgctxt "taxonomy singular name"
+msgid "%s"
+msgstr ""
+
+#: inc/register_taxonomy.php:16
+msgid "Popular %s"
+msgstr ""
+
+#: inc/register_taxonomy.php:18
+msgid "Parent %s"
+msgstr ""
+
+#: inc/register_taxonomy.php:22
+msgid "Update %s"
+msgstr ""
+
+#: inc/register_taxonomy.php:24
+msgid "New %s Name"
+msgstr ""
+
+#: inc/register_taxonomy.php:25
+msgid "Separate %s with commas"
+msgstr ""
+
+#: inc/register_taxonomy.php:26
+msgid "Add or remove %s"
+msgstr ""
+
+#: inc/register_taxonomy.php:27
+msgid "Choose from the most used %s"
+msgstr ""
+
+#: inc/template-tags.php:84
 msgid "Search Results for: %s"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "_s"
+#: inc/template-tags.php:209
+msgid "View all posts in %s"
 msgstr ""
 
+#: inc/template-tags.php:271
+msgid "Photo enlargement"
+msgstr ""
+
+#: inc/template-tags.php:282
+msgid "Permalink to %s"
+msgstr ""
+
+#: inc/template-tags.php:320
+msgid "<i class=\"fa fa-chevron-left\"></i>Previous Page"
+msgstr ""
+
+#: inc/template-tags.php:322 inc/template-tags.php:363
+msgid "To the top of the page"
+msgstr ""
+
+#: inc/template-tags.php:325
+msgid "Next Page<i class=\"fa fa-chevron-right\"></i>"
+msgstr ""
+
+#: inc/template-tags.php:350
+msgid "&lt;"
+msgstr ""
+
+#: inc/template-tags.php:351
+msgid "&gt;"
+msgstr ""
+
+#: inc/template-tags.php:361
+msgid "Previous article"
+msgstr ""
+
+#: inc/template-tags.php:366
+msgid "Next article"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Media Assembly Kit"
+msgstr ""
+
+#. #-#-#-#-#  mak.pot (Media Assembly Kit 0.1.0)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+#. #-#-#-#-#  mak.pot (Media Assembly Kit 0.1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://www.digitalcube.jp/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
+msgid "Megumi Media Assembly Kit Theme."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "DigitalCube Co.,Ltd"
 msgstr ""

@@ -1,0 +1,19 @@
+/* Module
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* header */
+// Logo start
+.site-title {
+
+	a {
+		background-image: image-url('site-logo@2x.png');
+		@include background-size( 266px 66px );
+	}
+}
+.footer-site-title {
+
+	a {
+		background-image: image-url('footer-site-logo@2x.png');
+		@include background-size( 246px 61px );
+	}
+}
+// Logo end

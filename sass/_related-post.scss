@@ -1,0 +1,50 @@
+#related-post {
+	margin-top: 20px;
+	border: 1px #b4b4b4 solid;
+	padding: 25px 30px;
+	background: #fff;
+	@extend %dropshadow-01;
+
+	ul {
+		@extend %ul;
+		@extend %clearfix;
+
+		li {
+			width: 300px;
+			min-height: 71px;
+			margin-bottom: 10px;
+			border-bottom: 1px dashed #898989;
+			padding-bottom: 10px;
+			float: left;
+
+			&:nth-child(2n) {
+				float: right;
+				margin-left: 0;
+			}
+			.title {
+				@include fz(14);
+				font-weight: normal;
+			}
+			&.thumbnail-true {
+				overflow: hidden;
+				@extend %clearfix;
+
+				.title {
+					width: 100%;
+					margin-left: -100px;
+					padding-left: 100px;
+					float: right;
+				}
+				.thumbnail {
+					width: 100px;
+					margin: 0;
+					float: left;
+
+					img {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

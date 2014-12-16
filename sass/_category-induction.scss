@@ -1,0 +1,105 @@
+#category-induction {
+	width: 680px;
+	margin: 0 auto 20px;
+}
+#category-induction-nav {
+	position: relative;
+	top: 1px;
+	@extend %clearfix;
+
+	ul {
+		width: 100%;
+		@extend %ul;
+		@extend %clearfix;
+	}
+	li {
+		text-align: center;
+		float: left;
+
+		span {
+			margin: 0 0 0 3px;
+			@include border-radius( 4px 4px 0 0 );
+			border: 1px solid #b4b4b4;
+			padding: 4px 0;
+			background: #999;
+			color: white;
+			cursor: pointer;
+			display: block;
+		}
+		&.current {
+
+			span {
+				border-bottom-color: #fff;
+				color: #535353 !important;
+				background-color: white !important;
+			}
+		}
+		&:first-child {
+
+			span {
+				margin-left: 0;
+			}
+		}
+	}
+}
+.category-induction-content {
+	margin: 0;
+	border: 1px solid #b4b4b4;
+	padding: 30px;
+	list-style: none;
+	background: #fff;
+	@extend %dropshadow-01;
+	display: none;
+	overflow: hidden;
+	@extend %clearfix;
+
+	&.current {
+		display: block;
+	}
+
+	li {
+		width: 100%;
+		margin: 0 -186px 4px 0;
+		padding: 0 186px 0 0;
+		float: right;
+		position: relative;
+
+		&.first {
+			width: 150px;
+			margin: 0;
+			padding: 0;
+			float: left;
+
+			.thumbnail {
+				margin-bottom: 10px;
+
+				img {
+					border: 1px solid #b4b4b4;
+					display: block;
+				}
+			}
+			.title {
+				margin: 0;
+				display: inline;
+			}
+		}
+		a {
+			text-decoration: none;
+
+			&:hover {
+				background: #f2f2f2;
+
+				.title {
+					background: #f2f2f2;
+				}
+			}
+		}
+		i {
+			@include fz( 17 );
+			color: #e197a0;
+			position: absolute;
+			top: 4px;
+			left: -12px;
+		}
+	}
+}

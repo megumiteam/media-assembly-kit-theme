@@ -41,10 +41,13 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
+				/* Loop through and list the comments. Tell wp_list_comments()
+				 * to use mak_comment() to format the comments.
+				 * If you want to override this in a child theme, then you can
+				 * define mak_comment() and that will be used instead.
+				 * See mak_comment() in inc/template-tags.php for more.
+				 */
+				wp_list_comments( array( 'callback' => 'mak_comment' ) );
 			?>
 		</ol><!-- .comment-list -->
 
