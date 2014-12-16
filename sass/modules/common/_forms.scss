@@ -74,6 +74,7 @@ textarea {
 	color: #666;
 	border: 1px solid #b4b4b4;
 	border-radius: 3px;
+	max-width: 100%;
 }
 
 input[type="text"]:focus,
@@ -98,15 +99,4 @@ textarea {
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
-}
-
-.wpcf7 {
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	input[type="password"],
-	input[type="search"],
-	textarea {
-		max-width: 100%;
-	}
 }

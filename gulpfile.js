@@ -53,14 +53,13 @@ gulp.task( 'compass', function() {
 	gulp.src('sass/{,*/}{,*/}*.scss')
 		.pipe($.compass({
 			sass:      'sass',
-			css:       './',
+			css:       'css',
 			image:     'images',
 			style:     'expanded',
 			relative:  true,
 			sourcemap: true,
 			comments:  true
 		}))
-		.pipe(gulp.dest('./'))
 
 	// dist
 	gulp.src( 'sass/{,*/}{,*/}*.scss' )
@@ -73,7 +72,6 @@ gulp.task( 'compass', function() {
 			sourcemap: false,
 			comments:  false
 		}))
-		.pipe(gulp.dest('./'))
 });
 
 // watch

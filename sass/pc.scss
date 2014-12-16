@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "compass";
 /*!
 Theme Name: Media Assembly Kit
 Theme URI: https://www.digitalcube.jp/
@@ -9,55 +8,23 @@ Description: Megumi Media Assembly Kit Theme.
 Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: mak
-Tags:
 */
 
 /* ・－－ ・ －・・・ －・ ・・ ・・・ －  */
 
 // SASS Function
-@import "sass_function/variable";
+@import "compass";
+@import "variable";
 @import "sass_function/mixins";
+@import "sass_function/extend";
 
 /* Base
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-* {
-	@include box-sizing( border-box );
-}
-html {
-	font-size: 62.5%;
-	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, sans-serif;
-}
-body {
-	@include hyphens( auto );
-	color: #535353;
-	background-color: white;
-	background-image: image-url('background/back-dot-03.png');
-	word-wrap: break-word;
-	line-height: 1.6;
-	margin: 0;
-	padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl, table {
-	margin-top: 0;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-i {
-	margin-right: 5px;
-}
-
-/* Extend
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "sass_function/extend";
+@import "modules/common/base";
 
 /* Form
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "forms";
+@import "modules/common/forms";
 
 /* Text
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -934,5 +901,5 @@ a {
 /* Ratio
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (-webkit-min-device-pixel-ratio: 1.2), screen and (min--moz-device-pixel-ratio: 1.2), screen and (-moz-min-device-pixel-ratio: 1.2), screen and (min-device-pixel-ratio: 1.2) {
-	@import 'ratio';
+	@import 'modules/pc/ratio';
 }

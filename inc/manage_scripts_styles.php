@@ -72,15 +72,22 @@ function mak_scripts_styles() {
 	}
 
 	// Loads main stylesheet.
+	$makstylesheet_mo = get_site_url() . '/assets/css/mobile.css';
+	$makstylesheet_pc = get_site_url() . '/assets/css/pc.css';
+
+	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) ) { // WP_DEBUG = ture
+		$makstylesheet_mo = get_template_directory_uri() . '/css/mobile.css';
+		$makstylesheet_pc = get_template_directory_uri() . '/css/pc.css';
+	}
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'mak', get_site_url() . '/assets/css/mobile.css', array(), '' );
+		wp_enqueue_style( 'mak', $makstylesheet_mo, array(), '' );
 	} else {
-		wp_enqueue_style( 'mak', get_site_url() . '/assets/css/pc.css', array(), '' );
+		wp_enqueue_style( 'mak', $makstylesheet_pc, array(), '' );
 	}
 
 	// Loads JavaScript file with functionality specific to mak.
-	if ( file_exists( get_stylesheet_directory() . '/js/mak.js' ) )
-		wp_enqueue_script( 'mak', get_stylesheet_directory_uri() . '/js/mak.js', array('jquery'), mak_file_time_stamp( '/js/mak.js' ), true );
+	if ( file_exists( get_template_directory() . '/js/mak.js' ) )
+		wp_enqueue_script( 'mak', get_template_directory_uri() . '/js/mak.js', array('jquery'), mak_file_time_stamp( '/js/mak.js' ), true );
 
 }
 add_action( 'wp_enqueue_scripts', 'mak_scripts_styles' );

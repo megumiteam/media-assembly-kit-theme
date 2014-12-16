@@ -75,8 +75,8 @@ function mak_get_category_induction_post_list( $args = array(), $instance  = arr
 		$name    = ! empty( $short ) ? $short : $name;
 		$slug    = $category['slug'];
 		$class   = ( 1 === $count ) ? ' class="current"' : '';
-		$color   = get_option( 'cat_' . $term_id . '_color', '#fff' );
-		$color   = $color ? $color : '#fff';
+		$color   = get_option( 'cat_' . $term_id . '_color', '#999' );
+		$color   = $color ? $color : '#999';
 		$output .= '<li' . $class . ' data-target="' . $slug . '"><span style="background-color: ' . $color . ';">' . esc_html( $name ) . '</span></li>' . "\n";
 		$count++;
 	}

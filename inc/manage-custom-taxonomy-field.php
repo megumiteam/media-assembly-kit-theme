@@ -11,7 +11,7 @@ function mak_admin_taxonomy_scripts() {
 
 	wp_enqueue_media();
 	wp_enqueue_script( 'wp-color-picker' );
-	wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/js/admin.js', array('jquery'), mak_file_time_stamp( '/js/admin.js' ), true );
+	wp_enqueue_script( 'admin', get_template_directory_uri() . '/js/admin.js', array('jquery'), mak_file_time_stamp( '/js/admin.js' ), true );
 }
 add_action( 'admin_print_scripts-edit-tags.php', 'mak_admin_taxonomy_scripts', 999 );
 
