@@ -24,7 +24,7 @@ function mak_whats_new( $args = array() ) {
 function mak_get_whats_new( $args = array() ) {
 	$output  = '';
 	$default = array(
-		'before_widget' => '<aside id="watts-new-box">',
+		'before_widget' => '<aside id="whats-new-box">',
 		'after_widget'  => '</aside>',
 		'limit'         => 10,
 	);

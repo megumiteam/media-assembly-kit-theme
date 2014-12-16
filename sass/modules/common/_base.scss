@@ -3,13 +3,12 @@
 }
 html {
 	font-size: 62.5%;
-	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, sans-serif;
+	font-family: $font__main;
 }
 body {
 	@include hyphens( auto );
-	color: #535353;
-	background-color: white;
-	background-image: image-url('background/back-dot-03.png');
+	color: $color__body-text;
+	background: $color__body-background;
 	word-wrap: break-word;
 	line-height: 1.6;
 	margin: 0;

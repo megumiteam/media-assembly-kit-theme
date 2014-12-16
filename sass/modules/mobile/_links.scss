@@ -1,0 +1,33 @@
+a {
+	color: $color__link;
+	text-decoration: none;
+}
+#masthead {
+
+	a {
+		color: $color__link-masthead-mobile;
+	}
+	& .header-meta a {
+		color: $color__link-masthead-header-meta-mobile;
+	}
+}
+.entry-meta,
+.posted-in-media,
+.author {
+
+	a {
+		color: $color__link-entry-meta-mobile;
+	}
+}
+#khm-15 {
+
+	a {
+		color: $color__link-khm-15-mobile;
+	}
+}
+.entry-content {
+
+	a {
+		color: $color__link-entry-content-mobile;
+	}
+}

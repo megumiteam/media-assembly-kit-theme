@@ -30,73 +30,22 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 // Font size
 #page {
-	@include fz( 14 );
+	@include fz( $fontsize__page-pc );
 }
 #media-nav-box {
-	@include fz( 12 );
+	@include fz( $fontsize__media-nav-box );
 }
 #global-nav-box {
-	@include fz( 16 );
+	@include fz( $fontsize__global-nav-box );
 }
 .entry-content {
-	@include fz( 15 );
+	@include fz( $fontsize__entry-content );
 }
 
 /* Link color
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-a {
-	color: #535353;
-	text-decoration: none;
-}
-#khm-15 {
+@import "modules/pc/links";
 
-	a {
-		color: #e197a0;
-	}
-}
-.entry-title {
-
-	.home &,
-	.archive &,
-	.search &,
-	#watts-new-box & {
-
-		a {
-			color: #535353;
-
-			&:hover {
-				background: #f2f2f2;
-			}
-		}
-	}
-}
-.entry-meta {
-
-	a {
-		color: #707070;
-
-		&:hover {
-			color: #e197a0;
-		}
-	}
-}
-.posted-in-media,
-.author {
-
-	a {
-		color: #707070;
-	}
-}
-.entry-content {
-
-	a {
-		color: #e197a0;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
 /* Layout
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #page {}
@@ -233,7 +182,7 @@ a {
 // Logo end
 
 // global-nav-box start
-@import "global-nav";
+@import "modules/pc/global-nav";
 // global-nav-box end
 
 /* common */
@@ -721,51 +670,51 @@ a {
 
 /* WordPress
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "wordpress";
+@import "modules/common/wordpress";
 
 /* Slide
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "slide";
+@import "modules/pc/slide";
 
 /* Carousel
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "carousel";
+@import "modules/pc/carousel";
 
 /* Category Induction
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "category-induction";
+@import "modules/pc/category-induction";
 
 /* Editor Choice
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "editor-choice";
+@import "modules/pc/editor-choice";
 
 /* entry-content
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "entry-content";
+@import "modules/pc/entry-content";
 
 /* External Site
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "external-site";
+@import "modules/pc/external-site";
 
 /* _popIn_recommend
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "popin_recommend";
+@import "modules/pc/popin_recommend";
 
 /* Related Post
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "related-post";
+@import "modules/pc/related-post";
 
 /* Pickup
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "pickup";
+@import "modules/pc/pickup";
 
 /* What's New
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "watts-new";
+@import "modules/pc/whats-new";
 
 /* Widget
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "widget";
+@import "modules/pc/widget";
 
 /* Background Link
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

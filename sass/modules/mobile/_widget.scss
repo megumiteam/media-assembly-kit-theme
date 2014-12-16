@@ -5,10 +5,47 @@
 	&:first-child {
 		padding-top: 25px;
 	}
+	select {
+		max-width: 100%;
+	}
+	
+	ul {
+		padding-left: 1.5em;
+		margin-bottom: 0;
+	}
 }
+
 .widget-title {
 	@extend %title-type-1-mob;
 }
+
+// search
+.widget_search {
+	.search-field {
+		width: 160px;
+	}
+	.search-submit {
+		width: 85px;
+		padding-top: 6px;
+	}
+}
+
+// calendar
+.widget_calendar {
+	table {
+		width: 100%;
+	}
+	td, th {
+		text-align: center;
+	}
+	td#prev {
+		text-align: left;
+	}
+	td#next {
+		text-align: right;
+	}
+}
+
 .widget-pickup,
 .widget-induction,
 .editor-choice-widget {

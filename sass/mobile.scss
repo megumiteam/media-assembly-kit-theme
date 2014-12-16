@@ -30,47 +30,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 // Font size
 #page {
-	@include fz( 15 );
+	@include fz( $fontsize__page-mobile );
 }
 #masthead {
-	@include fz( 12 );
+	@include fz( $fontsize__masthead-mobile );
 }
 
 /* Link color
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-a {
-	color: #535353;
-	text-decoration: none;
-}
-#masthead {
+@import "modules/mobile/links";
 
-	a {
-		color: #535353;
-	}
-	& .header-meta a {
-		color: white;
-	}
-}
-.entry-meta,
-.posted-in-media,
-.author {
-
-	a {
-		color: #535353;
-	}
-}
-#khm-15 {
-
-	a {
-		color: #e197a0;
-	}
-}
-.entry-content {
-
-	a {
-		color: #e197a0;
-	}
-}
 /* Layout
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #page {}
@@ -457,7 +426,7 @@ a {
 		}
 	}
 }
-#watts-new-box {
+#whats-new-box {
 	margin-top: 25px;
 }
 #post-box,
@@ -778,27 +747,28 @@ a {
 
 /* WordPress
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "wordpress";
+@import "modules/common/wordpress";
 
 /* Slide
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "mobile/slide";
+@import "modules/mobile/slide";
 
 /* Slide Pan Pan
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "mobile/slide-pan-pan";
+@import "modules/mobile/slide-pan-pan";
 
 /* entry-content
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "mobile/entry-content";
-
-/* Widget
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "mobile/widget";
+@import "modules/mobile/entry-content";
 
 /* Pickup
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@import "mobile/pickup";
+@import "modules/mobile/pickup";
+
+/* Widget
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@import "modules/mobile/widget";
+
 
 /* Parts
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2014-12-15 09:29:34+00:00\n"
+"POT-Creation-Date: 2014-12-16 09:32:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-summary.php:25 inc/template-tags.php:385
+#: content-summary.php:25 inc/template-tags.php:396
 msgid "Read the full story"
 msgstr ""
 
@@ -461,7 +461,7 @@ msgstr ""
 msgid "TOP"
 msgstr ""
 
-#: inc/parts-category-posts.php:128 inc/template-tags.php:312
+#: inc/parts-category-posts.php:128 inc/template-tags.php:323
 msgid "The following articles list"
 msgstr ""
 
@@ -474,7 +474,7 @@ msgstr ""
 msgid "Editor's Choice"
 msgstr ""
 
-#: inc/parts-external-site.php:32
+#: inc/parts-external-site.php:35
 msgid "This article provides original articles"
 msgstr ""
 
@@ -523,7 +523,7 @@ msgstr ""
 msgid "&#187; View more"
 msgstr ""
 
-#: inc/parts-watts-new.php:56 inc/template-tags.php:66
+#: inc/parts-whats-new.php:56 inc/template-tags.php:77
 msgid "What's New"
 msgstr ""
 
@@ -621,47 +621,47 @@ msgstr ""
 msgid "Choose from the most used %s"
 msgstr ""
 
-#: inc/template-tags.php:84
+#: inc/template-tags.php:95
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/template-tags.php:209
+#: inc/template-tags.php:220
 msgid "View all posts in %s"
 msgstr ""
 
-#: inc/template-tags.php:271
+#: inc/template-tags.php:282
 msgid "Photo enlargement"
 msgstr ""
 
-#: inc/template-tags.php:282
+#: inc/template-tags.php:293
 msgid "Permalink to %s"
 msgstr ""
 
-#: inc/template-tags.php:320
+#: inc/template-tags.php:331
 msgid "<i class=\"fa fa-chevron-left\"></i>Previous Page"
 msgstr ""
 
-#: inc/template-tags.php:322 inc/template-tags.php:363
+#: inc/template-tags.php:333 inc/template-tags.php:374
 msgid "To the top of the page"
 msgstr ""
 
-#: inc/template-tags.php:325
+#: inc/template-tags.php:336
 msgid "Next Page<i class=\"fa fa-chevron-right\"></i>"
 msgstr ""
 
-#: inc/template-tags.php:350
+#: inc/template-tags.php:361
 msgid "&lt;"
 msgstr ""
 
-#: inc/template-tags.php:351
+#: inc/template-tags.php:362
 msgid "&gt;"
 msgstr ""
 
-#: inc/template-tags.php:361
+#: inc/template-tags.php:372
 msgid "Previous article"
 msgstr ""
 
-#: inc/template-tags.php:366
+#: inc/template-tags.php:377
 msgid "Next article"
 msgstr ""
 

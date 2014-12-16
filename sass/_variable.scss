@@ -1,0 +1,40 @@
+// body
+$font__main: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, sans-serif;
+$color__body-text: #535353;
+$color__body-background: white image-url('background/back-dot-03.png');
+
+// form
+$color__button-border: #b4b4b4;
+$color__button-background: #e6e6e6;
+
+$color__button-border-hover: $color__button-border;
+$color__button-border-focus: $color__button-border;
+
+$color__input-text: #666;
+$color__input-border: $color__button-border;
+
+$color__input-text-focus: $color__body-text;
+
+// font size
+$fontsize__page-pc: 14;
+$fontsize__media-nav-box: 12;
+$fontsize__global-nav-box: 16;
+$fontsize__entry-content: 15;
+$fontsize__page-mobile: 15;
+$fontsize__masthead-mobile: 12;
+
+// link color
+$color__link: $color__body-text;
+$color__link-khm-15: #e197a0;
+$color__link-entry-title: $color__body-text;
+$color__link-entry-title-hover-background: #f2f2f2;
+$color__link-entry-meta: #707070;
+$color__link-entry-meta-hover: #e197a0;
+$color__link-author: $color__link-entry-meta;
+$color__link-entry-content: #e197a0;
+
+$color__link-masthead-mobile: $color__body-text;
+$color__link-masthead-header-meta-mobile: white;
+$color__link-khm-15-mobile: $color__link-khm-15;
+$color__link-entry-meta-mobile: $color__body-text;
+$color__link-entry-content-mobile: $color__link-entry-content;
