@@ -65,15 +65,17 @@ function mak_scripts_styles() {
 	if ( file_exists( ABSPATH . '/assets/lib/jquery.fitvids.js' ) && is_single() )
 		wp_enqueue_script( 'fitvids-script', get_site_url() . '/assets/lib/jquery.fitvids.js', array('jquery'), '1.1', true );
 
-	// slide-pan-pan
-	if ( file_exists( ABSPATH . '/assets/lib/slide-pan-pan.min.js' ) )
-		wp_enqueue_script( 'slide-pan-pan', get_site_url() . '/assets/lib/slide-pan-pan.min.js', array(), mak_file_time_stamp( '/lib/slide-pan-pan.min.js' ), true );
+	// slide-pan-pan mobile only
+	if ( is_child_theme() ) {
+		if ( file_exists( ABSPATH . '/assets/lib/slide-pan-pan.min.js' ) )
+			wp_enqueue_script( 'slide-pan-pan', get_site_url() . '/assets/lib/slide-pan-pan.min.js', array(), mak_file_time_stamp( '/lib/slide-pan-pan.min.js' ), true );
+	}
 
 	// Loads main stylesheet.
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'mak', '/assets/css/mobile.css', array(), '' );
+		wp_enqueue_style( 'mak', get_site_url() . '/assets/css/mobile.css', array(), '' );
 	} else {
-		wp_enqueue_style( 'mak', '/assets/css/pc.css', array(), '' );
+		wp_enqueue_style( 'mak', get_site_url() . '/assets/css/pc.css', array(), '' );
 	}
 
 	// Loads JavaScript file with functionality specific to mak.
