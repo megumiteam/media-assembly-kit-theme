@@ -1,0 +1,131 @@
+.parts-title {
+	@extend %title-type;
+}
+
+.archive-title {
+	@include fz( 32 );
+	color: $color__text-archive-title-pc;
+	border-bottom: 1px solid $color__border-archive-title-pc;
+	padding-bottom: 15px;
+
+	.home & {
+		@extend %title-type;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+}
+
+.description {
+	@extend %hr-border-bottom;
+}
+
+// .archive-article
+.archive-article {
+	margin-top: 10px;
+	padding-bottom: 20px;
+	@extend %hr-border-bottom;
+
+	.entry-title {
+		@include fz( 22 );
+		line-height: 1.2;
+		margin: 5px 0 0;
+	}
+	.posted-in-media,
+	.author,
+	.entry-date {
+		color: $color__text-entry-meta-pc;
+		@include fz( 11 );
+		margin: 5px 10px 8px 0;
+		display: inline-block;
+	}
+	.entry-summary {
+		color: $color__text-entry-summary;
+		p {
+			@include fz( 11 );
+			margin-bottom: 0;
+		}
+	}
+
+	&.thumbnail-true {
+		overflow: hidden;
+		@extend %clearfix;
+
+		.entry-header,
+		.entry-summary {
+			width: 100%;
+			margin: 0 0 0 -145px;
+			padding: 0 0 0 145px;
+			float: left;
+		}
+		.thumbnail {
+			width: 125px;
+			margin: 0;
+			float: right;
+
+			img {
+				display: block;
+			}
+		}
+	}
+}
+
+// #archive-nav
+#archive-nav {
+	font-family: 'Oswald';
+	text-align: center;
+	margin-top: 20px;
+
+	ul {
+		@extend %ul;
+		text-align: center;
+		display: inline-block;
+	}
+	li {
+		margin-left: 8px;
+		float: left;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	a,
+	.current {
+		color: $color__link;
+		padding: 3px 10px;
+		display: block;
+		@extend %dropshadow-box;
+	}
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $color__text-archive-nav-current;
+			background-color: $color__background-archive-nav-current;
+		}
+	}
+	.current {
+		color: $color__text-archive-nav-current;
+		background-color: $color__background-archive-nav-current;
+	}
+	.dots {
+		vertical-align: text-top;
+		padding: 3px 0;
+		display: block;
+		@include box-shadow( none );
+	}
+}
+
+// .color-cat
+.color-cat {
+	margin-bottom: 0;
+
+	a {
+		@include fz(12);
+		margin: 0 5px 5px 0;
+		@include border-radius( 9px );
+		padding: 0 16px;
+		display: inline-block;
+		background-color: $color__background-color-cat;
+		color: $color__link-color-cat;
+	}
+}

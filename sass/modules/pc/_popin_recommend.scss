@@ -1,7 +1,5 @@
 #ad-popin-recommend {
 	margin-top: 20px;
-	border: 1px #b4b4b4 solid;
 	padding: 25px 30px;
-	background: #fff;
-	@extend %dropshadow-01;
+	@extend %dropshadow-box;
 }

@@ -1,6 +1,6 @@
 .widget {
 	padding-bottom: 25px;
-	background: #fff;
+	background: $color__common-background;
 
 	&:first-child {
 		padding-top: 25px;
@@ -16,7 +16,7 @@
 }
 
 .widget-title {
-	@extend %title-type-1-mob;
+	@extend %title-type-mob;
 }
 
 // search
@@ -46,9 +46,9 @@
 	}
 }
 
-.widget-pickup,
-.widget-induction,
-.editor-choice-widget {
+.widget.widget-pickup,
+.widget.widget-induction,
+.widget.editor-choice-widget {
 
 	ul {
 		@extend %ul;
@@ -97,10 +97,7 @@
 	padding-left: 10px;
 }
 
-#pickup-box {
-	background: #fff;
-}
-.writer-list{
+.widget.writer-list{
 
 	ul {
 		@extend %ul;
@@ -150,14 +147,14 @@
 			width: 50%;
 			font-family: 'Oswald';
 			@include fz( 16 );
-			color: #fff;
+			color: $color__text-ranking-nav;
 			text-align: center;
 			margin: 0;
-			background: #aa917a;
+			background: $color__background-ranking-nav;
 			float: left;
 
 			&.current {
-				background: #e197a0;
+				background: $color__background-ranking-nav-current;
 			}
 		}
 	}
@@ -182,8 +179,8 @@
 			text-align: center;
 			font-family: 'Open Sans';
 			margin-right: 0;
-			color: white;
-			background: #d8dbd9;
+			color: $color__text-ranking-number;
+			background: $color__background-ranking-number;
 			display: block;
 			position: absolute;
 			top: 0;
@@ -194,7 +191,7 @@
 		&.ranking-3 {
 
 			&:before {
-				background: #b8bcba;
+				background: $color__background-ranking-number-top;
 			}
 		}
 
@@ -210,7 +207,7 @@
 	}
 }
 
-.widget_categories {
+.widget.widget_categories {
 
 	ul {
 		margin: 0;
@@ -230,14 +227,13 @@
 		}
 	}
 	a {
-		color: #535353;
 		text-decoration: none;
 		text-align: center;
 		margin: 0 auto;
 		@include border-radius(8px);
-		border: 1px solid #b4b4b4;
 		padding: 9px 0;
-		background: #fcfbf9;
+		background: $color__background-widget_categories-a;
+		border: 1px solid $color__common-border;
 		display: block;
 	}
 }

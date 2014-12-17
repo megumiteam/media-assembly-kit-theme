@@ -1,7 +1,7 @@
 #slide-box {
 	margin-top: 5px;
 	overflow: hidden;
-	background: #fff;
+	background: $color__background-slide-box;
 	position: relative;
 }
 #slide {
@@ -12,10 +12,10 @@
 	}
 	.title {
 		@include fz( 15 );
-		color: #fff;
+		color: $color__text-slide;
 		margin: 0;
 		padding: 8px 10px;
-		background: #e197a0;
+		background: $color__background-slide;
 		@include opacity(.85);
 		position: absolute;
 		bottom: 0;
@@ -24,7 +24,7 @@
 	}
 	.thumbnail {
 		margin: 0;
-		background: #fff;
+		background: $color__background-slide-thumbnail;
 
 		img {
 			display: block;

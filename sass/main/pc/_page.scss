@@ -1,0 +1,11 @@
+// .page-article
+.page-article {
+
+	.entry-title {
+		@include fz( 32 );
+		color: $color__text-entry-title;
+		@extend %hr-border-bottom;
+		padding-bottom: 15px;
+		clear: both;
+	}
+}

@@ -19,10 +19,10 @@
 		span {
 			margin: 0 0 0 3px;
 			@include border-radius( 4px 4px 0 0 );
-			border: 1px solid #b4b4b4;
+			border: 1px solid $color__common-border;
 			padding: 4px 0;
-			background: #999;
-			color: white;
+			background: $color__background-category-induction-nav;
+			color: $color__text-category-induction-nav;
 			cursor: pointer;
 			display: block;
 		}
@@ -30,8 +30,8 @@
 
 			span {
 				border-bottom-color: #fff;
-				color: #535353 !important;
-				background-color: white !important;
+				color: $color__text-category-induction-nav-current !important;
+				background-color: $color__background-category-induction-nav-current !important;
 			}
 		}
 		&:first-child {
@@ -42,13 +42,12 @@
 		}
 	}
 }
+
 .category-induction-content {
 	margin: 0;
-	border: 1px solid #b4b4b4;
 	padding: 30px;
 	list-style: none;
-	background: #fff;
-	@extend %dropshadow-01;
+	@extend %dropshadow-box;
 	display: none;
 	overflow: hidden;
 	@extend %clearfix;
@@ -74,7 +73,7 @@
 				margin-bottom: 10px;
 
 				img {
-					border: 1px solid #b4b4b4;
+					border: $color__border-entry-content-thumbnail;
 					display: block;
 				}
 			}
@@ -87,16 +86,16 @@
 			text-decoration: none;
 
 			&:hover {
-				background: #f2f2f2;
+				background: $color__link-entry-title-hover-background;
 
 				.title {
-					background: #f2f2f2;
+					background: $color__link-entry-title-hover-background;
 				}
 			}
 		}
 		i {
 			@include fz( 17 );
-			color: #e197a0;
+			color: $color__text-category-induction-content-arrow;
 			position: absolute;
 			top: 4px;
 			left: -12px;

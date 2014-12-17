@@ -1,0 +1,15 @@
+#page {}
+#content {
+	margin-top: 5px;
+	@extend %clearfix;
+
+	.single &,
+	.page &,
+	.error404 & {
+		background: $color__background-dropshadow-box;
+	}
+}
+#colophon {
+	padding: 25px 0;
+	background: $color__background-colophon-mobile;
+}

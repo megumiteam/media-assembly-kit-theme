@@ -1,0 +1,43 @@
+/* Search Form */
+.search-open {
+	width: 250px;
+	@include border-radius(10px);
+	border: none;
+	padding: 0 5px;
+	background: #c1baae;
+	@include opacity( 1 );
+}
+.search-close {
+	width: 0;
+	border: none;
+	padding: 0;
+	background: #e7e3dc;
+	@include opacity( 0 );
+}
+.headroom-nav {
+	position: relative;
+	z-index: 901;
+}
+.nav--not-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	.admin-bar & {
+		top: 32px;
+	}
+}
+.nav--stop {
+	position: absolute;
+}
+#global-nav-box.nav--not-top {
+	margin-top: 0;
+}
+.side {
+	position: relative;
+	z-index: 900;
+}
+.side--not-top {
+	position: fixed;
+}

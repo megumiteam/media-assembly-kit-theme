@@ -1,0 +1,10 @@
+#whats-new-box {
+	margin-top: 25px;
+}
+#post-box,
+#entry-box,
+.postsContents {
+	position: relative;
+	min-height: 100px;
+	background-color: $color__common-background;
+}

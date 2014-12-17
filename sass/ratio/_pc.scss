@@ -1,0 +1,19 @@
+/* Module
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* masthead */
+.site-title {
+
+	a {
+		background-image: image-url( $image__site-title-pc-2x );
+		@include background-size( $boxsize__width-site-title-pc $boxsize__height-site-title-pc );
+	}
+}
+
+.footer-site-title {
+
+	a {
+		background-image: image-url( $image__footer-site-title-pc-2x );
+		@include background-size( $boxsize__width-footer-site-title-pc $boxsize__height-footer-site-title-pc );
+	}
+}
+

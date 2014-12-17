@@ -1,0 +1,35 @@
+.not-found {
+
+	.entry-title {
+		@include fz( 32 );
+		color: $color__text-entry-title;
+		@extend %hr-border-bottom;
+		padding-bottom: 15px;
+		clear: both;
+	}
+	.search-form {
+		margin-top: 20px;
+		padding: 6px 25px;
+		background: $color__background-404-search-form-pc;
+		display: inline-block;
+		@extend %clearfix;
+	}
+	.search-field {
+		outline: none;
+		border: none;
+		padding: 0;
+		background: none;
+	}
+	.search-submit {
+		width: 16px;
+		height: 17px;
+		@include fz( 17 );
+		outline: none;
+		margin: 0;
+		border: none;
+		padding: 0;
+		background: none;
+		overflow: hidden;
+		line-height: 1;
+	}
+}

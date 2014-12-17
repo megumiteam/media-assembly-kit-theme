@@ -1,10 +1,8 @@
 .widget {
 	width: 300px;
-	background: #fff;
 	margin-top: 20px;
-	border: 1px #b4b4b4 solid;
 	padding: 25px 20px;
-	@extend %dropshadow-01;
+	@extend %dropshadow-box;
 
 	&:first-child {
 		margin-top: 0;
@@ -20,7 +18,7 @@
 }
 
 .widget-title {
-	@extend %title-type-1;
+	@extend %title-type;
 }
 
 // search
@@ -50,21 +48,20 @@
 	}
 }
 
-
-.widget-induction {
+.widget.widget-induction {
 
 	ul {
 		@extend %ul;
 	}
 	li {
-		margin-top: 10px;
-		border-top: 1px dashed #898989;
-		padding-top: 10px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		@extend %hr-border-bottom;
 
-		&:first-child {
-			margin-top: 0;
-			border-top: none;
-			padding-top: 0;
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
+			padding-bottom: 0;
 		}
 		.title {
 			@include fz(14);
@@ -78,7 +75,7 @@
 				.content {
 
 					p {
-						background: #e6e2de;
+						background: $color__link-entry-title-hover-background;
 					}
 				}
 			}
@@ -108,21 +105,21 @@
 		}
 	}
 }
-.writer-list{
+.widget.writer-list{
 	@include fz( 15 );
 
 	ul {
 		@extend %ul;
 	}
 	li {
-		margin-top: 10px;
-		border-top: 1px dashed #898989;
-		padding-top: 10px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		@extend %hr-border-bottom;
 
-		&:first-child {
-			margin-top: 0;
-			border-top: none;
-			padding-top: 0;
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
+			padding-bottom: 0;
 		}
 		a {
 			overflow: hidden;
@@ -135,7 +132,7 @@
 			&:hover {
 
 				span {
-					background: #fff9b1;
+					background: $color__link-entry-title-hover-background;
 				}
 			}
 		}
@@ -174,14 +171,14 @@
 			width: 50%;
 			font-family: 'Oswald';
 			@include fz( 16 );
-			color: #fff;
+			color: $color__text-ranking-nav;
 			text-align: center;
 			margin: 0;
-			background: #aa917a;
+			background: $color__background-ranking-nav;
 			float: left;
 
 			&.current {
-				background: #e197a0;
+				background: $color__background-ranking-nav-current;
 			}
 		}
 	}
@@ -203,8 +200,8 @@
 			text-align: center;
 			font-family: 'Open Sans';
 			margin-right: 0;
-			color: white;
-			background: #d8dbd9;
+			color: $color__text-ranking-number;
+			background: $color__background-ranking-number;
 			display: block;
 			position: absolute;
 			top: 0;
@@ -215,7 +212,7 @@
 		&.ranking-3 {
 
 			&:before {
-				background: #b8bcba;
+				background: $color__background-ranking-number-top;
 			}
 		}
 

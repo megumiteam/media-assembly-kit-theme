@@ -1,0 +1,12 @@
+// .page-article
+.page-article {
+
+	.entry-title {
+		@include fz( 22 );
+		color: $color__text-entry-title;
+		margin: 20px 0 0;
+		padding: 10px;
+		background: $color__background-entry-title-mobile;
+		clear: both;
+	}
+}

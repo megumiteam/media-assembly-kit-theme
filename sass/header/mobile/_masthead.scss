@@ -1,0 +1,22 @@
+#masthead {
+
+	a {
+		color: $color__link-masthead-mobile;
+	}
+	& .header-meta a {
+		color: $color__text-header-meta;
+	}
+}
+.site-title {
+	width: $boxsize__width-site-title-mobile;
+	height: $boxsize__height-site-title-mobile;
+	margin: 17px auto 0;
+	overflow: hidden;
+
+	a {
+		width: $boxsize__width-site-title-mobile;
+		padding-top: $boxsize__height-site-title-mobile;
+		background: image-url( $image__site-title-mobile );
+		display: block;
+	}
+}

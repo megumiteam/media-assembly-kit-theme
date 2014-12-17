@@ -1,0 +1,47 @@
+.not-found {
+
+	.entry-title {
+		@include fz( 22 );
+		color: $color__text-entry-title;
+		margin: 20px 0 0;
+		padding: 10px;
+		background: $color__background-entry-title-mobile;
+		clear: both;
+	}
+	.search-foam-box {
+		margin-top: 15px;
+		padding: 10px;
+		background: $color__background-404-search-form-mobile;
+		@extend %clearfix;
+
+		.search-form {
+			display: inline-block;
+			float: left;
+		}
+		.search-field {
+			width: 100%;
+			@include fz(12);
+			outline: none;
+			border: none;
+			padding: 0;
+			background: none;
+		}
+		input[type="search"] {
+			@include box-sizing( border-box );
+		}
+		.search-toggle {
+			width: 14px;
+			@include fz(15);
+			line-height: 1;
+			margin-left: 10px;
+			display: inline-block;
+
+			i {
+				margin: 0;
+			}
+		}
+		.search-submit {
+			display: none;
+		}
+	}
+}

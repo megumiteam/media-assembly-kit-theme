@@ -35,9 +35,6 @@
 	var editorChoiceBox           = $('#editor-choice-box');
 	var editorChoice              = editorChoiceBox.children('#editor-choice');
 
-	var footerMenu                = $('nav#footer-nav-box');
-	var footerMenuList            = footerMenu.find('li');
-
 	var backgroundLink            = $('div#background-link');
 	var trunk8                    = $( '.trunk8' );
 	var trunk8Lines               = '';
@@ -256,9 +253,7 @@
 			});
 		});
 	}
-	if ( footerMenu[0] ) {
-		footerMenuList.prepend('<i class="fa fa-caret-right"></i>');
-	}
+
 	// Background
 	$(window).resize(function(){
 		if( backgroundLink.size()>0 ) {

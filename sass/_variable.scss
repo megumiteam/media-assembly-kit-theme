@@ -2,9 +2,33 @@
 $font__main: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, sans-serif;
 $color__body-text: #535353;
 $color__body-background: white image-url('background/back-dot-03.png');
+$color__link: $color__body-text;
+
+$color__common-background: white;
+$color__common-border: #b4b4b4;
+
+// %title-type
+$color__text-title-type: $color__body-text;
+$color__text-title-type-first: #e197a0;
+$color__background-title-type: image-url('background/back-dot.png');
+$color__background-title-type-span: $color__common-background;
+
+// %dropshadow-box
+$default-box-shadow-blur: 10px;
+$default-box-shadow-color: rgba( 194, 194, 194, .6 );
+$color__border-dropshadow-box: $color__common-border;
+$color__background-dropshadow-box: $color__common-background;
+
+// %hr-border-bottom
+$color__border-hr-border-bottom: $color__common-border;
+$style__border-hr-border-bottom: dashed;
+
+// %dlbtn
+$color__text-dlbtn: white;
+$color__background-dlbtn: #656565;
 
 // form
-$color__button-border: #b4b4b4;
+$color__button-border: $color__common-border;
 $color__button-background: #e6e6e6;
 
 $color__button-border-hover: $color__button-border;
@@ -15,26 +39,191 @@ $color__input-border: $color__button-border;
 
 $color__input-text-focus: $color__body-text;
 
-// font size
-$fontsize__page-pc: 14;
-$fontsize__media-nav-box: 12;
-$fontsize__global-nav-box: 16;
-$fontsize__entry-content: 15;
-$fontsize__page-mobile: 15;
-$fontsize__masthead-mobile: 12;
-
-// link color
-$color__link: $color__body-text;
-$color__link-khm-15: #e197a0;
-$color__link-entry-title: $color__body-text;
-$color__link-entry-title-hover-background: #f2f2f2;
-$color__link-entry-meta: #707070;
-$color__link-entry-meta-hover: #e197a0;
-$color__link-author: $color__link-entry-meta;
-$color__link-entry-content: #e197a0;
+//
+// #masthead
+//
 
 $color__link-masthead-mobile: $color__body-text;
-$color__link-masthead-header-meta-mobile: white;
-$color__link-khm-15-mobile: $color__link-khm-15;
-$color__link-entry-meta-mobile: $color__body-text;
-$color__link-entry-content-mobile: $color__link-entry-content;
+
+// #mak_media_nav
+$color__background-media-nav-box: #eceae6;
+$color__border-media-nav-box: $color__body-text;
+
+// .site-title
+// pc
+$boxsize__width-site-title-pc: 266px;
+$boxsize__height-site-title-pc: 66px;
+$image__site-title-pc: 'site-logo.png';
+$image__site-title-pc-2x: 'site-logo@2x.png';
+// mobile
+$boxsize__width-site-title-mobile: 207px;
+$boxsize__height-site-title-mobile: 51px;
+$image__site-title-mobile: 'site-logo-mobile.png';
+$image__site-title-mobile-2x: 'site-logo-mobile@2x.png';
+
+// #header-meta (mobile only)
+$color__background-header-meta: #78aeb6;
+$color__text-header-meta: white;
+
+// #global-nav-box (pc only)
+$color__background-global-nav-box: #78aeb6;
+$color__text-global-nav-box: white;
+$color__border-global-nav-box: white;
+$color__background-global-nav-box-hover: #9fc5cc;
+$color__background-global-nav-box-current: $color__background-global-nav-box-hover;
+
+// #khm-15
+// pc
+$color__text-khm-15-pc: $color__body-text;
+$color__link-khm-15-pc: #e197a0;
+// mobile
+$color__text-khm-15-mobile: #a0a0a0;
+$color__link-khm-15-mobile: $color__link-khm-15-pc;
+
+//
+// #main
+//
+
+// .archive-title
+// pc
+$color__text-archive-title-pc: $color__body-text;
+$color__border-archive-title-pc: $color__common-border;
+// mobile
+$color__text-archive-title-mobile: white;
+$color__background-archive-title-mobile: #c8cc2e;
+
+// #archive-nav
+// pc
+$color__text-archive-nav-current: white;
+$color__background-archive-nav-current: #e197a0;
+// mobile
+$color__background-archive-nav: $color__common-background;
+$color__text-archive-nav-a: white;
+$color__background-archive-nav-a: #c0c0c0;
+
+// .entry-title
+$color__text-entry-title: $color__body-text;
+$color__link-entry-title: $color__body-text;
+$color__link-entry-title-hover-background: #f2f2f2;
+$color__background-entry-title-mobile: image-url('background/back-dot-02.png');
+
+// .posted-in-media
+$color__text-posted-in-media: #e197a0;
+
+// .entry-meta
+// pr
+$color__text-entry-meta-pr: white;
+$color__background-entry-meta-pr: #9fc5cc;
+// pc
+$color__text-entry-meta-pc: #707070;
+$color__link-entry-meta-pc: $color__text-entry-meta-pc;
+$color__link-entry-meta-pc-hover: #e197a0;
+$color__link-author: $color__text-entry-meta-pc;
+// mobile
+$color__text-entry-meta-mobile: $color__body-text;
+$color__link-entry-meta-mobile: $color__text-entry-meta-mobile;
+
+// .color-cat
+$color__link-color-cat: white;
+$color__background-color-cat: #999;
+
+// .social-entry-box
+$color__background-social-entry-box: #f7f7f7;
+$color__border-social-entry-box: $color__common-border;
+
+// .entry-summary
+$color__text-entry-summary: #707070;
+
+// .entry-content
+$color__link-entry-content: #e197a0;
+$color__border-entry-content-thumbnail: 1px solid #c9c9c9;
+$color__background-entry-content-blockquote: #F3F3F3;
+
+// #more-link-box
+$color__link-more-link-box: white;
+$color__background-more-link-box: #9fc5cc;
+
+// #single-nav
+$color__link-single-nav: white;
+$color__background-single-nav: $color__common-border;
+$color__background-single-nav-hover: #e197a0;
+
+// .not-found search-form
+$color__background-404-search-form-pc: #e7e3dc;
+$color__background-404-search-form-mobile: #eceae6;
+
+//
+// #secondary
+//
+
+// #ranking-nav
+$color__text-ranking-nav: white;
+$color__background-ranking-nav: #aa917a;
+$color__background-ranking-nav-current: #e197a0;
+$color__text-ranking-number: white;
+$color__background-ranking-number: #d8dbd9;
+$color__background-ranking-number-top: #b8bcba;
+
+// .widget_categories (mobile only)
+$color__background-widget_categories-a: #fcfbf9;
+
+//
+// #colophon footer
+//
+
+// footer background
+$color__background-colophon-pc: $color__common-background;
+$color__background-colophon-mobile: #eceae6;
+
+// .footer-site (pc only)
+$boxsize__width-footer-site-title-pc: 246px;
+$boxsize__height-footer-site-title-pc: 61px;
+$image__footer-site-title-pc: 'footer-site-logo.png';
+$image__footer-site-title-pc-2x: 'footer-site-logo@2x.png';
+
+// footer .search-foam-box (mobile only)
+$color__background-colophon-search-foam-box: $color__common-background;
+$color__border-colophon-search-foam-box: #c9c9c9;
+
+// #footer-nav-box
+$color__text-footer-nav-box-arrow: #e197a0;
+
+// #related-menu (mobile only)
+$color__background-related-menu: $color__common-background;
+$color__border-related-menu: #e197a0;
+
+
+//
+// Modules
+//
+
+// #slide-box
+$color__background-slide-box: $color__common-background;
+$color__text-slide: white;
+$color__background-slide: #e197a0;
+$color__background-slide-thumbnail: white;
+
+// #category-posts-tab (mobile only)
+$color__text-category-posts-nav: white;
+$color__background-category-posts-nav: #c8cc2e;
+$color__border-category-posts-nav: white;
+$color__background-category-posts-nav-current: #c8cc2e;
+$color__border-category-posts-nav-current: #f8fb77;
+
+// #carousel-box (pc only)
+$color__text-bx-controls-direction: white;
+$color__background-bx-controls-direction: #c8cc2e;
+
+// #category-induction (pc only)
+$color__text-category-induction-nav: white;
+$color__background-category-induction-nav: #999;
+$color__text-category-induction-nav-current: #535353;
+$color__background-category-induction-nav-current: white;
+$color__text-category-induction-content-arrow: #e197a0;
+
+// #external-site
+$color__background-external-site: image-url('background/back-dot-02.png');
+$color__link-external-site: #e1969f;
+
+// #pickup-box (mobile only)
+$color__text-pickup-box-title: #e197a0;

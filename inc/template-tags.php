@@ -393,7 +393,7 @@ function mak_get_more_link( $post_id = '' ) {
 	if ( !$link )
 		return;
 
-	$output .= '<p class="more-link-box"><a href="' . $link . '" class="more-link">' . __( 'Read the full story', 'mak' ) . '</a></p>' . "\n";
+	$output .= '<p id="more-link-box"><a href="' . $link . '" class="more-link">' . __( 'Read the full story', 'mak' ) . '</a></p>' . "\n";
 	return $output;
 }
 

@@ -1,0 +1,36 @@
+#khm-15 {
+	margin: 20px 10px 0;
+
+	a {
+		color: $color__link-khm-15-mobile;
+	}
+
+	ul {
+		@extend %ul;
+		@include fz( 11 );
+	}
+
+	li {
+		color: $color__text-khm-15-mobile;
+		margin-right: 5px;
+		display: inline-block;
+
+		&:after {
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			margin-left: 10px;
+			content: "\f105";
+		}
+
+		&.current_item {
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

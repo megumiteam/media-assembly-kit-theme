@@ -1,0 +1,57 @@
+#page {}
+#masthead {
+	width: 1000px;
+	margin: 0 auto;
+}
+#slide-box {
+	@extend #masthead;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+#global-nav-box {
+	@extend #masthead;
+	margin-top: 5px;
+}
+#carousel-box {
+	@extend #masthead;
+	margin-top: 29px;
+}
+#khm-15 {
+	@extend #masthead;
+	margin-top: 40px;
+}
+#content {
+	@extend #masthead;
+	margin-top: 10px;
+	@extend %clearfix;
+
+	.home & {
+		margin-top: 20px;
+	}
+}
+#primary {
+	width: 680px;
+	float: left;
+}
+#main {
+	padding: 25px 30px;
+	@extend %dropshadow-box;
+}
+#secondary {
+	width: 300px;
+	float: right;
+}
+#editor-choice-box {
+	@extend #masthead;
+	margin-top: 50px;
+}
+#colophon {
+	min-width: 1000px;
+	margin-top: 50px;
+	background: $color__background-colophon-pc;
+}
+#in-footer {
+	@extend #masthead;
+	padding: 33px 0;
+	@extend %clearfix;
+}

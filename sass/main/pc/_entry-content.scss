@@ -1,0 +1,47 @@
+.entry-content {
+	@extend %clearfix;
+
+	a {
+		color: $color__link-entry-content;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.thumbnail {
+		width: 220px;
+		@include fz( 12 );
+		text-align: center;
+		margin: 0 30px 5px 0;
+		float: left;
+
+		img {
+			margin-bottom: 5px;
+			border: $color__border-entry-content-thumbnail;
+			display: block;
+		}
+		a {
+			color: $color__link-entry-content;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+
+				img {
+					@include opacity(.5);
+				}
+			}
+		}
+	}
+	blockquote {
+		padding:10px;
+		background: $color__background-entry-content-blockquote;
+		margin-bottom:1em;
+
+		p {
+			padding:10px;
+			margin-bottom: 0;
+		}
+	}
+}
+

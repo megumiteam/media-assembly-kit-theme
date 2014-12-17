@@ -1,0 +1,23 @@
+#media-nav-box {
+	padding: 8px 10px;
+	background: $color__background-media-nav-box;
+}
+#media-nav-box ul {
+	@extend %ul;
+
+	li {
+		display: inline-block;
+
+		a {
+			border-left: 1px solid $color__border-media-nav-box;
+			padding: 0 15px;
+		}
+		&:first-child {
+
+			a {
+				border-left: none;
+				padding-left: 0;
+			}
+		}
+	}
+}

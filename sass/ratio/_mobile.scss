@@ -1,0 +1,10 @@
+/* Module
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* masthead */
+.site-title {
+
+	a {
+		background-image: image-url( $image__site-title-mobile-2x );
+		@include background-size( $boxsize__width-site-title-mobile $boxsize__height-site-title-mobile );
+	}
+}

@@ -1,0 +1,16 @@
+/* Search Form */
+.search-open {
+	@include border-radius(10px);
+	border: none;
+	padding: 0 5px;
+	background: darken(#78aeb6, 10%);
+	@include opacity( 1 );
+}
+.search-close {
+	width: 0;
+	border: none;
+	padding: 0;
+	background: #e7e3dc;
+	@include opacity( 0 );
+}
+

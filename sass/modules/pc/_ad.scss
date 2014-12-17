@@ -1,0 +1,44 @@
+.mad {
+	margin: 0;
+}
+.mad-halfway-box {
+	margin-top: 10px;
+	@extend %hr-border-bottom;
+	padding-bottom: 20px;
+	@extend %clearfix;
+
+	.mad-halfway-left {
+		width: 50%;
+		float: left;
+	}
+	.mad-halfway-right {
+		width: 50%;
+		float: right;
+	}
+}
+.mad-summary-box {
+	margin-top: 30px;
+	@extend %clearfix;
+
+	.mad-summary-left {
+		width: 50%;
+		float: left;
+	}
+	.mad-summary-right {
+		width: 50%;
+		float: right;
+	}
+}
+.mad-single-box {
+	margin-top: 30px;
+	@extend %clearfix;
+
+	.mad-single-left {
+		width: 50%;
+		float: left;
+	}
+	.mad-single-right {
+		width: 50%;
+		float: right;
+	}
+}

@@ -1,0 +1,13 @@
+.site-title {
+	width: $boxsize__width-site-title-pc;
+	height: $boxsize__height-site-title-pc;
+	margin: 17px auto 0;
+	overflow: hidden;
+
+	a {
+		width: $boxsize__width-site-title-pc;
+		padding-top: $boxsize__height-site-title-pc;
+		background: image-url( $image__site-title-pc );
+		display: block;
+	}
+}

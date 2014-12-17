@@ -1,9 +1,7 @@
 #related-post {
 	margin-top: 20px;
-	border: 1px #b4b4b4 solid;
 	padding: 25px 30px;
-	background: #fff;
-	@extend %dropshadow-01;
+	@extend %dropshadow-box;
 
 	ul {
 		@extend %ul;
@@ -13,7 +11,7 @@
 			width: 300px;
 			min-height: 71px;
 			margin-bottom: 10px;
-			border-bottom: 1px dashed #898989;
+			@extend %hr-border-bottom;
 			padding-bottom: 10px;
 			float: left;
 

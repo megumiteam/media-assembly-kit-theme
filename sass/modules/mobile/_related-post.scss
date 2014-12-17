@@ -1,0 +1,33 @@
+#related-post {
+	margin-top: 25px;
+
+	ul {
+		@extend %ul;
+	}
+	li {
+		padding: 0 0 1px 10px;
+	}
+	.title {
+		@include fz(14);
+	}
+	.thumbnail-true {
+		overflow: hidden;
+		@extend %clearfix;
+
+		.title {
+			width: 100%;
+			margin: 0 0 0 -107px;
+			padding: 0 0 0 107px;
+			float: left;
+		}
+		.thumbnail {
+			width: 95px;
+			margin: 0;
+			float: right;
+
+			img {
+				display: block;
+			}
+		}
+	}
+}

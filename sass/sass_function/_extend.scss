@@ -12,28 +12,24 @@
 	list-style: none;
 }
 
-%title-type-1 {
+%title-type {
 	font-family: 'Oswald';
 	font-weight: normal;
 	@include fz( 26 );
 	line-height: 1;
-	color: #535353;
-	// mobile
-	// margin-bottom: 11px;
-	background: image-url('background/back-dot.png');
+	color: $color__text-title-type;
+	background: $color__background-title-type;
 
 	&:first-letter {
-		color: #e197a0;
+		color: $color__text-title-type-first;
 	}
 	span {
-		// mobile
-		// padding: 0 24px 0 10px;
 		padding-right: 24px;
-		background: #fff;
+		background: $color__background-title-type-span;
 	}
 }
-%title-type-1-mob {
-	@extend %title-type-1;
+%title-type-mob {
+	@extend %title-type;
 	margin-bottom: 11px;
 
 	span {
@@ -41,19 +37,16 @@
 	}
 }
 
-%title-type-2 {
-	@include fz( 22 );
-	color: #fff;
-	margin-bottom: 5px;
-	padding: 2px 10px;
-	background: #c8cc2e;
-}
-
-%dropshadow-01 {
-	@include box-shadow( 0 0 10px 0 rgba( 194, 194, 194, .6 ) );
+%dropshadow-box {
+	background: $color__background-dropshadow-box;
+	border: 1px solid $color__border-dropshadow-box;
+	@include box-shadow;
 }
 %dropshadow-reset {
 	@include box-shadow( none );
+}
+%hr-border-bottom {
+	border-bottom: 1px $style__border-hr-border-bottom $color__border-hr-border-bottom;
 }
 
 %dlbtn {
@@ -62,8 +55,8 @@
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
-	color: white;
-	background-color: #656565;
+	color: $color__text-dlbtn;
+	background-color: $color__background-dlbtn;
 	width: 405px;
 	padding: 10px;
 }

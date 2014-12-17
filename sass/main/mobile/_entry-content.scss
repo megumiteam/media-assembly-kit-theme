@@ -1,0 +1,39 @@
+.entry-content {
+	margin-top: 30px;
+	padding: 0 10px;
+
+	a {
+		color: $color__link-entry-content;
+	}
+
+	.iframe-wrapper {
+		display: block;
+	}
+	.thumbnail {
+		width: 175px;
+		@include fz( 12 );
+		text-align: center;
+		margin: 0 auto;
+
+		img {
+			margin-bottom: 5px;
+			border: $color__border-entry-content-thumbnail;
+			display: block;
+		}
+		a {
+			color: $color__link-entry-content;
+			text-decoration: none;
+		}
+	}
+	blockquote {
+		padding:10px;
+		background: $color__background-entry-content-blockquote;
+		margin-bottom:1em;
+
+		p {
+			padding:10px;
+			margin-bottom: 0;
+		}
+	}
+}
+

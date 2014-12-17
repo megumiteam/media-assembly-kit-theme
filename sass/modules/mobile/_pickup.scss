@@ -1,6 +1,6 @@
 #pickup-box {
 	padding-top: 25px;
-	background: #fff;
+	background: $color__common-background;
 
 	ul {
 		@extend %ul;
@@ -10,7 +10,7 @@
 
 		.title {
 			@include fz(14);
-			color: #e197a0;
+			color: $color__text-pickup-box-title;
 			margin: 0;
 			padding-left: 10px;
 
