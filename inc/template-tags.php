@@ -42,7 +42,7 @@ function mak_global_nav() {
 		'container'       => 'nav',
 		'container_id'    => 'global-nav-box',
 		'container_class' => 'global-menu',
-		'depth'           => 1,
+		'depth'           => 2,
 		'fallback_cb'     => ''
 	) );
 }
@@ -189,7 +189,7 @@ function mak_get_entry_terms( $args = array() ) {
 		'first'     => false,
 		'showcolor' => false,
 		'class'     => '',
-		'children'  => true,
+		'children'  => false,
 	);
 	$default = apply_filters( 'mak_get_entry_terms_default', $default );
 	$args    = wp_parse_args( $args, $default );
@@ -230,6 +230,54 @@ function mak_get_entry_terms( $args = array() ) {
 		$output .= $after . '</p>' . "\n";
 		return $output;
 	}
+}
+
+// mak_entry_author
+function mak_entry_author( $args = array() ) {
+	echo mak_get_entry_author( $args );
+}
+
+function mak_get_entry_author( $args = array() ) {
+	$default = array(
+		'size' => 96
+	);
+	$default = apply_filters( 'mak_get_entry_author_default', $default );
+	$args    = wp_parse_args( $args, $default );
+	extract($args);
+
+	$id           = get_the_ID();
+	$author_id    = get_the_author_meta( 'ID' );
+	$author_url   = esc_url( get_author_posts_url( $author_id ) );
+	$display_name = get_the_author_meta( 'display_name' );
+	$avatar       = get_avatar( $author_id, $size );
+
+	$output  = '<p class="post-author">';
+	$output .= '<span class="avatar"><a href="' . $author_url . '">' . $avatar . '</a></span> ';
+	$output .= '<a href="' . $author_url . '">' . $display_name . '</a>';
+	$output .= '</p>' . "\n";
+	
+	return $output;
+}
+
+// mak_entry_pr
+function mak_entry_pr( $args = array() ) {
+	echo mak_get_entry_pr( $args );
+}
+
+function mak_get_entry_pr( $args = array() ) {
+	$default = array(
+		'field_name' => '_pr_check'
+	);
+	$default = apply_filters( 'mak_get_entry_pr_default', $default );
+	$args    = wp_parse_args( $args, $default );
+	extract($args);
+
+	$output = '';
+	if( get_field( $field_name ) ) {
+		$output .= '<p class="pr">PR</p>';
+	}
+	
+	return $output;
 }
 
 // mak_entry_thumbnail
@@ -493,6 +541,9 @@ function mak_copyright() {
 function mak_get_copyright() {
 	$now_year  = date_i18n( 'Y' );
 	$copyright = get_option( 'copyright', '&copy; Your Corp. [year] All rights reserved. No reproduction or republication without written permission.' );
+	if ( is_child_theme() ) {
+		$copyright = get_option( 'mobile_copyright', '&copy; Shogakukan Inc. [year] All rights reserved.' );
+	}
 	$year      = get_option( 'copyright_year', $now_year );
 
 	if ( $now_year > $year )

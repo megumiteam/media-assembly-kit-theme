@@ -1,6 +1,6 @@
 #whats-new-box {
 	margin-top: 20px;
-	padding: 25px 30px;
+	padding: 25px 0;
 	@extend %dropshadow-box;
 }
 
@@ -9,4 +9,3 @@
 	position: relative;
 	min-height: 100px;
 }
-

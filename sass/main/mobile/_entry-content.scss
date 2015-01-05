@@ -1,5 +1,5 @@
 .entry-content {
-	margin-top: 30px;
+	margin-top: 10px;
 	padding: 0 10px;
 
 	a {
@@ -10,10 +10,11 @@
 		display: block;
 	}
 	.thumbnail {
-		width: 175px;
+		width: 110px;
 		@include fz( 12 );
 		text-align: center;
-		margin: 0 auto;
+		margin: 0 15px 5px 0;
+		float: left;
 
 		img {
 			margin-bottom: 5px;
@@ -24,6 +25,9 @@
 			color: $color__link-entry-content;
 			text-decoration: none;
 		}
+	}
+	.summary_the_content {
+		overflow: hidden;
 	}
 	blockquote {
 		padding:10px;

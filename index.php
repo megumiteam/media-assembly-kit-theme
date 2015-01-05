@@ -16,8 +16,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<?php mak_category_induction_post_list(); ?>
 		<main id="main" class="site-main" role="main">
-			<?php mak_archive_title(); ?>
 			<?php do_action( 'mak_before_main' ); ?>
+			<?php mak_archive_title(); ?>
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php do_action( 'mak_before_loop' ); ?>
@@ -27,9 +27,9 @@ get_header(); ?>
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
+			<?php if ( $wp_query->found_posts === 0 ) : mak_whats_new(); endif; ?>
 			<?php do_action( 'mak_after_main' ); ?>
 		</main><!-- #main -->
-		<?php if ( $wp_query->found_posts === 0 ) : mak_whats_new(); endif; ?>
 		<?php mak_content_nav(); ?>
 	</div>
 <?php get_footer(); ?>

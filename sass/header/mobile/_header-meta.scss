@@ -5,30 +5,36 @@
 	color: $color__text-header-meta;
 	@extend %clearfix;
 
-	.search-foam-box {
+	.search-form {
 		display: inline-block;
 		@extend %clearfix;
 		float: left;
-
-		.search-form {
-			float: right;
-		}
+		padding: 0 13px 0 26px;
+		background: $color__background-header-meta-search-foam-box;
+		@include border-radius( 13px );
+		position: relative;
 		.search-field {
 			outline: none;
-			transition: opacity .5s linear;
-		}
-		input[type="search"] {
 			@include box-sizing( border-box );
-		}
-		.search-toggle {
-			@include fz(17);
-			line-height: 1;
-			margin-right: 5px;
-			display: block;
-			float: left;
+			color: $color__text-header-meta;
+			border: none;
+			background: transparent;
 		}
 		.search-submit {
-			display: none;
+			position: absolute;
+			top: 4px;
+			left: 8px;
+			z-index: 10;
+			line-height: 1;
+			@include fz(17);
+			width: 16px;
+			height: 16px;
+			padding: 0;
+			overflow: hidden;
+			background: transparent;
+			text-shadow: none;
+			border: none;
+			color: $color__text-header-meta;
 		}
 	}
 
@@ -36,7 +42,7 @@
 		display: inline-block;
 		@extend %clearfix;
 		float: right;
-	
+		margin-top: 5px;
 		p {
 			margin: 0;
 			float: left;

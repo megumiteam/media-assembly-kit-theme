@@ -19,8 +19,8 @@ get_header(); ?>
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
+			<?php mak_whats_new(); ?>
 			<?php do_action( 'mak_after_main' ); ?>
 		</main><!-- #main -->
-		<?php mak_whats_new(); ?>
 	</div>
 <?php get_footer(); ?>

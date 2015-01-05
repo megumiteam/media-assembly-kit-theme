@@ -21,13 +21,7 @@
 
 // search
 .widget_search {
-	.search-field {
-		width: 160px;
-	}
-	.search-submit {
-		width: 85px;
-		padding-top: 6px;
-	}
+	@extend %search-form-set;
 }
 
 // calendar
@@ -145,7 +139,7 @@
 
 		p {
 			width: 50%;
-			font-family: 'Oswald';
+			font-family: 'Nunito';
 			@include fz( 16 );
 			color: $color__text-ranking-nav;
 			text-align: center;

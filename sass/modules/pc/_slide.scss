@@ -19,6 +19,14 @@
 		width: 298px;
 		padding: 40px 30px 0;
 		float: right;
+		.view-more {
+			a {
+				display: inline-block;
+				color: white;
+				background: #f49d7a;
+				padding: 0.75em 2em;
+			}
+		}
 	}
 	.thumbnail {
 		width: 700px;

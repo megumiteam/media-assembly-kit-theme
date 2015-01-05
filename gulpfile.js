@@ -40,7 +40,7 @@ gulp.task( 'fonts', function() {
 // javascript
 /*
 gulp.task( 'js', function() {
-	return gulp.src('js/media-assembly-kit.js')
+	return gulp.src('js/*.js')
 		.pipe($.jshint())
 		.pipe($.jshint.reporter('default'))
 		.pipe(gulp.dest('js'))
@@ -58,7 +58,8 @@ gulp.task( 'compass', function() {
 			style:     'expanded',
 			relative:  true,
 			sourcemap: true,
-			comments:  true
+			comments:  true,
+			force:     true
 		}))
 
 	// dist
@@ -70,13 +71,14 @@ gulp.task( 'compass', function() {
 			style:     'compressed',
 			relative:  true,
 			sourcemap: false,
-			comments:  false
+			comments:  false,
+			force:     true
 		}))
 });
 
 // watch
 gulp.task( 'watch', function () {
-	gulp.watch( 'js/media-assembly-kit.js', ['js'] );
+	gulp.watch( 'js/*.js', ['js'] );
 	gulp.watch( 'sass/{,*/}{,*/}*.scss', ['compass'] );
 	gulp.watch( 'images/{,*/}{,*/}*.*', ['images'] );
 });

@@ -19,7 +19,7 @@
 		span {
 			margin: 0 0 0 3px;
 			@include border-radius( 4px 4px 0 0 );
-			border: 1px solid $color__common-border;
+			//border: 1px solid $color__common-border;
 			padding: 4px 0;
 			background: $color__background-category-induction-nav;
 			color: $color__text-category-induction-nav;
@@ -29,7 +29,7 @@
 		&.current {
 
 			span {
-				border-bottom-color: #fff;
+				//border-bottom-color: #fff;
 				color: $color__text-category-induction-nav-current !important;
 				background-color: $color__background-category-induction-nav-current !important;
 			}
@@ -48,6 +48,7 @@
 	padding: 30px;
 	list-style: none;
 	@extend %dropshadow-box;
+	border: none;
 	display: none;
 	overflow: hidden;
 	@extend %clearfix;

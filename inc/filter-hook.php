@@ -45,6 +45,15 @@ function mak_pre_get_posts( $query ) {
 }
 add_action( 'pre_get_posts', 'mak_pre_get_posts' );
 
+//
+function mak_excerpt_length( $length ) {
+	if ( is_child_theme() ) {
+		$length = 100;
+	}
+	return $length;
+}
+add_filter( 'excerpt_mblength', 'mak_excerpt_length');
+
 function mak_excerpt_more( $more ) {
 	return '&hellip;';
 }

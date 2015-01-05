@@ -49,6 +49,7 @@ function mak_setup() {
 	add_image_size( 'square-193-image', 193, 100, true ); // Mobile @2x
 	add_image_size( 'square-175-image', 350, 450, true ); // Mobile @2x
 	add_image_size( 'square-148-image', 148, 148, true );
+	add_image_size( 'square-110-image', 110, 125, true );
 	add_image_size( 'square-100-image', 100, 70, true );
 	add_image_size( 'square-90-image', 90, 60, true );
 	add_image_size( 'square-70-image', 70, 70, true );

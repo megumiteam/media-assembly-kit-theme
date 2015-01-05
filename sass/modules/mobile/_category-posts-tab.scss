@@ -1,15 +1,6 @@
 #category-posts-tab {
 	display: block;
 
-	#current-bar {
-		display: none;
-/*
-		height: 3px;
-		background: $color__background-category-posts-tab-current;
-		position: absolute;
-		bottom: 0;
-*/
-	}
 	& > div {
 		width: 100%;
 		margin-top: 5px;
@@ -52,6 +43,7 @@
 			margin-left: 0;
 		}
 		&.current {
+			color: $color__text-category-posts-nav-current;
 			background: $color__background-category-posts-nav-current;
 			border-bottom-color: 3px solid $color__border-category-posts-nav-current;
 		}

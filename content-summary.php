@@ -17,13 +17,17 @@
 			<?php mak_entry_data( array( 'before' => '<i class="fa fa-clock-o"></i>' ) ); ?>
 			<?php mak_entry_terms( array( 'before' => '<i class="fa fa-folder-open-o"></i>' ) ); ?>
 			<?php mak_entry_terms( array( 'term_name' => 'post_tag', 'before' => '<i class="fa fa-tags"></i>' ) ); ?>
+			<?php mak_entry_author( array( 'size' => 20 ) ); ?>
+			<?php mak_entry_pr(); ?>
 		</div>
 	</header><!-- .entry-header -->
 	<section class="entry-content">
 		<?php do_action( 'mak_before_single_entry_content' ); ?>
 		<?php mak_entry_thumbnail( array( 'size' => 'square-218-image', 'lightbox' => true ) ); ?>
-		<?php summary_the_content( __( 'Read the full story', 'mak' ) ); ?>
-		<?php mak_more_link(); ?>
+		<div class="summary_the_content">
+			<?php summary_the_content( __( 'Read the full story', 'mak' ) ); ?>
+			<?php mak_more_link(); ?>
+		</div>
 		<?php do_action( 'mak_after_single_entry_content' ); ?>
 	</section><!-- .entry-content -->
 	<footer class="entry-footer">

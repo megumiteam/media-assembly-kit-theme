@@ -23,13 +23,7 @@
 
 // search
 .widget_search {
-	.search-field {
-		width: 160px;
-	}
-	.search-submit {
-		width: 85px;
-		padding-top: 6px;
-	}
+	@extend %search-form-set;
 }
 
 // calendar
@@ -106,7 +100,7 @@
 	}
 }
 .widget.writer-list{
-	@include fz( 15 );
+	@include fz( 13 );
 
 	ul {
 		@extend %ul;
@@ -169,8 +163,8 @@
 
 		p {
 			width: 50%;
-			font-family: 'Oswald';
-			@include fz( 16 );
+			font-family: 'Nunito';
+			@include fz( 12 );
 			color: $color__text-ranking-nav;
 			text-align: center;
 			margin: 0;

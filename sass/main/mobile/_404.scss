@@ -2,46 +2,26 @@
 
 	.entry-title {
 		@include fz( 22 );
-		color: $color__text-entry-title;
-		margin: 20px 0 0;
-		padding: 10px;
-		background: $color__background-entry-title-mobile;
-		clear: both;
+		color: $color__text-archive-title-mobile;
+		padding: 2px 10px;
+		margin-bottom: 0;
+		background: $color__background-archive-title-mobile;
 	}
-	.search-foam-box {
+	@extend %search-form-set;
+	.search-form {
 		margin-top: 15px;
-		padding: 10px;
-		background: $color__background-404-search-form-mobile;
-		@extend %clearfix;
-
-		.search-form {
-			display: inline-block;
-			float: left;
-		}
-		.search-field {
-			width: 100%;
-			@include fz(12);
-			outline: none;
-			border: none;
-			padding: 0;
-			background: none;
-		}
-		input[type="search"] {
-			@include box-sizing( border-box );
-		}
-		.search-toggle {
-			width: 14px;
-			@include fz(15);
-			line-height: 1;
-			margin-left: 10px;
-			display: inline-block;
-
-			i {
-				margin: 0;
-			}
-		}
-		.search-submit {
-			display: none;
-		}
+		margin-bottom: 15px;
+		padding-right: 40px;
+		width: 100%;
+		position: relative;
+	}
+	.search-field {
+		width: 100%;
+	}
+	.search-submit {
+		position: absolute;
+		top: 9px;
+		right: 15px;
+		z-index: 10;
 	}
 }

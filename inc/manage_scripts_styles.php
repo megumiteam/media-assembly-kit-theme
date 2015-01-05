@@ -11,10 +11,7 @@
  * Register Lobster Google font
  */
 function mak_font_url() {
-	$font_url = '';
-	if ( 'off' !== _x( 'on', 'Oswald: on or off', 'mak' ) ) {
-		$font_url = add_query_arg( 'family', 'Oswald:400,300,700', "//fonts.googleapis.com/css" );
-	}
+	$font_url = add_query_arg( 'family', 'Nunito:400,700,300', "//fonts.googleapis.com/css" );
 	return $font_url;
 }
 function mak_scripts_styles() {
@@ -67,8 +64,8 @@ function mak_scripts_styles() {
 
 	// slide-pan-pan mobile only
 	if ( is_child_theme() ) {
-		if ( file_exists( ABSPATH . '/assets/lib/slide-pan-pan.min.js' ) )
-			wp_enqueue_script( 'slide-pan-pan', get_site_url() . '/assets/lib/slide-pan-pan.min.js', array(), mak_file_time_stamp( '/lib/slide-pan-pan.min.js' ), true );
+		if ( file_exists( ABSPATH . '/assets/lib/slide-pan-pan.js' ) )
+			wp_enqueue_script( 'slide-pan-pan', get_site_url() . '/assets/lib/slide-pan-pan.js', array(), mak_file_time_stamp( '/lib/slide-pan-pan.js' ), true );
 	}
 
 	// Loads main stylesheet.
@@ -81,13 +78,16 @@ function mak_scripts_styles() {
 	}
 	if ( is_child_theme() ) {
 		wp_enqueue_style( 'mak', $makstylesheet_mo, array(), '' );
+		if ( file_exists( get_template_directory() . '/js/mak_pc.js' ) )
+			wp_enqueue_script( 'mak', get_template_directory_uri() . '/js/mak_mo.js', array('jquery'), mak_file_time_stamp( '/js/mak_mo.js' ), true );
 	} else {
 		wp_enqueue_style( 'mak', $makstylesheet_pc, array(), '' );
+
+		if ( file_exists( get_template_directory() . '/js/mak_pc.js' ) )
+			wp_enqueue_script( 'mak', get_template_directory_uri() . '/js/mak_pc.js', array('jquery'), mak_file_time_stamp( '/js/mak_pc.js' ), true );
 	}
 
 	// Loads JavaScript file with functionality specific to mak.
-	if ( file_exists( get_template_directory() . '/js/mak.js' ) )
-		wp_enqueue_script( 'mak', get_template_directory_uri() . '/js/mak.js', array('jquery'), mak_file_time_stamp( '/js/mak.js' ), true );
 
 }
 add_action( 'wp_enqueue_scripts', 'mak_scripts_styles' );

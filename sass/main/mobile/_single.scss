@@ -1,7 +1,7 @@
 // common
 .entry-meta,
 .posted-in-media,
-.author {
+.entry-meta .author {
 	a {
 		color: $color__link-entry-meta-mobile;
 	}
@@ -11,7 +11,7 @@
 .single-article {
 
 	.media-box {
-		padding: 15px 10px 0;
+		padding: 10px 10px 0;
 		@extend %clearfix;
 	}
 	.posted-in-media {
@@ -32,39 +32,35 @@
 	}
 	.entry-title {
 		@include fz( 22 );
-		color: $color__text-entry-title;
-		margin: 20px 0 0;
+		color: $color__text-entry-title-mobile;
+		margin: 10px 0 0;
 		padding: 10px;
 		background: $color__background-entry-title-mobile;
 		clear: both;
 
 		a {
-			color: #535353;
+			color: $color__text-entry-title-mobile;
 		}
 	}
 	.entry-meta {
 		@include fz( 12 );
 		color: $color__text-entry-meta-mobile;
-		margin: 30px 0 0;
+		margin: 8px 0 0;
 		padding: 0 10px;
 		@extend %clearfix;
-
+		clear: both;
 		p {
-			margin: 0 20px 5px 0;
+			margin: 0 10px 0 0;
 			display: inline-block;
 			float: left;
-
-			&.posted-in-tags {
-				clear: left;
-			}
 			&.pr {
-				clear: left;
+				@include border-radius(3px);
 				float: right;
 				margin-right: 0;
 				background: $color__background-entry-meta-pr;
 				color: $color__text-entry-meta-pr;
 				width: 60px;
-				padding-top: 2px;
+				padding: 2px;
 				text-align: center;
 			}
 		}
@@ -73,8 +69,8 @@
 
 // .social-entry-box
 .social-entry-box {
-	margin: 0 10px;
-	padding: 10px 10px;
+	margin: 10px 10px 0px 10px;
+	padding: 8px 10px;
 	background: $color__background-social-entry-box;
 	@extend %clearfix;
 
@@ -121,7 +117,6 @@
 		}
 	}
 }
-
 // #more-link-box
 #more-link-box {
 	margin-bottom: 0;
@@ -170,7 +165,6 @@
 		}
 	}
 	a {
-		font-weight: bold;
 		color: $color__link-single-nav;
 		text-decoration: none;
 		@include border-radius(8px);

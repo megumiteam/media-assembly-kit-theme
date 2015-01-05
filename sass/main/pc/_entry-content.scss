@@ -33,6 +33,10 @@
 			}
 		}
 	}
+	.summary_the_content {
+		overflow: hidden;
+	}
+
 	blockquote {
 		padding:10px;
 		background: $color__background-entry-content-blockquote;

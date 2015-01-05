@@ -1,32 +1,34 @@
 #colophon {
 
-	.search-foam-box {
+	.search-form {
 		margin: 0 10px;
 		border: 1px $color__border-colophon-search-foam-box solid;
-		padding: 0 10px;
+		padding: 5px 10px 5px 30px;
 		background: $color__background-colophon-search-foam-box;
+		position: relative;
 
-		.search-form {
-			display: inline-block;
-		}
 		.search-field {
 			width: 100%;
 			@include fz(12);
 			outline: none;
 			border: none;
 			padding: 0;
-		}
-		input[type="search"] {
 			@include box-sizing( border-box );
 		}
-		.search-toggle {
-			@include fz(15);
-			line-height: 1;
-			margin-right: 0;
-			display: inline-block;
-		}
 		.search-submit {
-			display: none;
+			position: absolute;
+			top: 9px;
+			left: 8px;
+			z-index: 10;
+			line-height: 1;
+			@include fz(17);
+			width: 16px;
+			height: 16px;
+			padding: 0;
+			overflow: hidden;
+			background: transparent;
+			text-shadow: none;
+			border: none;
 		}
 	}
 }

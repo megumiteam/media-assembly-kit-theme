@@ -27,7 +27,6 @@
 	<?php mak_slide_post_list(); ?>
 	<?php mak_global_nav(); ?>
 	<?php mak_carousel_post_list(); ?>
-	<?php mak_khm_15(); ?>
 	<?php do_action( 'mak_header_content' ); ?>
 	<div id="content" class="site-content">
 		<?php do_action( 'mak_before_content' ); ?>

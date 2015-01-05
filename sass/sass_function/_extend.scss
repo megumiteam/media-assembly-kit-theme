@@ -13,10 +13,11 @@
 }
 
 %title-type {
-	font-family: 'Oswald';
-	font-weight: normal;
-	@include fz( 26 );
+	font-family: 'Nunito';
+	font-weight: bold;
+	@include fz( 30 );
 	line-height: 1;
+	padding-bottom: 24px;
 	color: $color__text-title-type;
 	background: $color__background-title-type;
 
@@ -24,22 +25,24 @@
 		color: $color__text-title-type-first;
 	}
 	span {
-		padding-right: 24px;
 		background: $color__background-title-type-span;
 	}
 }
 %title-type-mob {
-	@extend %title-type;
+	font-family: 'Nunito';
+	font-weight: bold;
+	@include fz( 23 );
+	line-height: 1;
+	padding: 10px;
+	color: $color__text-title-type-mob;
+	background: $color__background-title-type-mob;
 	margin-bottom: 11px;
 
-	span {
-		padding: 0 24px 0 10px;
-	}
 }
 
 %dropshadow-box {
 	background: $color__background-dropshadow-box;
-	border: 1px solid $color__border-dropshadow-box;
+	border-top: 1px solid $color__border-dropshadow-box;
 	@include box-shadow;
 }
 %dropshadow-reset {
@@ -59,4 +62,31 @@
 	background-color: $color__background-dlbtn;
 	width: 405px;
 	padding: 10px;
+}
+
+%search-form-set {
+	.search-form {
+		padding: 6px 25px;
+		background: $color__background-404-search-form-pc;
+		display: inline-block;
+		@extend %clearfix;
+	}
+	.search-field {
+		outline: none;
+		border: none;
+		padding: 0;
+		background: none;
+	}
+	.search-submit {
+		width: 16px;
+		height: 16px;
+		@include fz( 17 );
+		outline: none;
+		margin: 0;
+		border: none;
+		padding: 0;
+		background: none;
+		overflow: hidden;
+		line-height: 1;
+	}
 }

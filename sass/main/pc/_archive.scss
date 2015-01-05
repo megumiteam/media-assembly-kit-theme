@@ -4,14 +4,14 @@
 
 .archive-title {
 	@include fz( 32 );
+	line-height: 1;
+	padding-bottom: 29px;
 	color: $color__text-archive-title-pc;
-	border-bottom: 1px solid $color__border-archive-title-pc;
-	padding-bottom: 15px;
+	background: $color__background-title-type;
 
 	.home & {
 		@extend %title-type;
 		border-bottom: none;
-		padding-bottom: 0;
 	}
 }
 
@@ -71,7 +71,8 @@
 
 // #archive-nav
 #archive-nav {
-	font-family: 'Oswald';
+	font-family: 'Nunito';
+	font-weight: bold;
 	text-align: center;
 	margin-top: 20px;
 
@@ -93,7 +94,8 @@
 		color: $color__link;
 		padding: 3px 10px;
 		display: block;
-		@extend %dropshadow-box;
+		background: $color__background-dropshadow-box;
+		//@extend %dropshadow-box;
 	}
 	a {
 		text-decoration: none;

@@ -25,14 +25,15 @@ function mak_slide_post_list( $args = array() ) {
 	echo mak_get_slide_post_list( $args );
 }
 function mak_get_slide_post_list( $args = array() ) {
-	if ( ( !is_home() || !is_front_page() ) || is_paged() || !( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) )
+	//if ( ( !is_home() || !is_front_page() ) || is_paged() || !( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) )
+	if ( ( !is_home() || !is_front_page() ) || is_paged()  )
 		return;
 
 	$output  = '';
 	$default = array(
 		'device'        => 'pc',
-		'before_widget' => '',
-		'after_widget'  => '',
+		'before_widget' => '<div id="slide-box">',
+		'after_widget'  => '</div>',
 		'limit'         => get_option( 'slide_posts_per_page', 5 ),
 		'speed'         => get_option( 'slide_speed', 1500 ),
 		'pause'         => get_option( 'slide_pause', 6000 ),
@@ -98,7 +99,7 @@ function mak_get_slide_post_list( $args = array() ) {
 			. '<div class="trunk8" data-lines="4">' . "\n"
 			. $content . "\n"
 			. '</div>' . "\n"
-			. '<p class="view-more"><a href="' . $link . '">' . __( '&#187; View more', 'mak' ) . '</a></p>' . "\n"
+			. '<p class="view-more"><a href="' . $link . '">' . __( 'View more', 'mak' ) . '</a></p>' . "\n"
 			. '</div>' . "\n"
 			. '<p class="thumbnail"><a href="' . $link . '">' . $image . '</a></p>' . "\n"
 			. '</li>' . "\n";

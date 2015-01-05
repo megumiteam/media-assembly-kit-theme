@@ -25,7 +25,7 @@
 }
 
 .posted-in-media,
-.author {
+.entry-meta .author {
 	a {
 		color: $color__link-author;
 	}
@@ -41,7 +41,7 @@
 		float: left;
 
 		a {
-			color: $color__text-posted-in-media;
+			color: $color__link-posted-in-media;
 		}
 	}
 	.media-logo {
@@ -53,8 +53,9 @@
 	.entry-title {
 		@include fz( 32 );
 		color: $color__text-entry-title;
-		@extend %hr-border-bottom;
-		padding-bottom: 15px;
+		background: $color__background-title-type;
+// 		@extend %hr-border-bottom;
+		padding-bottom: 30px;
 		clear: both;
 	}
 	.entry-meta {
@@ -67,6 +68,7 @@
 			display: inline-block;
 
 			&.pr {
+				@include border-radius(3px);
 				float: right;
 				margin-right: 0;
 				background: $color__background-entry-meta-pr;
@@ -134,18 +136,18 @@
 // #more-link-box
 #more-link-box {
 	margin-bottom: 50px;
-	clear: both;
+// 	clear: both;
 
 	a {
 		width: 250px;
 		color: $color__link-more-link-box;
 		text-decoration: none;
 		text-align: center;
-		margin: 0 auto;
+		margin: 0;
 		@include border-radius(8px);
 		padding: 9px 0;
 		background: $color__background-more-link-box;
-		display: block;
+		display: inline-block;
 
 		&:hover {
 			text-decoration: none;
@@ -182,7 +184,6 @@
 		}
 	}
 	a {
-		font-weight: bold;
 		color: $color__link-single-nav;
 		text-decoration: none;
 		@include border-radius(8px);

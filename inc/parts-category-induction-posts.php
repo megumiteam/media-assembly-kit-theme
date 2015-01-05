@@ -23,7 +23,8 @@ function mak_category_induction_post_list( $args = array(), $instance  = array()
 	echo mak_get_category_induction_post_list( $args, $instance );
 }
 function mak_get_category_induction_post_list( $args = array(), $instance  = array()) {
-	if ( ( !is_home() || !is_front_page() ) || is_paged() || !( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) )
+	//if ( ( !is_home() || !is_front_page() ) || is_paged() || !( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) )
+	if ( ( !is_home() || !is_front_page() ) || is_paged()  )
 		return;
 
 	$output    = '';

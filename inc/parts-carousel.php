@@ -25,7 +25,8 @@ function mak_carousel_post_list( $args = array() ) {
 	echo mak_get_carousel_post_list( $args );
 }
 function mak_get_carousel_post_list( $args = array() ) {
-	if ( ( !is_home() || !is_front_page() ) || is_paged() || !( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) )
+	//if ( ( !is_home() || !is_front_page() ) || is_paged() || !( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) )
+	if ( ( !is_home() || !is_front_page() ) || is_paged() )
 		return;
 
 	$output  = '';
