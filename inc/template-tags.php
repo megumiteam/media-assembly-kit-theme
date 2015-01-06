@@ -25,7 +25,7 @@
 # 2. Header tags
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 function mak_media_nav() {
-	$search_foam = '<div class="search-foam-box">' . get_search_form( false ) . '<span class="search-toggle"><i class="fa fa-search"></i></span></div>' . "\n";
+	$search_foam = get_search_form( false ) . "\n";
 	wp_nav_menu( array(
 		'theme_location'  => 'media-menu',
 		'container'       => 'nav',

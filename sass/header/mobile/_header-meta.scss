@@ -5,6 +5,10 @@
 	color: $color__text-header-meta;
 	@extend %clearfix;
 
+	a {
+		color: $color__text-header-meta;
+	}
+
 	.search-form {
 		display: inline-block;
 		@extend %clearfix;

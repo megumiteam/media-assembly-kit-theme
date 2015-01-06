@@ -38,14 +38,27 @@ gulp.task( 'fonts', function() {
 
 
 // javascript
-/*
 gulp.task( 'js', function() {
-	return gulp.src('js/*.js')
+	// PC
+	gulp.src(['js/mak_pc.js', 'js/functions_common/*.js', 'js/functions_pc/*.js' ])
 		.pipe($.jshint())
 		.pipe($.jshint.reporter('default'))
+		.pipe($.concat('pc.js'))
 		.pipe(gulp.dest('js'))
+		.pipe($.concat('pc.min.js'))
+		.pipe($.uglify())
+		.pipe(gulp.dest('../../../assets/js'))
+
+	// Mobile
+	gulp.src(['js/mak_mobile.js', 'js/functions_common/*.js', 'js/functions_mobile/*.js' ])
+		.pipe($.jshint())
+		.pipe($.jshint.reporter('default'))
+		.pipe($.concat('mobile.js'))
+		.pipe(gulp.dest('js'))
+		.pipe($.concat('mobile.min.js'))
+		.pipe($.uglify())
+		.pipe(gulp.dest('../../../assets/js'))
 });
-*/
 
 // compass(sass)
 gulp.task( 'compass', function() {

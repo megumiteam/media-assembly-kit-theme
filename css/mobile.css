@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ・－－ ・ －・・・ －・ ・・ ・・・ －  */
 /* line 2, ../sass/sass_function/_extend.scss */
-.not-found .search-form:after, .widget_search .search-form:after, #content:after, #header-meta:after, #header-meta .search-form:after, #header-meta .social-box:after, .archive-article.thumbnail-true:after, #archive-nav:after, .single-article .media-box:after, .single-article .entry-meta:after, .social-entry-box:after, #single-nav:after, .global-social-button-box:after, #footer-nav-box ul:after, .widget.widget-pickup li.thumbnail-true a:after,
+.not-found .search-form:after, .widget_search .search-form:after, #content:after, #media-nav-box:after, #header-meta:after, #header-meta .search-form:after, #header-meta .social-box:after, .archive-article.thumbnail-true:after, #archive-nav:after, .single-article .media-box:after, .single-article .entry-meta:after, .social-entry-box:after, #single-nav:after, .global-social-button-box:after, #footer-nav-box ul:after, .widget.widget-pickup li.thumbnail-true a:after,
 .widget.widget-induction li.thumbnail-true a:after,
 .widget.editor-choice-widget li.thumbnail-true a:after, .widget.writer-list li a:after, .widget-ranking #ranking-nav:after, .widget.widget_categories ul:after, #category-posts-tab-nav ul:after, #related-post .thumbnail-true:after, #pickup-box li.thumbnail-true a:after {
   display: table;
@@ -412,25 +412,33 @@ object {
   background: #eceae6;
 }
 
-/* line 8, ../sass/header/mobile/_media-nav-box.scss */
+/* line 6, ../sass/header/mobile/_media-nav-box.scss */
+#media-nav-box ul {
+  float: left;
+}
+/* line 10, ../sass/header/mobile/_media-nav-box.scss */
 #media-nav-box ul li {
   display: inline-block;
 }
-/* line 11, ../sass/header/mobile/_media-nav-box.scss */
+/* line 13, ../sass/header/mobile/_media-nav-box.scss */
 #media-nav-box ul li a {
   border-left: 1px solid #444444;
   padding: 0 15px;
 }
-/* line 17, ../sass/header/mobile/_media-nav-box.scss */
+/* line 19, ../sass/header/mobile/_media-nav-box.scss */
 #media-nav-box ul li:first-child a {
   border-left: none;
-  padding-left: 0;
+}
+
+/* line 26, ../sass/header/mobile/_media-nav-box.scss */
+#media-nav-box .search-form {
+  display: none;
 }
 
 /* masthead */
 /* line 3, ../sass/header/mobile/_masthead.scss */
 #masthead a {
-  color: white;
+  color: #444444;
 }
 /* line 6, ../sass/header/mobile/_masthead.scss */
 #masthead .header-meta a {
@@ -461,6 +469,10 @@ object {
   color: white;
 }
 /* line 8, ../sass/header/mobile/_header-meta.scss */
+#header-meta a {
+  color: white;
+}
+/* line 12, ../sass/header/mobile/_header-meta.scss */
 #header-meta .search-form {
   display: inline-block;
   float: left;
@@ -471,7 +483,7 @@ object {
   border-radius: 13px;
   position: relative;
 }
-/* line 16, ../sass/header/mobile/_header-meta.scss */
+/* line 20, ../sass/header/mobile/_header-meta.scss */
 #header-meta .search-form .search-field {
   outline: none;
   -moz-box-sizing: border-box;
@@ -481,7 +493,7 @@ object {
   border: none;
   background: transparent;
 }
-/* line 23, ../sass/header/mobile/_header-meta.scss */
+/* line 27, ../sass/header/mobile/_header-meta.scss */
 #header-meta .search-form .search-submit {
   position: absolute;
   top: 4px;
@@ -499,22 +511,22 @@ object {
   border: none;
   color: white;
 }
-/* line 41, ../sass/header/mobile/_header-meta.scss */
+/* line 45, ../sass/header/mobile/_header-meta.scss */
 #header-meta .social-box {
   display: inline-block;
   float: right;
   margin-top: 5px;
 }
-/* line 46, ../sass/header/mobile/_header-meta.scss */
+/* line 50, ../sass/header/mobile/_header-meta.scss */
 #header-meta .social-box p {
   margin: 0;
   float: left;
 }
-/* line 50, ../sass/header/mobile/_header-meta.scss */
+/* line 54, ../sass/header/mobile/_header-meta.scss */
 #header-meta .social-box p.tweet-button {
   margin-right: 23px;
 }
-/* line 54, ../sass/header/mobile/_header-meta.scss */
+/* line 58, ../sass/header/mobile/_header-meta.scss */
 #header-meta .social-box i {
   font-size: 17px;
   font-size: 1.7rem;

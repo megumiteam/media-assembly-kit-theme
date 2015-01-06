@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ・－－ ・ －・・・ －・ ・・ ・・・ －  */
 /* line 2, ../sass/sass_function/_extend.scss */
-.not-found .search-form:after, .widget_search .search-form:after, #content:after, #in-footer:after, #media-nav-box:after, .search-foam-box:after, #global-nav-box ul:after, .archive-article.thumbnail-true:after, .single-article .entry-meta:after, .social-entry-box:after, #single-nav:after, .entry-content:after, #footer-nav-box ul:after, .widget.widget-induction li.thumbnail-true a:after, .widget.writer-list li a:after, .widget-ranking #ranking-nav:after, #slide li:after, #carousel:after,
+#media-nav-box .search-form:after, .not-found .search-form:after, .widget_search .search-form:after, #content:after, #in-footer:after, #media-nav-box:after, #global-nav-box ul:after, .archive-article.thumbnail-true:after, .single-article .entry-meta:after, .social-entry-box:after, #single-nav:after, .entry-content:after, #footer-nav-box ul:after, .widget.widget-induction li.thumbnail-true a:after, .widget.writer-list li a:after, .widget-ranking #ranking-nav:after, #slide li:after, #carousel:after,
 #editor-choice:after, #carousel li:after,
 #editor-choice li:after, #category-induction-nav:after, #category-induction-nav ul:after, .category-induction-content:after, #related-post ul:after, #related-post ul li.thumbnail-true:after, #pickup:after, .mad-halfway-box:after, .mad-summary-box:after, .mad-single-box:after {
   display: table;
@@ -63,20 +63,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 /* line 68, ../sass/sass_function/_extend.scss */
-.not-found .search-form, .widget_search .search-form {
+#media-nav-box .search-form, .not-found .search-form, .widget_search .search-form {
   padding: 6px 25px;
   background: #f3edde;
   display: inline-block;
 }
 /* line 74, ../sass/sass_function/_extend.scss */
-.not-found .search-field, .widget_search .search-field {
+#media-nav-box .search-field, .not-found .search-field, .widget_search .search-field {
   outline: none;
   border: none;
   padding: 0;
   background: none;
 }
 /* line 80, ../sass/sass_function/_extend.scss */
-.not-found .search-submit, .widget_search .search-submit {
+#media-nav-box .search-submit, .not-found .search-submit, .widget_search .search-submit {
   width: 16px;
   height: 16px;
   font-size: 17px;
@@ -523,38 +523,11 @@ object {
   border-left: none;
 }
 
-/* line 25, ../sass/header/pc/_media-nav-box.scss */
-.search-foam-box {
-  display: inline-block;
+/* line 27, ../sass/header/pc/_media-nav-box.scss */
+#media-nav-box .search-form {
   float: right;
-}
-/* line 30, ../sass/header/pc/_media-nav-box.scss */
-.search-foam-box .search-form {
-  margin-right: 5px;
-  float: left;
-}
-/* line 34, ../sass/header/pc/_media-nav-box.scss */
-.search-foam-box .search-field {
-  outline: none;
-  transition: opacity .5s linear;
-}
-/* line 38, ../sass/header/pc/_media-nav-box.scss */
-.search-foam-box input[type="search"] {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 41, ../sass/header/pc/_media-nav-box.scss */
-.search-foam-box .search-submit {
-  display: none;
-}
-/* line 44, ../sass/header/pc/_media-nav-box.scss */
-.search-foam-box .search-toggle {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 1;
-  display: block;
-  float: right;
+  background: white;
+  padding: 3px 10px;
 }
 
 /* masthead */

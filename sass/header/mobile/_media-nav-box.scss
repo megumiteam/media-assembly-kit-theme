@@ -1,9 +1,11 @@
 #media-nav-box {
 	padding: 8px 10px;
 	background: $color__background-media-nav-box;
+	@extend %clearfix;
 }
 #media-nav-box ul {
 	@extend %ul;
+	float: left;
 
 	li {
 		display: inline-block;
@@ -16,8 +18,12 @@
 
 			a {
 				border-left: none;
-				padding-left: 0;
 			}
 		}
+	}
+}
+#media-nav-box {
+	.search-form  {
+		display: none;
 	}
 }

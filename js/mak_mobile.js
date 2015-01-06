@@ -1,0 +1,6 @@
+/*! mobile */
+(function($){
+
+
+})(jQuery);
+

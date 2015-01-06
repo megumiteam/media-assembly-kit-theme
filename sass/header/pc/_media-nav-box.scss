@@ -22,29 +22,11 @@
 		}
 	}
 }
-.search-foam-box {
-	display: inline-block;
-	@extend %clearfix;
-	float: right;
-
-	.search-form {
-		margin-right: 5px;
-		float: left;
-	}
-	.search-field {
-		outline: none;
-		transition: opacity .5s linear;
-	}
-	input[type="search"] {
-		@include box-sizing( border-box );
-	}
-	.search-submit {
-		display: none;
-	}
-	.search-toggle {
-		@include fz(17);
-		line-height: 1;
-		display: block;
+#media-nav-box {
+	@extend %search-form-set;
+	.search-form  {
 		float: right;
+		background: white;
+		padding: 3px 10px;
 	}
 }

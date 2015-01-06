@@ -237,6 +237,99 @@ add_action( 'wp_footer', function(){
 	}
 }, 9999 );
 
+add_action( 'wp_footer', 'mak_footer_scripts', 9999 );
+function mak_footer_scripts() {
+	if ( is_child_theme() ) {
+?>
+<script>
+(function($) {
+	// Common
+
+	// trunk8Set
+	trunk8Set();
+
+	// ranking
+	rankingNavSet();
+
+	// searchFieldResize
+	searchFieldResizeSet();
+
+	// colophonSocial
+	searchFieldResizeSet();
+
+	// HOME
+
+	// slideBoxSet
+	slideBoxSet();
+
+	// categoryPostsTab
+	categoryPostsTabSet();
+
+	// single, page, summary
+
+	// imagePopup
+	imagePopupSet();
+
+	// entryContentiflame
+	entryContentiflameSet();
+
+	// SNS count
+	twitterCount();
+	facebookCount();
+	hatenaCount();
+})(jQuery);
+</script>
+<?php
+	} else { // pc
+?>
+<script>
+(function($) {
+	// Common
+
+	// trunk8Set
+	trunk8Set();
+
+	// Background
+	backgroundLinkSet();
+
+	// globalNavBox
+	globalNavBoxSet();
+
+	// editorChoiceBox
+	editorChoiceBoxSet();
+
+	// ranking
+	rankingNavSet();
+
+	// HOME
+
+	// slideBoxSet
+	slideBoxSet();
+
+	// carouselBox
+	carouselBoxSet();
+
+	// categoryInductionBoxSet
+	categoryInductionBoxSet();
+
+	// single, page, summary
+
+	// imagePopup
+	imagePopupSet();
+
+	// entryContentiflame
+	entryContentiflameSet();
+
+	// SNS count
+	twitterCount();
+	facebookCount();
+	hatenaCount();
+})(jQuery);
+</script>
+<?php
+	}
+}
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #  42. Other
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
