@@ -28,6 +28,7 @@
 
 		&.current_item {
 
+			body.single &,
 			&:after {
 				display: none;
 			}

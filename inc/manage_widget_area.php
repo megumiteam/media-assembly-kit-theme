@@ -11,7 +11,7 @@ function mak_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'PC HOME Sideber', 'mak' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-pc-home',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h1 class="widget-title"><span>',
@@ -20,7 +20,7 @@ function mak_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'PC Sideber', 'mak' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'sidebar-pc',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h1 class="widget-title"><span>',
@@ -29,16 +29,7 @@ function mak_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Mobile', 'mak' ),
-		'id'            => 'sidebar-3',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h1 class="widget-title"><span>',
-		'after_title'   => '</span></h1>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Mobile Summary', 'mak' ),
-		'id'            => 'sidebar-4',
+		'id'            => 'sidebar-mobile',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h1 class="widget-title"><span>',
@@ -47,7 +38,7 @@ function mak_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Mobile Single', 'mak' ),
-		'id'            => 'sidebar-5',
+		'id'            => 'sidebar-mobile-single',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h1 class="widget-title"><span>',

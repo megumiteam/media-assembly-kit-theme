@@ -3,17 +3,17 @@
 	border: none;
 	background: $color__background-global-nav-box;
 }
-#global-nav-box ul {
+#global-nav-box > ul {
 	width: 100%;
 	@extend %ul;
 	@extend %clearfix;
-	//display: table;
 
 	li {
 		text-align: center;
 		float: left;
 		border-left: 1px solid $color__border-global-nav-box;
 		@include box-sizing( border-box );
+		position: relative;
 		&:first-child {
 			border-left: none;
 		}
@@ -36,29 +36,38 @@
 		}
 	}
 	ul {
+		@extend %ul;
 		display: none;
+		background: $color__background-global-nav-box-secondary;
+		float: left;
+		position: absolute;
+		top: 49px;
+		left: 0;
+		z-index: 99999;
+		width: 200px;
+		li {
+			text-align: left;
+			border-left: 1px solid $color__border-global-nav-box;
+			&:first-child {
+				border-left: none;
+			}
+		}
+		a {
+			padding: 10px 20px;
+			background: transparent;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		ul {
+			left: 200px;
+			top: 0;
+		}
 	}
 
-	li:hover {
-		ul {
+	> li:hover {
+		> ul {
 			display: block;
-			width: 1000px;
-			background: $color__background-global-nav-box-secondary;
-			position: absolute;
-			li {
-				border-left: 1px solid $color__border-global-nav-box;
-				&:first-child {
-					border-left: none;
-				}
-			}
-
-			a {
-				padding: 10px 20px;
-				background: transparent;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
 		}
 	}
 }

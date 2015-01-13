@@ -1,0 +1,79 @@
+doctype html
+block vars
+html(lang="ja", xmlns:og="http://ogp.me/ns#", xmlns:fb="http://www.facebook.com/2008/fbml", xmlns:mixi="http://mixi-platform.com/ns#")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="fragment", content="!")
+		if type == 'home'
+			title #{sitename} | #{title}
+		else 
+			title #{title} | #{sitename}
+		link#contact-form-7-css(rel="stylesheet", href="/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.2")
+		link#normalize-css(rel="stylesheet", href="/assets/lib/normalize.css")
+		link#open-sans-Oswald-css(rel="stylesheet", href="//fonts.googleapis.com/css?family=Nunito:400,700,300")
+		link#font-awesome-css(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css")
+		link#font-webnist-css(rel="stylesheet", href="/assets/fonts/font-webnist.css")
+		if type == 'single'
+			link#mak-css(rel="stylesheet", href="/assets/lib/magnific-popup.css")
+
+		link#mak-css(rel="stylesheet", href="/assets/css/pc.css")
+
+		script(src="/wp-includes/js/jquery/jquery.js?ver=1.11.1")
+		script(src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1")
+
+		block wp_head
+
+	body(class=type)
+
+		#before_body
+			block before_body
+
+		#page.hfeed.site
+
+			block before_page
+
+			include ../includes/_header
+
+			#content.site-content
+
+				block before_content
+
+				#primary.content-area
+
+					main#main.site-main(role="main")
+
+						//-khm-15 = Breadcrumb
+						if type !== 'home'
+							include ../includes/_khm-15
+
+						block main
+
+					block main_bottom
+
+				aside#secondary.widget-area(role="complementary")
+
+			//- ad-before-footer
+			#ad-before-footer
+
+			include ../includes/_footer
+
+		block wp_footer
+
+			script(src="/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20")
+			script.
+				/* <![CDATA[ */
+				var _wpcf7 = {"loaderUrl":"http:\/\/appwoman.local\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u9001\u4fe1\u4e2d ..."};
+				/* ]]> */
+			script(src="/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.2")
+			script(src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js?ver=v0.5.0")
+			script(src="//cdn.jsdelivr.net/headroomjs/0.5.0/jQuery.headroom.min.js?ver=v0.5.0")
+			script(src="/assets/lib/imagesloaded.pkgd.min.js")
+			script(src="/assets/lib/jquery.bxslider.min.js")
+			script(src="/assets/lib/trunk8.js")
+			if type == 'single'
+				script(src="/assets/lib/jquery.fitvids.js")
+				script(src="/assets/lib/jquery.magnific-popup.min.js")
+			script(src="/assets/js/pc.min.js?ver=0.7.2")
+			script(src="/assets/js/wpjson.min.js?ver=0.7.2")
+

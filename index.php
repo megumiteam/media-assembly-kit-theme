@@ -14,7 +14,6 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<?php mak_category_induction_post_list(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php do_action( 'mak_before_main' ); ?>
 			<?php mak_archive_title(); ?>

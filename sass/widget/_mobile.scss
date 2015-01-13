@@ -1,6 +1,5 @@
 .widget {
 	padding-bottom: 25px;
-	background: $color__common-background;
 
 	&:first-child {
 		padding-top: 25px;
@@ -40,9 +39,7 @@
 	}
 }
 
-.widget.widget-pickup,
-.widget.widget-induction,
-.widget.editor-choice-widget {
+.widget.widget-induction {
 
 	ul {
 		@extend %ul;
@@ -139,7 +136,7 @@
 
 		p {
 			width: 50%;
-			font-family: 'Nunito';
+			font-family: 'Asap';
 			@include fz( 16 );
 			color: $color__text-ranking-nav;
 			text-align: center;

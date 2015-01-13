@@ -1,5 +1,10 @@
+.parts-box {
+	margin-top: 20px;
+	padding: 25px 0;
+	@extend %dropshadow-box;
+}
+
 .widget {
-	width: 300px;
 	margin-top: 20px;
 	padding: 25px 20px;
 	@extend %dropshadow-box;
@@ -24,6 +29,15 @@
 // search
 .widget_search {
 	@extend %search-form-set;
+	
+	#secondary & {
+		.search-form {
+			width: 100%;
+		}
+		.search-field {
+			width: 185px;
+		}
+	}
 }
 
 // calendar
@@ -163,7 +177,7 @@
 
 		p {
 			width: 50%;
-			font-family: 'Nunito';
+			font-family: 'Asap';
 			@include fz( 12 );
 			color: $color__text-ranking-nav;
 			text-align: center;

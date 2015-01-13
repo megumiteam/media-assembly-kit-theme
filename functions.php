@@ -58,7 +58,6 @@ function mak_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'global-menu'         => __( 'Global Menu', 'mak' ),
-		'media-menu'          => __( 'Media Menu', 'mak' ),
 		'footer-menu'         => __( 'Footer Menu', 'mak' ),
 		'mobile-footer-menu'  => __( 'Mobile Footer Menu', 'mak' ),
 	) );
@@ -116,18 +115,6 @@ function mak_theme_require() {
 	/* global require function */
 	if ( file_exists( get_template_directory() . '/inc/') ) {
 		$dir = get_template_directory() . '/inc/';
-		$handle = opendir( $dir );
-		while ( false !== ( $ent = readdir( $handle ) ) ) {
-			if ( !is_dir( $ent ) && strtolower( substr( $ent, -4 ) ) == ".php" ) {
-				require $dir . $ent;
-			}
-		}
-		closedir( $handle );
-	}
-
-	/* Parent require function */
-	if ( !is_child_theme() && file_exists( get_template_directory() . '/parent_inc/') ) {
-		$dir = get_template_directory() . '/parent_inc/';
 		$handle = opendir( $dir );
 		while ( false !== ( $ent = readdir( $handle ) ) ) {
 			if ( !is_dir( $ent ) && strtolower( substr( $ent, -4 ) ) == ".php" ) {

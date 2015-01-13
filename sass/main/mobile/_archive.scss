@@ -12,7 +12,6 @@
 
 .description {
 	padding: 10px;
-	background: $color__common-background;
 	border-bottom: solid 1px $color__common-border;
 	p {
 		margin: 0;
@@ -22,7 +21,6 @@
 // archive post start
 .archive-article {
 	border-bottom: solid 1px $color__common-border;
-	background: $color__common-background;
 
 	.entry-title {
 		@include fz( 15 );
@@ -34,7 +32,6 @@
 		margin: 0;
 		padding-left: 10px;
 	}
-	.posted-in-media,
 	.entry-date {
 		@include fz( 10 );
 		margin: 5px 10px 0 0;
@@ -69,14 +66,12 @@
 
 #archive-nav {
 	text-align: center;
-	margin: 0;
-	padding: 15px 10px 0;
-	background: $color__background-archive-nav;
+	margin: 15px 10px;
 	@extend %clearfix;
 
 	p {
 		width: 32%;
-		margin: 6px 0 0 2%;
+		margin: 0 0 0 2%;
 		float: left;
 
 		&:first-child {

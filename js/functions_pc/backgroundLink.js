@@ -3,7 +3,7 @@
 window.backgroundLinkSet = function() {
 
 	var backgroundLink = $('div#background-link');
-	var positionGroup  = $('#masthead, #slide-box, #carousel-box, #khm-15, #content, #editor-choice-box, #colophon');
+	var positionGroup  = $('#masthead, #slide-box, #khm-15, #content, #colophon');
 	$(window).resize(function(){
 		if( backgroundLink.size() > 0 ) {
 			var bodyWidth  = $(window).width();

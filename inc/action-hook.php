@@ -42,23 +42,24 @@
  * 36. mak_secondary
  * 37. mak_after_content
  * 38. mak_content_footer
- * 39. mak_footer
- * 40. mak_after_page
- * 41. wp_footer
- * 42. Other
+ * 39. mak_footer_before
+ * 40. mak_footer
+ * 41. mak_after_page
+ * 42. wp_footer
+ * 43. Other
 **/
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 1. wp_head
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 add_action( 'wp_head', function(){
-	if ( ! function_exists( 'mad_code' ) )
+	if ( ! function_exists( 'mak_ad_code' ) )
 		return;
 
 	if ( is_child_theme() ) {
-		mad_code( array( 'code' => 'mad_general_mobile_header', 'tag' => false ) );
+		mak_ad_code( array( 'code' => 'mak_ad_general_mobile_header', 'tag' => false ) );
 	} else {
-		mad_code( array( 'code' => 'mad_general_pc_header', 'tag' => false ) );
+		mak_ad_code( array( 'code' => 'mak_ad_general_pc_header', 'tag' => false ) );
 	}
 }, 9999 );
 
@@ -216,24 +217,35 @@ add_action( 'mak_before_main', function(){
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#  39. mak_footer
+#  39. mak_footer_before
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+add_action( 'mak_footer_before', function(){
+	if ( ! function_exists( 'mak_ad_code' ) )
+		return;
+
+	mak_ad_code( array( 'code' => 'mak_ad_pc_before_footer', 'class' => 'mad mad-before-footer' ) );
+
+}, 9999 );
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#  40. mak_footer
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#  40. mak_after_page
+#  41. mak_after_page
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#  41. wp_footer
+#  42. wp_footer
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 add_action( 'wp_footer', function(){
-	if ( ! function_exists( 'mad_code' ) )
+	if ( ! function_exists( 'mak_ad_code' ) )
 		return;
 
 	if ( is_child_theme() ) {
-		mad_code( array( 'code' => 'mad_general_mobile_footer', 'tag' => false ) );
+		mak_ad_code( array( 'code' => 'mak_ad_general_mobile_footer', 'tag' => false ) );
 	} else {
-		mad_code( array( 'code' => 'mad_general_pc_footer', 'tag' => false ) );
+		mak_ad_code( array( 'code' => 'mak_ad_general_pc_footer', 'tag' => false ) );
 	}
 }, 9999 );
 
@@ -258,15 +270,10 @@ function mak_footer_scripts() {
 	searchFieldResizeSet();
 
 	// HOME
-
-	// slideBoxSet
-	slideBoxSet();
-
 	// categoryPostsTab
-	categoryPostsTabSet();
+	categoryInductionBoxSet();
 
 	// single, page, summary
-
 	// imagePopup
 	imagePopupSet();
 
@@ -276,7 +283,6 @@ function mak_footer_scripts() {
 	// SNS count
 	twitterCount();
 	facebookCount();
-	hatenaCount();
 })(jQuery);
 </script>
 <?php
@@ -295,9 +301,6 @@ function mak_footer_scripts() {
 	// globalNavBox
 	globalNavBoxSet();
 
-	// editorChoiceBox
-	editorChoiceBoxSet();
-
 	// ranking
 	rankingNavSet();
 
@@ -305,12 +308,6 @@ function mak_footer_scripts() {
 
 	// slideBoxSet
 	slideBoxSet();
-
-	// carouselBox
-	carouselBoxSet();
-
-	// categoryInductionBoxSet
-	categoryInductionBoxSet();
 
 	// single, page, summary
 
@@ -323,7 +320,6 @@ function mak_footer_scripts() {
 	// SNS count
 	twitterCount();
 	facebookCount();
-	hatenaCount();
 })(jQuery);
 </script>
 <?php
@@ -331,5 +327,5 @@ function mak_footer_scripts() {
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-#  42. Other
+#  43. Other
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

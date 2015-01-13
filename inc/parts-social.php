@@ -47,10 +47,10 @@ function mak_social_button_conf( $post_id = '' ) {
 	$title         = get_the_title( $post_id ) . ' | ' . get_bloginfo( 'name' );
 	$value         = array(
 		'title'        => $title,
-		//'counturl'   => esc_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ),
-		'counturl'     => mak_get_summary_permalink( $post_id ),
-		'url'          => mak_get_summary_permalink( $post_id ),
-		//'url'        => esc_url( wp_get_shortlink( $post_id ) ),
+		'counturl'   => esc_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ),
+		//'counturl'     => mak_get_summary_permalink( $post_id ),
+		'url'        => esc_url( wp_get_shortlink( $post_id ) ),
+		//'url'          => mak_get_summary_permalink( $post_id ),
 		'twitter_url'  => esc_url( $twitter_url ),
 		'facebook_url' => esc_url( $facebook_url ),
 		'via'          => esc_attr( $twitter_via ),
@@ -112,9 +112,32 @@ function mak_get_social_button( $post_id = '' ) {
 		<p class="line">
 			<a href="http://line.me/R/msg/text/?{$title}%0D%0A{$url}" target="_blank"><i class="webnist webnist-line"></i></a>
 		</p>
-		<p class="hatena-button">
-			<a href="http://b.hatena.ne.jp/append?{$url}" target="_blank"><i class="webnist webnist-hatena"></i></a>
-			<span class="count hatena-count" data-url="{$url}">0</span>
+	</div>
+EOD;
+	return $output;
+}
+
+function mak_social_share( $post_id = '' ) {
+	echo mak_get_social_share( $post_id );
+}
+function mak_get_social_share( $post_id = '' ) {
+	$output = '';
+	if ( !$post_id && !is_404() )
+		$post_id = get_the_ID();
+
+	$conf = mak_social_button_conf( $post_id );
+	extract($conf);
+
+	$counturlencode = urlencode($counturl);
+	$urlencode      = urlencode($url);
+	$txtencode      = urlencode($title);
+	$output .= <<<EOD
+	<div class="social-share-box">
+		<p class="twitter-button">
+			<a href="http://twitter.com/share?url={$urlencode}&counturl={$counturlencode}&text={$txtencode}&via={$via}&related={$via}" target="_blank"><i class="fa fa-twitter"></i>Twitterでつぶやく</a>
+		</p>
+		<p class="facebook-button">
+			<a href="http://www.facebook.com/share.php?u={$url}&t={$title}" target="_blank"><i class="fa fa-facebook"></i>Facebookでシェア</a>
 		</p>
 	</div>
 EOD;

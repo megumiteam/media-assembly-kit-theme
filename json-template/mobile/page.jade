@@ -1,0 +1,47 @@
+extends ../extends/_layout_mobile
+
+block vars
+	- var sitename = 'Mama’s Money（マママネー）';
+	- var title    = 'page';
+	- var type     = 'page';
+	- var post     = 'page';
+
+//- scripts
+block append wp_head
+
+block append before_body
+
+block append before_page
+
+block append after_header
+
+block append header_content
+
+block append before_content
+
+block append wp_footer
+	script.
+		(function($) {
+			var lpath    = location.pathname.split("/");
+			var lpathend = lpath[lpath.length-1];
+			if ( lpathend === '' ) {
+				lpath.pop();
+			}
+			var id = lpath[lpath.length-1];
+			wpjsonRoot( 'mobile' );
+			wpjson( 'page', 'posts', '/?type=page&filter[pagename]='+id );
+			wpjsonWidgets( 'sidebar-mobile' );
+		})(jQuery);
+
+//- main content
+block main
+
+	article.post.hentry.single-article
+		header.entry-header
+			h1.entry-title
+
+		section.entry-content
+			#entry-box
+				include ../includes/_loader
+
+block main_bottom

@@ -20,13 +20,11 @@
 	<?php do_action( 'mak_before_page' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<?php do_action( 'mak_before_header' ); ?>
-		<?php mak_media_nav(); ?>
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php do_action( 'mak_after_header' ); ?>
 	</header><!-- #masthead -->
 	<?php mak_slide_post_list(); ?>
 	<?php mak_global_nav(); ?>
-	<?php mak_carousel_post_list(); ?>
 	<?php do_action( 'mak_header_content' ); ?>
 	<div id="content" class="site-content">
 		<?php do_action( 'mak_before_content' ); ?>

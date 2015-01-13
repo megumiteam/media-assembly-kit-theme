@@ -10,19 +10,27 @@
 function mak_background() {
 	global $background_defaults;
 	$output     = '';
-	$attachment_id = get_option( 'background_image');
+	$suffix     = '';
+	if ( is_child_theme() ) {
+		$suffix     = '_mobile';
+	}
+	$attachment_id = get_option( 'background_image' . $suffix );
 	$image         = wp_get_attachment_image_src( $attachment_id, 'full' );
 	if ( !empty( $image ) )
 		$image         = reset( $image );
-	$color         = get_option( 'background_color' );
-	$repeat        = get_option( 'background_repeat' );
-	$position      = get_option( 'background_position' );
-	$attachment    = get_option( 'background_attachment' );
-	$background_size = '-webkit-background-size: cover;' . "\n"
-	. '-moz-background-size: cover;' . "\n"
-	. '-o-background-size: cover;' . "\n"
-	. '-ms-background-size: cover;' . "\n"
-	. 'background-size: cover;' . "\n";
+
+	$color           = get_option( 'background_color' . $suffix );
+	$repeat          = get_option( 'background_repeat' . $suffix );
+	$position        = get_option( 'background_position' . $suffix );
+	$attachment      = get_option( 'background_attachment' . $suffix );
+	$background_size = '';
+	if ( $repeat == 'no-repeat' ) {
+		$background_size = '-webkit-background-size: cover;' . "\n"
+		. '-moz-background-size: cover;' . "\n"
+		. '-o-background-size: cover;' . "\n"
+		. '-ms-background-size: cover;' . "\n"
+		. 'background-size: cover;' . "\n";
+	}
 
 	if ( $image ) {
 		$output = <<< EOT

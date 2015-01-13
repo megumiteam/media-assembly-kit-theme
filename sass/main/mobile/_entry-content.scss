@@ -30,12 +30,30 @@
 		overflow: hidden;
 	}
 	blockquote {
-		padding:10px;
+		margin-right: 0;
+		margin-left: 0;
+		padding: 20px 60px;
 		background: $color__background-entry-content-blockquote;
 		margin-bottom:1em;
+		position: relative;
+		&:before, &:after {
+			font-family: 'FontAwesome';
+			color: #c0baa4;
+			font-size: 32px;
+			position: absolute;
+		}
+		&:before {
+			content: '\f10d';
+			left: 15px;
+			top: 15px;
+		}
+		&:after {
+			content: '\f10e';
+			right: 15px;
+			top: 15px;
+		}
 
 		p {
-			padding:10px;
 			margin-bottom: 0;
 		}
 	}

@@ -53,12 +53,8 @@ function mak_theme_options_fields() {
 	if( ! function_exists( 'get_editable_roles' ) ) {
 		require_once( ABSPATH . '/wp-admin/includes/user.php' );
 	}
-	$options_authors     = array();
-	$options_authors_obj = get_editable_roles();
-	foreach ($options_authors_obj as $key => $value ) {
-		$options_authors[$key] = _x( $value['name'], 'User role');
-	}
 
+	// General
 	add_settings_section(
 		'general',
 		__( 'General', 'mak' ),
@@ -132,50 +128,6 @@ function mak_theme_options_fields() {
 		)
 	);
 	add_settings_field(
-		'carousel_panel_posts_per_page',
-		__( 'Carousel Panel show at most', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'carousel_panel_posts_per_page',
-			'default' => 6,
-		)
-	);
-	add_settings_field(
-		'carousel_panel_speed',
-		__( 'Carousel Panel Speed', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'carousel_panel_speed',
-			'default' => 1500,
-		)
-	);
-	add_settings_field(
-		'carousel_panel_pause',
-		__( 'Carousel Panel Pause', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'carousel_panel_pause',
-			'default' => 6000,
-		)
-	);
-	add_settings_field(
-		'induction_posts_per_page',
-		__( 'Category Induction frame show at most', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'induction_posts_per_page',
-			'default' => 7,
-		)
-	);
-	add_settings_field(
 		'related_posts_per_page',
 		__( 'Related Posts show at most', 'mak' ),
 		'mak_text_field',
@@ -195,50 +147,6 @@ function mak_theme_options_fields() {
 		array(
 			'name'    => 'mobile_related_posts_per_page',
 			'default' => 3,
-		)
-	);
-	add_settings_field(
-		'editor_posts_per_page',
-		__( 'Editors Choice Posts show at most', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'editor_posts_per_page',
-			'default' => 6,
-		)
-	);
-	add_settings_field(
-		'mobile_editor_posts_per_page',
-		__( 'Mobile Editors Choice Posts show at most', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'mobile_editor_posts_per_page',
-			'default' => 4,
-		)
-	);
-	add_settings_field(
-		'editor_panel_speed',
-		__( 'Editors Choice Speed', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'editor_panel_speed',
-			'default' => 1500,
-		)
-	);
-	add_settings_field(
-		'editor_panel_pause',
-		__( 'Editors Choice Pause', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'general',
-		array(
-			'name'    => 'editor_panel_pause',
-			'default' => 6000,
 		)
 	);
 	add_settings_field(
@@ -264,6 +172,7 @@ function mak_theme_options_fields() {
 		)
 	);
 
+	// Site Settings
 	add_settings_section(
 		'siteoption',
 		__( 'Site Settings', 'mak' ),
@@ -328,9 +237,10 @@ function mak_theme_options_fields() {
 		)
 	);
 
+	// Background
 	add_settings_section(
 		'background',
-		__( 'Background', 'mak' ),
+		__( 'PC Background', 'mak' ),
 		'',
 		'mak_theme_options'
 	);
@@ -431,6 +341,88 @@ function mak_theme_options_fields() {
 		)
 	);
 
+	// Background mobile
+	add_settings_section(
+		'background_mobile',
+		__( 'Mobile Background', 'mak' ),
+		'',
+		'mak_theme_options'
+	);
+	add_settings_field(
+		'background_image_mobile',
+		__( 'Background Image', 'mak' ),
+		'mak_image_field',
+		'mak_theme_options',
+		'background_mobile',
+		array(
+			'id'   => 'background-image-mobile',
+			'name' => 'background_image_mobile',
+		)
+	);
+	add_settings_field(
+		'background_color_mobile',
+		__( 'Background Color', 'mak' ),
+		'mak_text_field',
+		'mak_theme_options',
+		'background_mobile',
+		array(
+			'class' => 'small-text color-picker',
+			'name'  => 'background_color',
+		)
+	);
+	add_settings_field(
+		'background_repeat_mobile',
+		__( 'Background Repeat', 'mak' ),
+		'mak_select_field',
+		'mak_theme_options',
+		'background_mobile',
+		array(
+			'name'   => 'background_repeat_mobile',
+			'option' => array(
+				'no-repeat' => __( 'No Repeat', 'mak' ),
+				'repeat-x'  => __( 'Repeat Horizontally', 'mak' ),
+				'repeat-y'  => __( 'Repeat Vertically', 'mak' ),
+				'repeat'    => __( 'Repeat All', 'mak' ),
+			)
+		)
+	);
+	add_settings_field(
+		'background_position_mobile',
+		__( 'Background Position', 'mak' ),
+		'mak_select_field',
+		'mak_theme_options',
+		'background_mobile',
+		array(
+			'name'   => 'background_position_mobile',
+			'option' => array(
+				'top left'      => __( 'Top Left', 'mak' ),
+				'top center'    => __( 'Top Center', 'mak' ),
+				'top right'     => __( 'Top Right', 'mak' ),
+				'middle left'   => __( 'Middle Left', 'mak' ),
+				'middle center' => __( 'Middle Center', 'mak' ),
+				'middle right'  => __( 'Middle Right', 'mak' ),
+				'bottom left'   => __( 'Bottom Left', 'mak' ),
+				'bottom center' => __( 'Bottom Center', 'mak' ),
+				'bottom right'  => __( 'Bottom Right', 'mak' ),
+			)
+		)
+	);
+	add_settings_field(
+		'background_attachment_mobile',
+		__( 'Background Attachment', 'mak' ),
+		'mak_select_field',
+		'mak_theme_options',
+		'background_mobile',
+		array(
+			'name'   => 'background_attachment_mobile',
+			'option' => array(
+				'scroll' => __( 'Scroll Normally', 'mak' ),
+				'fixed'  => __( 'Fixed in Place', 'mak' ),
+			)
+		)
+	);
+
+	// Social
 	add_settings_section(
 		'social',
 		__( 'Social', 'mak' ),
@@ -548,25 +540,8 @@ function mak_theme_options_fields() {
 			'id'   => 'ogp-image',
 		)
 	);
-	add_settings_section(
-		'author',
-		__( 'Writer', 'mak' ),
-		'',
-		'mak_theme_options'
-	);
-	add_settings_field(
-		'writer_role',
-		__( 'Writer Role', 'mak' ),
-		'mak_select_field',
-		'mak_theme_options',
-		'author',
-		array(
-			'name'   => 'writer_role',
-			'option' => $options_authors,
-			'multi'  => true,
-			'value'  => get_option( 'writer_role', array( 'author' ) ),
-		)
-	);
+
+	// Category
 	add_settings_section(
 		'category',
 		__( 'Category', 'mak' ),
@@ -580,39 +555,6 @@ function mak_theme_options_fields() {
 		$slug     = $category['slug'];
 
 		add_settings_field(
-			'cat_' . $term_id . '_view_induction',
-			sprintf( __( 'To view the %s induction frame', 'mak' ), $name ),
-			'mak_check_field',
-			'mak_theme_options',
-			'category',
-			array(
-				'name' => 'cat_' . $term_id . '_view_induction',
-				//'default' => 1,
-			)
-		);
-		add_settings_field(
-			'cat_' . $term_id . '_view_choice',
-			sprintf( __( 'To view the %s Editors Choice', 'mak' ), $name ),
-			'mak_check_field',
-			'mak_theme_options',
-			'category',
-			array(
-				'name' => 'cat_' . $term_id . '_view_choice',
-			)
-		);
-		add_settings_field(
-			'cat_' . $term_id . '_short_title',
-			sprintf( __( '%s Short Title', 'mak' ), $name ),
-			'mak_text_field',
-			'mak_theme_options',
-			'category',
-			array(
-				'class' => 'regular-text',
-				'name'    => 'cat_' . $term_id . '_short_title',
-				'default' => $name,
-			)
-		);
-		add_settings_field(
 			'cat_' . $term_id . '_color',
 			sprintf( __( '%s Category Color', 'mak' ), $name ),
 			'mak_text_field',
@@ -625,6 +567,7 @@ function mak_theme_options_fields() {
 		);
 	}
 
+	// Other
 	add_settings_section(
 		'other',
 		__( 'Other', 'mak' ),
@@ -677,13 +620,8 @@ function mak_register_setting() {
 	register_setting( 'mak_theme_options', 'slide_posts_per_page', 'intval' );
 	register_setting( 'mak_theme_options', 'slide_speed', 'intval' );
 	register_setting( 'mak_theme_options', 'slide_pause', 'intval' );
-	register_setting( 'mak_theme_options', 'carousel_panel_posts_per_page', 'intval' );
-	register_setting( 'mak_theme_options', 'carousel_panel_speed', 'intval' );
-	register_setting( 'mak_theme_options', 'carousel_panel_pause', 'intval' );
-	register_setting( 'mak_theme_options', 'induction_posts_per_page', 'intval' );
 	register_setting( 'mak_theme_options', 'related_posts_per_page', 'mak_related_per' );
-	register_setting( 'mak_theme_options', 'editor_posts_per_page', 'intval' );
-	register_setting( 'mak_theme_options', 'mobile_editor_posts_per_page', 'intval' );
+	register_setting( 'mak_theme_options', 'mobile_related_posts_per_page', 'mak_related_per' );
 	register_setting( 'mak_theme_options', 'ad_posts_number', 'intval' );
 	register_setting( 'mak_theme_options', 'ad_mobile_posts_number', 'intval' );
 
@@ -703,6 +641,13 @@ function mak_register_setting() {
 	register_setting( 'mak_theme_options', 'background_link', 'esc_url' );
 	register_setting( 'mak_theme_options', 'background_target', 'intval' );
 
+	// Background mobile
+	register_setting( 'mak_theme_options', 'background_image_mobile', 'intval' );
+	register_setting( 'mak_theme_options', 'background_color_mobile', 'esc_attr' );
+	register_setting( 'mak_theme_options', 'background_repeat_mobile', 'esc_attr' );
+	register_setting( 'mak_theme_options', 'background_position_mobile', 'esc_attr' );
+	register_setting( 'mak_theme_options', 'background_attachment_mobile', 'esc_attr' );
+
 	// Social
 	register_setting( 'mak_theme_options', 'twitter_url', 'esc_url' );
 	register_setting( 'mak_theme_options', 'twitter_via', 'esc_attr' );
@@ -715,18 +660,12 @@ function mak_register_setting() {
 	register_setting( 'mak_theme_options', 'ogp_keyword', 'esc_attr' );
 	register_setting( 'mak_theme_options', 'ogp_image', 'intval' );
 
-	// Writer
-	register_setting( 'mak_theme_options', 'writer_role' );
-
 	// Category
 	$categories = mak_options_categories( array(), array( 'child' => false ) );
 	foreach ( $categories as $category ) {
 		$term_id  = $category['term_id'];
 		$name     = $category['name'];
 		$slug     = $category['slug'];
-		register_setting( 'mak_theme_options', 'cat_' . $term_id . '_view_induction', 'intval' );
-		register_setting( 'mak_theme_options', 'cat_' . $term_id . '_view_choice', 'intval' );
-		register_setting( 'mak_theme_options', 'cat_' . $term_id . '_short_title', 'esc_html' );
 		register_setting( 'mak_theme_options', 'cat_' . $term_id . '_color', 'esc_attr' );
 	}
 

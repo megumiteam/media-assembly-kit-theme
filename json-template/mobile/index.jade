@@ -1,0 +1,51 @@
+extends ../extends/_layout_mobile
+
+block vars
+	- var sitename = 'お金と知識でステキなママライフをサポート';
+	- var title    = 'Mama’s Money（マママネー）';
+	- var type     = 'home';
+
+//- scripts
+block append wp_head
+
+block append before_body
+
+block append before_page
+
+block append after_header
+
+block append header_content
+
+block append before_content
+
+block append wp_footer
+	script.
+		(function($) {
+			var lpath    = location.pathname.split("/");
+			var lpathend = lpath[lpath.length-1];
+			if ( lpathend === '' ) {
+				lpath.pop();
+			}
+			var page    = lpath[lpath.length-2];
+			var pagenum = '';
+			if ( page == 'page' ) {
+				pagenum     = lpath[lpath.length-1];
+			}
+			wpjsonRoot( 'mobile' );
+			wpjsonPosts( 'mobile', '', '', pagenum, true );
+			wpjsonHome( 'mobile', pagenum );
+			wpjsonWidgets( 'sidebar-mobile' );
+		})(jQuery);
+
+//- main content
+block main
+
+	//- category-posts-tab
+	#category-induction-box
+	#post-box
+		include ../includes/_loader
+
+block main_bottom
+
+	//- mak_nav_top_ad
+	#mad-nav-top

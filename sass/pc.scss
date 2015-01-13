@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*!
-Theme Name: TG Media Kit for Mama's Money
+Theme Name: Media Assembly Kit
 Theme URI: https://www.digitalcube.jp/
 Author: DigitalCube Co.,Ltd
 Author URI: https://www.digitalcube.jp/
-Description: TG Media Kit for Mama's Money
+Description: Media Assembly Kit Theme.
 Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -59,9 +59,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Header
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* media-nav-box */
-@import "header/pc/media-nav-box";
-
 /* masthead */
 @import "header/pc/masthead";
 
@@ -104,18 +101,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Slide */
 @import "modules/pc/slide";
-
-/* Carousel and Editor Choice */
-@import "modules/pc/carousel";
-
-/* Category Induction */
-@import "modules/pc/category-induction";
-
-/* External Site */
-@import "modules/pc/external-site";
-
-/* _popIn_recommend */
-@import "modules/pc/popin_recommend";
 
 /* Related Post */
 @import "modules/pc/related-post";

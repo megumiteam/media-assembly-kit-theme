@@ -47,28 +47,20 @@ $color__input-text-focus: $color__body-text;
 // #masthead
 //
 
-$color__link-masthead-mobile: $color__body-text;
-
-// #mak_media_nav
-$color__background-media-nav-box: #eceae6;
-$color__border-media-nav-box: $color__body-text;
-
 // .site-title
 // pc
 $boxsize__width-site-title-pc: 250px;
-$boxsize__height-site-title-pc: 76px;
+$boxsize__height-site-title-pc: 39px;
 $image__site-title-pc: 'site-logo.png';
 $image__site-title-pc-2x: 'site-logo@2x.png';
 // mobile
-$boxsize__width-site-title-mobile: 173px;
-$boxsize__height-site-title-mobile: 52px;
-$image__site-title-mobile: 'site-logo-mobile.png';
-$image__site-title-mobile-2x: 'site-logo-mobile@2x.png';
-
-// #header-meta (mobile only)
-$color__background-header-meta: #9a764b;
-$color__text-header-meta: white;
-$color__background-header-meta-search-foam-box: #ba9972;
+$boxsize__width-site-title-mobile: 240px;
+$boxsize__height-site-title-mobile: 37px;
+$image__site-title-mobile: 'site-logo.png';
+$image__site-title-mobile-2x: 'site-logo@2x.png';
+$color__link-masthead-mobile: $color__body-text;
+$color__background-button-box: #f99e24;
+$color__text-button-box: white;
 
 // #global-nav-box (pc only)
 $color__background-global-nav-box: #f6ad64;
@@ -102,7 +94,6 @@ $color__background-archive-title-mobile: #f99e24;
 $color__text-archive-nav-current: white;
 $color__background-archive-nav-current: #f99e24;
 // mobile
-$color__background-archive-nav: $color__common-background;
 $color__text-archive-nav-a: white;
 $color__background-archive-nav-a: #f99e24;
 
@@ -113,19 +104,11 @@ $color__link-entry-title-hover-background: #f3edde;
 $color__text-entry-title-mobile: white;
 $color__background-entry-title-mobile: #f99e24;
 
-// .posted-in-media
-$color__text-posted-in-media: #f99e24;
-$color__link-posted-in-media: $color__body-text;
-
 // .entry-meta
-// pr
-$color__text-entry-meta-pr: white;
-$color__background-entry-meta-pr: #fcbe01;
 // pc
 $color__text-entry-meta-pc: #707070;
 $color__link-entry-meta-pc: $color__text-entry-meta-pc;
 $color__link-entry-meta-pc-hover: #f99e24;
-$color__link-author: $color__text-entry-meta-pc;
 // mobile
 $color__text-entry-meta-mobile: $color__body-text;
 $color__link-entry-meta-mobile: $color__text-entry-meta-mobile;
@@ -172,7 +155,7 @@ $color__background-ranking-number: #c7ba9a;
 $color__background-ranking-number-top: #f8d32f;
 
 // .widget_categories (mobile only)
-$color__background-widget_categories-a: #fcfbf9;
+$color__background-widget_categories-a: #fff7d8;
 
 //
 // #colophon footer
@@ -195,11 +178,6 @@ $color__border-colophon-search-foam-box: #c9c9c9;
 // #footer-nav-box
 $color__text-footer-nav-box-arrow: #f99e24;
 
-// #related-menu (mobile only)
-$color__background-related-menu: $color__common-background;
-$color__border-related-menu: #f99e24;
-
-
 //
 // Modules
 //
@@ -217,21 +195,3 @@ $color__border-category-posts-nav: #ffd3a8;
 $color__text-category-posts-nav-current: #f99e24;
 $color__background-category-posts-nav-current: #ffdebe;
 $color__border-category-posts-nav-current: $color__background-category-posts-nav-current;
-
-// #carousel-box (pc only)
-$color__text-bx-controls-direction: white;
-$color__background-bx-controls-direction: #9a764b;
-
-// #category-induction (pc only)
-$color__text-category-induction-nav: white;
-$color__background-category-induction-nav: #999;
-$color__text-category-induction-nav-current: #1c1c1c;
-$color__background-category-induction-nav-current: white;
-$color__text-category-induction-content-arrow: #f99e24;
-
-// #external-site
-$color__background-external-site: image-url('background/back-dot-02.png');
-$color__link-external-site: #f99e24;
-
-// #pickup-box (mobile only)
-$color__text-pickup-box-title: #f99e24;

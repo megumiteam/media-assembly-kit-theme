@@ -123,7 +123,7 @@ function mak_get_category_posts_tab( $args = array() ) {
 			$count++;
 		}
 		wp_reset_postdata();
-		$output .= mak_get_nav_top_ad();
+
 		if ( $limit < $post_count )
 			$output .= '<p class="more-archive"><a href="' . $cat_link . '">' . __( 'The following articles list', 'mak' ) . '</a></p>' . "\n";
 

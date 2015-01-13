@@ -4,7 +4,7 @@ var mainBowerFiles = require('main-bower-files');
 var runSequence    = require('run-sequence');
 
 // default task
-gulp.task( 'default', ['images', 'compass'] );
+gulp.task( 'default', ['images', 'compass', 'js', 'jade'] );
 
 // init task
 gulp.task( 'init', function() {
@@ -39,8 +39,16 @@ gulp.task( 'fonts', function() {
 
 // javascript
 gulp.task( 'js', function() {
+	// wpjson
+	gulp.src( 'js/wpjson.js' )
+		.pipe($.jshint())
+		.pipe($.jshint.reporter('default'))
+		.pipe($.concat('wpjson.min.js'))
+		.pipe($.uglify())
+		.pipe(gulp.dest('../../../assets/js'))
+
 	// PC
-	gulp.src(['js/mak_pc.js', 'js/functions_common/*.js', 'js/functions_pc/*.js' ])
+	gulp.src(['js/mak_pc.js', 'js/functions_common/*.js', 'js/functions_pc/*.js', '! js/wpjson.js' ])
 		.pipe($.jshint())
 		.pipe($.jshint.reporter('default'))
 		.pipe($.concat('pc.js'))
@@ -50,7 +58,7 @@ gulp.task( 'js', function() {
 		.pipe(gulp.dest('../../../assets/js'))
 
 	// Mobile
-	gulp.src(['js/mak_mobile.js', 'js/functions_common/*.js', 'js/functions_mobile/*.js' ])
+	gulp.src(['js/mak_mobile.js', 'js/functions_common/*.js', 'js/functions_mobile/*.js', '! js/wpjson.js' ])
 		.pipe($.jshint())
 		.pipe($.jshint.reporter('default'))
 		.pipe($.concat('mobile.js'))
@@ -89,9 +97,72 @@ gulp.task( 'compass', function() {
 		}))
 });
 
+// jade
+gulp.task('jade', function() {
+  // PC
+  gulp.src(['json-template/pc/{,*/}{,*/}*.jade', '!json-template/{,*/}{,*/}_*.jade'])
+    .pipe($.jade({
+	    'pretty': true
+    }))
+    .pipe(gulp.dest('../../../json-template-pc/'))
+  // Mobile
+  gulp.src(['json-template/mobile/{,*/}{,*/}*.jade', '!json-template/{,*/}{,*/}_*.jade'])
+    .pipe($.jade({
+	    'pretty': true
+    }))
+    .pipe(gulp.dest('../../../json-template-mobile/'))
+});
+
 // watch
 gulp.task( 'watch', function () {
 	gulp.watch( 'js/*.js', ['js'] );
 	gulp.watch( 'sass/{,*/}{,*/}*.scss', ['compass'] );
 	gulp.watch( 'images/{,*/}{,*/}*.*', ['images'] );
 });
+
+
+// Test
+gulp.task('test', function() {
+  // PC
+  gulp.src(['../../../json-template-pc/search.html', '../../../json-template-pc/404.html'])
+    .pipe(gulp.dest('../../../test/pc/'))
+  gulp.src('../../../json-template-pc/index.html')
+    .pipe(gulp.dest('../../../test/pc/'))
+    .pipe(gulp.dest('../../../test/pc/page/2'))
+  gulp.src('../../../json-template-pc/archive.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/pc/category/money/'))
+    .pipe(gulp.dest('../../../test/pc/category/money/page/2'))
+    .pipe(gulp.dest('../../../test/pc/author/digitalcube/'))
+  gulp.src('../../../json-template-pc/summary.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/pc/summary/2014/12/19/51589/'))
+  gulp.src('../../../json-template-pc/post.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/pc/2014/12/19/51589/'))
+  gulp.src('../../../json-template-pc/page.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/pc/contact/'))
+
+  // Mobile
+  gulp.src(['../../../json-template-mobile/search.html', '../../../json-template-mobile/404.html'])
+    .pipe(gulp.dest('../../../test/mobile/'))
+  gulp.src('../../../json-template-mobile/index.html')
+    .pipe(gulp.dest('../../../test/mobile/'))
+    .pipe(gulp.dest('../../../test/mobile/page/2'))
+  gulp.src('../../../json-template-mobile/archive.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/mobile/category/money/'))
+    .pipe(gulp.dest('../../../test/mobile/category/money/page/2'))
+    .pipe(gulp.dest('../../../test/mobile/author/digitalcube/'))
+  gulp.src('../../../json-template-mobile/summary.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/mobile/summary/2014/12/19/51589/'))
+  gulp.src('../../../json-template-mobile/post.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/mobile/2014/12/19/51589/'))
+  gulp.src('../../../json-template-mobile/page.html')
+    .pipe($.concat('index.html'))
+    .pipe(gulp.dest('../../../test/mobile/contact/'))
+});
+

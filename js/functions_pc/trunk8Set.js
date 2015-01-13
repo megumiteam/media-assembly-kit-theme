@@ -1,8 +1,12 @@
 // trunk8
 (function($){
-window.trunk8Set = function() {
+window.trunk8Set = function( targetname ) {
 
-	var trunk8      = $( '.trunk8' );
+	if ( typeof targetname === 'undefined' ) {
+		targetname = '.trunk8';
+	}
+
+	var trunk8      = $( targetname );
 	var trunk8Lines = '';
 	if( trunk8[0] ) {
 		trunk8.each( function() {

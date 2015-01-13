@@ -28,24 +28,29 @@ function mak_related_post_list( $args = array() ) {
 	echo mak_get_related_post_list( $args );
 }
 function mak_get_related_post_list( $args = array() ) {
-	if ( !class_exists('Simple_Related_Posts') )
+	if ( !class_exists( 'Simple_Related_Posts' ) )
 		return;
 
 	$output  = '';
 	$id      = '';
 	$default = array(
-		'device' => 'pc',
+		'device'        => 'pc',
 		'before_widget' => '<aside id="related-post">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="parts-title"><span>',
 		'after_title'   => '</span></h1>',
-		'title'         => __( 'Recommend', 'mak' ),
+		'title'         => __( 'Related posts', 'mak' ),
 	);
 	$default = apply_filters( 'mak_related_post_list_default', $default );
 	$args    = wp_parse_args( $args, $default );
 	extract($args);
 
-	$ids = mak_get_related_posts();
+	if ( is_child_theme() || $device == "mobile" ) {
+		$num  = get_option( 'mobile_related_posts_per_page', 3 );
+	} else {
+		$num  = get_option( 'related_posts_per_page', 8 );
+	}
+	$ids = mak_get_related_posts( array( 'display_num' => $num ) );
 	if ( empty( $ids ) )
 		return;
 
@@ -90,3 +95,4 @@ function mak_get_related_post_list( $args = array() ) {
 	$output .= $after_widget;
 	return $output;
 }
+

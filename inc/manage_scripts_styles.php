@@ -11,7 +11,7 @@
  * Register Lobster Google font
  */
 function mak_font_url() {
-	$font_url = add_query_arg( 'family', 'Nunito:400,700,300', "//fonts.googleapis.com/css" );
+	$font_url = add_query_arg( 'family', 'Asap:400,700,400italic,700italic', "//fonts.googleapis.com/css" );
 	return $font_url;
 }
 function mak_scripts_styles() {
@@ -21,7 +21,7 @@ function mak_scripts_styles() {
 		wp_enqueue_style( 'normalize', get_site_url() . '/assets/lib/normalize.css', array(), 'v3.0.2' );
 
 	wp_enqueue_style( 'open-sans' );
-	wp_enqueue_style( 'oswald', mak_font_url(), array(), null );
+	wp_enqueue_style( 'asap', mak_font_url(), array(), null );
 
 	// Font-Awesome
 	wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' );

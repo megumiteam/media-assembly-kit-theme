@@ -1,0 +1,52 @@
+extends ../extends/_layout
+
+block vars
+	- var sitename = 'Mama’s Money（マママネー）';
+	- var title    = 'ページが見つかりませんでした';
+	- var type     = 'error404';
+	- var post     = 'post';
+
+//- scripts
+block append wp_head
+
+block append before_body
+
+block append before_page
+
+block append after_header
+
+block append header_content
+
+block append before_content
+
+block append wp_footer
+	script.
+		(function($) {
+			wpjsonRoot();
+			wpjsonPosts();
+			wpjsonPickup();
+			wpjsonWidgets( 'sidebar-pc' );
+			ogp_set();
+		})(jQuery);
+
+//- main content
+block main
+
+	article#post-0.error404.not-found
+		header.entry-header
+			h1.entry-title ページが見つかりませんでした。
+
+		section.entry-content
+			div ここには何も見つかりませんでした。以下の検索をお試しください。
+			include ../includes/_search_field
+
+	#pickup-box-set
+
+	//- What’s New
+	aside#whats-new-box
+		h1.parts-title: span What’s New
+		#post-box
+			include ../includes/_loader
+
+block main_bottom
+

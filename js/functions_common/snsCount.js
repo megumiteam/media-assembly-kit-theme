@@ -28,18 +28,4 @@ window.facebookCount = function() {
 		}
 	});
 };
-window.hatenaCount = function() {
-	var socialBox    = $('.social-entry-box');
-	var socialHatena = $('.hatena-count');
-	var url          = socialHatena.attr( 'data-url' );
-	$.ajax({
-		url:'http://api.b.st-hatena.com/entry.count?url=' + url,
-		type:"get",
-		dataType:"jsonp"
-	}).then(function(response) {
-		if ( 0 <= response ) {
-			socialHatena.text(response);
-		}
-	});
-};
 })(jQuery);

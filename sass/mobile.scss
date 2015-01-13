@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*
-Theme Name: TG Media Kit Mobile  for Mama's Money
+Theme Name: Media Assembly Kit Mobile Theme
 Theme URI: https://www.digitalcube.jp/
 Author: DigitalCube Co., Ltd
 Author URI: https://www.digitalcube.jp/
-Description: TG Media Kit Mobile  for Mama's Money
+Description: Media Assembly Kit Mobile Theme.
 Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,14 +50,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Header
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* media-nav-box */
-@import "header/mobile/media-nav-box";
-
 /* masthead */
 @import "header/mobile/masthead";
-
-/* header-meta */
-@import "header/mobile/header-meta";
 
 /* khm-15 */
 @import "header/mobile/khm-15";
@@ -93,14 +87,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Modules
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* Slide */
-@import "modules/mobile/slide";
-
 /* Home Category tabs */
 @import "modules/mobile/category-posts-tab";
-
-/* External Site */
-@import "modules/mobile/external-site";
 
 /* Related Post */
 @import "modules/mobile/related-post";

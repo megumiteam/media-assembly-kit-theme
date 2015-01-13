@@ -48,38 +48,11 @@ window.rankingNavSet = function() {
 		rankingNav.on( 'click', function() {
 			if ( ! $(this).hasClass( 'current') ) {
 				var target = $(this).attr( 'data-target' );
-				console.log(target);
 				rankingNav.removeClass( 'current' );
 				$(this).addClass( 'current' );
 				rankingList.removeClass( 'current' );
 				ranking.children( '#' + target ).addClass( 'current' );
 			}
-		});
-	}
-};
-})(jQuery);
-
-(function($){
-window.slideBoxSet = function() {
-	var slideBox = $('#slide-box');
-	var slide    = slideBox.children('#slide');
-	if ( slideBox[0] ) {
-		slideSpeed  = parseInt( slide.attr( 'data-speed' ), 10 );
-		slidePause  = parseInt( slide.attr( 'data-pause' ), 10 );
-		slideHeight = slide.find('img').height();
-		slideBox.css({
-			'height': slideHeight
-		});
-		slide.imagesLoaded(function(){
-			slide.bxSlider({
-				mode: 'fade',
-				speed: slideSpeed,
-				pager: false,
-				controls: false,
-				auto: true,
-				pause: slidePause,
-				autoHover: true
-			});
 		});
 	}
 };
@@ -115,25 +88,11 @@ window.facebookCount = function() {
 		}
 	});
 };
-window.hatenaCount = function() {
-	var socialBox    = $('.social-entry-box');
-	var socialHatena = $('.hatena-count');
-	var url          = socialHatena.attr( 'data-url' );
-	$.ajax({
-		url:'http://api.b.st-hatena.com/entry.count?url=' + url,
-		type:"get",
-		dataType:"jsonp"
-	}).then(function(response) {
-		if ( 0 <= response ) {
-			socialHatena.text(response);
-		}
-	});
-};
 })(jQuery);
 
-// categoryPostsTab
+// categoryPostsTab(categoryInductionBoxSet)
 (function($){
-window.categoryPostsTabSet = function() {
+window.categoryInductionBoxSet = function() {
 
 	var categoryPostsTab     = $('#category-posts-tab');
 	if ( categoryPostsTab[0] ) {
@@ -168,25 +127,11 @@ window.colophonSocialSet = function() {
 (function($){
 window.searchFieldResizeSet = function() {
 
-	var headerMeta           = $('#header-meta');
-	var search               = headerMeta.children('.search-form');
-	var searchField          = search.find('.search-field');
-	var socialBox            = headerMeta.children('div.social-box');
-	var colophon             = $('#colophon');
+	var colophon             = $('#footer-search-box');
 	var colophonSearchBox    = colophon.children('.search-form');
 	var colophonSearch       = colophonSearchBox.children('.search-field');
 
 	colophonSearch.attr( 'placeholder', '気になるワードを入力' );
-
-	$(window).resize(function(){
-		var headerMetaWidth     = headerMeta.width();
-		var socialBoxWidth      = socialBox.innerWidth();
-		var searchFieldWidth    = headerMetaWidth - socialBoxWidth - 26;
-		search.css({
-			'width': searchFieldWidth
-		});
-	}).resize();
-
 };
 
 })(jQuery);
@@ -195,7 +140,11 @@ window.searchFieldResizeSet = function() {
 (function($){
 window.trunk8Set = function() {
 
-	var trunk8      = $( '.trunk8' );
+	if ( typeof targetname === 'undefined' ) {
+		targetname = '.trunk8';
+	}
+
+	var trunk8      = $( targetname );
 	var trunk8Lines = '';
 	if( trunk8[0] ) {
 		trunk8.each( function() {

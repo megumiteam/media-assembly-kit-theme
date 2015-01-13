@@ -30,8 +30,6 @@
 		line-height: 1.2;
 		margin: 5px 0 0;
 	}
-	.posted-in-media,
-	.author,
 	.entry-date {
 		color: $color__text-entry-meta-pc;
 		@include fz( 11 );
@@ -71,7 +69,7 @@
 
 // #archive-nav
 #archive-nav {
-	font-family: 'Nunito';
+	font-family: 'Asap';
 	font-weight: bold;
 	text-align: center;
 	margin-top: 20px;

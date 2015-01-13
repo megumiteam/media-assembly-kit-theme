@@ -1,0 +1,16 @@
+header#masthead.site-header(role="banner")
+
+	h1.site-title: a.homelink(href="/", rel="home") #{sitename}
+
+	block after_header
+
+//- Slide
+if type === 'home'
+	#slide-box-out
+		include _loader
+
+//- health_global_nav
+nav#global-nav-box.global-menu.headroom-nav.nav--top
+
+block header_content
+

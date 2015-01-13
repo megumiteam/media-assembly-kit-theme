@@ -3,7 +3,7 @@
 	.home &,
 	.archive &,
 	.search &,
-	#whats-new-box & {
+	#whats-new-post & {
 
 		a {
 			color: $color__link-entry-title;
@@ -24,26 +24,9 @@
 	}
 }
 
-.posted-in-media,
-.entry-meta .author {
-	a {
-		color: $color__link-author;
-	}
-}
-
 // single-article
 .single-article {
 
-	.posted-in-media {
-		color: $color__text-posted-in-media;
-		margin-bottom: 16px;
-		display: inline-block;
-		float: left;
-
-		a {
-			color: $color__link-posted-in-media;
-		}
-	}
 	.media-logo {
 		max-width: 120px;
 		margin-bottom: 16px;
@@ -57,6 +40,12 @@
 // 		@extend %hr-border-bottom;
 		padding-bottom: 30px;
 		clear: both;
+		a {
+			color: $color__text-entry-title;
+			&:hover {
+				background: $color__link-entry-title-hover-background;
+			}
+		}
 	}
 	.entry-meta {
 		@include fz( 11 );
@@ -66,19 +55,15 @@
 		p {
 			margin-right: 25px;
 			display: inline-block;
-
-			&.pr {
-				@include border-radius(3px);
-				float: right;
-				margin-right: 0;
-				background: $color__background-entry-meta-pr;
-				color: $color__text-entry-meta-pr;
-				width: 60px;
-				padding: 2px;
-				text-align: center;
-			}
 		}
 
+	}
+	.entry-content {
+		@extend %hr-border-bottom;
+		padding-bottom: 30px;
+	}
+	&.single-summary .entry-content {
+		border: none;
 	}
 }
 
@@ -122,20 +107,47 @@
 				margin-bottom: 1px;
 			}
 		}
-		&.hatena-button {
-
-			i {
-				color: #00a4de;
-				margin-bottom: 1px;
-			}
-		}
 
 	}
 }
 
+// .social-share-box
+.social-share-box {
+	text-align: center;
+	padding: 20px 0 10px 0;
+	clear: both;
+	@extend %clearfix;
+
+	p {
+		background: #000;
+		width: 235px;
+		display: inline-block;
+		margin: 0 9px;
+		padding: 8px;
+		@include border-radius(8px);
+
+		a {
+			display: block;
+			color: white;
+		}
+		i {
+			@include fz(24);
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+
+		&.twitter-button {
+			background: #55acee;
+		}
+		&.facebook-button {
+			background: #3b5999;
+		}
+	}
+
+}
+
 // #more-link-box
 #more-link-box {
-	margin-bottom: 50px;
 // 	clear: both;
 
 	a {
@@ -163,7 +175,7 @@
 	@extend %clearfix;
 
 	p {
-		width: 125px;
+		width: 150px;
 		margin: 0;
 		display: inline-block;
 

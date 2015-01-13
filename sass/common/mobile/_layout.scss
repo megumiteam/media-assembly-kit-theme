@@ -2,11 +2,10 @@
 #content {
 	@extend %clearfix;
 
-	.single &,
-	.page &,
-	.error404 & {
 		background: $color__background-dropshadow-box;
-	}
+}
+#primary {
+	padding-bottom: 25px;
 }
 #colophon {
 	padding: 25px 0;

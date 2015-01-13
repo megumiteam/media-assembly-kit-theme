@@ -1,5 +1,7 @@
-#pickup-box {
+#pickup-post {
 	margin-top: 20px;
+	padding: 25px 0;
+	@extend %dropshadow-box;
 }
 #pickup {
 	@extend %ul;
@@ -23,12 +25,5 @@
 		img {
 			display: block;
 		}
-	}
-}
-.error404 {
-
-	#pickup-box {
-		padding: 25px 30px;
-		@extend %dropshadow-box;
 	}
 }

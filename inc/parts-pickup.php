@@ -23,12 +23,17 @@ function mak_pickup( $args = array(), $instance = array() ) {
 	echo mak_get_pickup( $args, $instance );
 }
 function mak_get_pickup( $args = array(), $instance = array() ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return;
+	}
+
 	$output  = '';
 	$default = array(
-		'before_widget' => '<aside id="pickup-box">',
+		'before_widget' => '<aside id="pickup-post">',
 		'after_widget'  => '</aside>',
 		'limit'         => 3,
 		'title'         => __( 'Pickup', 'mak' ),
+		'ua'            => 'pc',
 	);
 	$default = apply_filters( 'mak_pickup_post_list_default', $default );
 	$args    = wp_parse_args( $args, $default );
@@ -41,7 +46,7 @@ function mak_get_pickup( $args = array(), $instance = array() ) {
 	if ( empty( $posts ) )
 		return;
 
-	if ( is_child_theme() ) {
+	if ( is_child_theme() || $ua == 'mobile' ) {
 		$size   = 'mobile-thumbnail';
 		$width  = 190;
 		$height = 200;
@@ -87,3 +92,4 @@ function mak_get_pickup( $args = array(), $instance = array() ) {
 	$output .= $after_widget;
 	return $output;
 }
+

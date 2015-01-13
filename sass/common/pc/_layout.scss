@@ -5,16 +5,11 @@
 }
 #slide-box {
 	@extend #masthead;
-	margin-top: 5px;
 	margin-bottom: 20px;
 }
 #global-nav-box {
 	@extend #masthead;
-	margin-top: 5px;
-}
-#carousel-box {
-	@extend #masthead;
-	margin-top: 29px;
+	margin-bottom: 20px;
 }
 #khm-15 {
 	@extend #masthead;
@@ -22,7 +17,7 @@
 }
 #content {
 	@extend #masthead;
-	margin-top: 20px;
+	margin-bottom: 20px;
 	@extend %clearfix;
 
 }
@@ -37,10 +32,6 @@
 #secondary {
 	width: 300px;
 	float: right;
-}
-#editor-choice-box {
-	@extend #masthead;
-	margin-top: 50px;
 }
 #colophon {
 	min-width: 1000px;

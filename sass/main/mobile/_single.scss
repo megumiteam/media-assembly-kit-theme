@@ -1,7 +1,5 @@
 // common
-.entry-meta,
-.posted-in-media,
-.entry-meta .author {
+.entry-meta {
 	a {
 		color: $color__link-entry-meta-mobile;
 	}
@@ -10,20 +8,6 @@
 // single-article
 .single-article {
 
-	.media-box {
-		padding: 10px 10px 0;
-		@extend %clearfix;
-	}
-	.posted-in-media {
-		color: $color__text-posted-in-media;
-		margin-bottom: 0;
-		display: inline-block;
-		float: left;
-
-		a {
-			color: $color__text-posted-in-media;
-		}
-	}
 	.media-logo {
 		max-width: 120px;
 		margin-bottom: 0;
@@ -53,17 +37,14 @@
 			margin: 0 10px 0 0;
 			display: inline-block;
 			float: left;
-			&.pr {
-				@include border-radius(3px);
-				float: right;
-				margin-right: 0;
-				background: $color__background-entry-meta-pr;
-				color: $color__text-entry-meta-pr;
-				width: 60px;
-				padding: 2px;
-				text-align: center;
-			}
 		}
+	}
+	.entry-content {
+		@extend %hr-border-bottom;
+		padding-bottom: 20px;
+	}
+	&.single-summary .entry-content {
+		border: none;
 	}
 }
 
@@ -108,15 +89,43 @@
 				margin-bottom: 1px;
 			}
 		}
-		&.hatena-button {
-
-			i {
-				color: #00a4de;
-				margin-bottom: 1px;
-			}
-		}
 	}
 }
+
+// .social-share-box
+.social-share-box {
+	text-align: center;
+	padding: 10px 0;
+	clear: both;
+	@extend %clearfix;
+
+	p {
+		background: #000;
+		width: 300px;
+		margin: 0 auto;
+		padding: 12px;
+		@include border-radius(8px);
+
+		a {
+			display: block;
+			color: white;
+		}
+		i {
+			@include fz(24);
+			margin-right: 5px;
+		}
+
+		&.twitter-button {
+			background: #55acee;
+			margin-bottom: 10px;
+		}
+		&.facebook-button {
+			background: #3b5999;
+		}
+	}
+
+}
+
 // #more-link-box
 #more-link-box {
 	margin-bottom: 0;
@@ -139,7 +148,6 @@
 #single-nav {
 	text-align: center;
 	margin: 0 10px;
-	background: $color__common-background;
 	clear:both;
 	@extend %clearfix;
 

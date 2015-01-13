@@ -24,9 +24,11 @@ function mak_whats_new( $args = array() ) {
 function mak_get_whats_new( $args = array() ) {
 	$output  = '';
 	$default = array(
-		'before_widget' => '<aside id="whats-new-box">',
+		'before_widget' => '<aside id="whats-new-post">',
 		'after_widget'  => '</aside>',
 		'limit'         => 10,
+		'title'         => __( 'What\'s New', 'mak' ),
+		'ua'            => 'pc',
 	);
 	$default = apply_filters( 'mak_whats_new_post_list_default', $default );
 	$args    = wp_parse_args( $args, $default );
@@ -39,7 +41,7 @@ function mak_get_whats_new( $args = array() ) {
 	if ( empty( $posts ) )
 		return;
 
-	if ( is_child_theme() ) {
+	if ( is_child_theme() || $ua == 'mobile' ) {
 		$size     = 'mobile-thumbnail';
 		$width    = 190;
 		$height   = 200;
@@ -53,7 +55,7 @@ function mak_get_whats_new( $args = array() ) {
 		$children = false;
 	}
 	$output .= $before_widget;
-	$output .= '<h1 class="parts-title"><span>' . __( 'What\'s New', 'mak' ) . '</span></h1>' . "\n";
+	$output .= '<h1 class="parts-title"><span>' . $title . '</span></h1>' . "\n";
 	foreach ( $posts as $post ) {
 		setup_postdata( $post );
 		$post_id        = $post->ID;
@@ -84,13 +86,18 @@ function mak_get_whats_new( $args = array() ) {
 		$output .= '<article class="archive-article ' . $class . '">' . "\n";
 		$output .= $image . "\n";
 		$output .= '<header class="entry-header">' . "\n";
-		if ( ! is_child_theme() )
+		if ( is_child_theme() || $ua == 'mobile' ) {
+			
+		} else {
 			$output .= mak_get_entry_terms( array( 'id' => $post_id, 'separator' => '', 'showcolor' => true, 'class' => ' color-cat' ) );
+		}
 		$output .= '<h1 class="entry-title"><a href="' . $link . '">' . $title . '</a></h1>' . "\n";
 		$output .= mak_get_entry_terms( array( 'id' => $post_id, 'term_name' => 'media', 'separator' => '' ) );
 		$output .= $date;
 		$output .= '</header>' . "\n";
-		if ( ! is_child_theme() ) {
+		if ( is_child_theme() || $ua == 'mobile' ) {
+			
+		} else {
 			$output .= '<section class="entry-summary trunk8" data-lines="' . $lines . '">' . "\n";
 			$output .= $content;
 			$output .= '</section>' . "\n";

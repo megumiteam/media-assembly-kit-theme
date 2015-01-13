@@ -24,18 +24,6 @@
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 2. Header tags
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-function mak_media_nav() {
-	$search_foam = get_search_form( false ) . "\n";
-	wp_nav_menu( array(
-		'theme_location'  => 'media-menu',
-		'container'       => 'nav',
-		'container_id'    => 'media-nav-box',
-		'container_class' => 'media-menu',
-		'items_wrap'      =>'<ul id="%1$s" class="%2$s">%3$s</ul>' . $search_foam,
-		'depth'           => 1,
-		'fallback_cb'     => ''
-	) );
-}
 function mak_global_nav() {
 	wp_nav_menu( array(
 		'theme_location'  => 'global-menu',
@@ -124,11 +112,16 @@ function mak_get_entry_data( $args = array() ) {
 	$args    = wp_parse_args( $args, $default );
 	extract($args);
 
+	$post_date = '';
+	$post_date_iso = '';
+
 	if ( $post_id ) {
 		$post          = get_post( $post_id );
-		$post_date     = $post->post_date;
-		$post_date     = esc_attr( date_i18n( $format, strtotime( $post_date ) ) );
-		$post_date_iso = esc_attr( date_i18n( 'c', strtotime( $post_date ) ) );
+		if ( $post ) {
+			$post_date     = $post->post_date;
+			$post_date     = esc_attr( date_i18n( $format, strtotime( $post_date ) ) );
+			$post_date_iso = esc_attr( date_i18n( 'c', strtotime( $post_date ) ) );
+		}
 	} else {
 		$post_date     = esc_attr( apply_filters( 'the_date', get_the_date( $format ) ) );
 		$post_date_iso = esc_attr( apply_filters( 'the_date', get_the_date( 'c' ) ) );
@@ -212,7 +205,7 @@ function mak_get_entry_terms( $args = array() ) {
 			$term_id  = $term->term_id;
 			$parent   = $term->parent;
 
-			if ( $term_id ) {
+			if ( $term_id && $parent === 0 ) {
 				$color    = ! empty( $showcolor ) ? get_option( 'cat_' . $term_id . '_color', '#999' ) : '';
 				$style    = $color ? ' style="background: ' . $color . ';"' : '';
 				if ( $term->slug != 'pr' ) {
@@ -230,54 +223,6 @@ function mak_get_entry_terms( $args = array() ) {
 		$output .= $after . '</p>' . "\n";
 		return $output;
 	}
-}
-
-// mak_entry_author
-function mak_entry_author( $args = array() ) {
-	echo mak_get_entry_author( $args );
-}
-
-function mak_get_entry_author( $args = array() ) {
-	$default = array(
-		'size' => 96
-	);
-	$default = apply_filters( 'mak_get_entry_author_default', $default );
-	$args    = wp_parse_args( $args, $default );
-	extract($args);
-
-	$id           = get_the_ID();
-	$author_id    = get_the_author_meta( 'ID' );
-	$author_url   = esc_url( get_author_posts_url( $author_id ) );
-	$display_name = get_the_author_meta( 'display_name' );
-	$avatar       = get_avatar( $author_id, $size );
-
-	$output  = '<p class="post-author">';
-	$output .= '<span class="avatar"><a href="' . $author_url . '">' . $avatar . '</a></span> ';
-	$output .= '<a href="' . $author_url . '">' . $display_name . '</a>';
-	$output .= '</p>' . "\n";
-	
-	return $output;
-}
-
-// mak_entry_pr
-function mak_entry_pr( $args = array() ) {
-	echo mak_get_entry_pr( $args );
-}
-
-function mak_get_entry_pr( $args = array() ) {
-	$default = array(
-		'field_name' => '_pr_check'
-	);
-	$default = apply_filters( 'mak_get_entry_pr_default', $default );
-	$args    = wp_parse_args( $args, $default );
-	extract($args);
-
-	$output = '';
-	if( get_field( $field_name ) ) {
-		$output .= '<p class="pr">PR</p>';
-	}
-	
-	return $output;
 }
 
 // mak_entry_thumbnail
@@ -364,7 +309,7 @@ function get_mak_content_nav() {
 	$output = '';
 	if ( is_child_theme() && $wp_query->max_num_pages > 1 ) {
 		if ( 1 > $paged && ! is_home() ) {
-			$output .= mak_get_nav_top_ad();
+
 			$output .= '<nav id="archive-nav">' . "\n";
 
 			if ( get_next_posts_link() )
@@ -460,6 +405,39 @@ function mak_get_summary_permalink( $post_id = '' ) {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 4. HOME tags
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+function mak_halfway_ad() {
+	echo mak_get_halfway_ad();
+}
+function mak_get_halfway_ad() {
+	if ( ! function_exists( 'mak_ad_code' ) )
+		return;
+
+	if ( is_home() ) {
+		$code = 'mak_ad_mobile_home_halfway';
+	} else {
+		$code = 'mak_ad_mobile_archive_halfway';
+	}
+
+	$output = get_mak_ad_code( array( 'code' => $code, 'class' => 'mad mad-halfway' ) );
+	return $output;
+}
+
+function mak_nav_top_ad() {
+	echo mak_get_nav_top_ad();
+}
+function mak_get_nav_top_ad() {
+	if ( ! function_exists( 'mak_ad_code' ) )
+		return;
+
+	if ( is_home() ) {
+		$code = 'mak_ad_mobile_home_nav_top';
+	} else {
+		$code = 'mak_ad_mobile_archive_nav_top';
+	}
+
+	$output = get_mak_ad_code( array( 'code' => $code, 'class' => 'mad mad-nav-top' ) );
+	return $output;
+}
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 5. Archive tags
@@ -468,27 +446,15 @@ function mak_get_summary_permalink( $post_id = '' ) {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 6. Single tags
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-function mak_summary_ad() {
-	echo mak_get_summary_ad();
-}
-function mak_get_summary_ad() {
-	if ( ! function_exists( 'mad_code' ) )
-		return;
-	$output = '<div class="mad-summary-box">' . "\n";
-	$output .= get_mad_code( array( 'code' => 'mad_pc_summary_left', 'class' => 'mad mad-summary-left' ) );
-	$output .= get_mad_code( array( 'code' => 'mad_pc_summary_right', 'class' => 'mad mad-summary-right' ) );
-	$output .= '</div>' . "\n";
-	return $output;
-}
 function mak_single_ad() {
 	echo mak_get_single_ad();
 }
 function mak_get_single_ad() {
-	if ( ! function_exists( 'mad_code' ) )
+	if ( ! function_exists( 'mak_ad_code' ) )
 		return;
 	$output = '<div class="mad-single-box">' . "\n";
-	$output .= get_mad_code( array( 'code' => 'mad_pc_single_left', 'class' => 'mad mad-single-left' ) );
-	$output .= get_mad_code( array( 'code' => 'mad_pc_single_right', 'class' => 'mad mad-single-right' ) );
+	$output .= get_mak_ad_code( array( 'code' => 'mak_ad_pc_single_left', 'class' => 'mad mad-single-left' ) );
+	$output .= get_mak_ad_code( array( 'code' => 'mak_ad_pc_single_right', 'class' => 'mad mad-single-right' ) );
 	$output .= '</div>' . "\n";
 	return $output;
 }
@@ -501,20 +467,17 @@ function mak_get_single_ad() {
 # 8. Side tags
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 add_action( 'mak_secondary', function(){
-	if ( !is_child_theme() && is_active_sidebar( 'sidebar-1' ) && is_home() ) {
-		dynamic_sidebar( 'sidebar-1' );
+	if ( !is_child_theme() && is_active_sidebar( 'sidebar-pc-home' ) && is_home() ) {
+		dynamic_sidebar( 'sidebar-pc-home' );
 	}
-	if ( !is_child_theme() && is_active_sidebar( 'sidebar-2' ) && !is_home() ) {
-		dynamic_sidebar( 'sidebar-2' );
+	if ( !is_child_theme() && is_active_sidebar( 'sidebar-pc' ) && !is_home() ) {
+		dynamic_sidebar( 'sidebar-pc' );
 	}
-	if ( is_child_theme() && is_active_sidebar( 'sidebar-3' ) && !is_single() ) {
-		dynamic_sidebar( 'sidebar-3' );
+	if ( is_child_theme() && is_active_sidebar( 'sidebar-mobile' ) && !is_single() ) {
+		dynamic_sidebar( 'sidebar-mobile' );
 	}
-	if ( is_child_theme() && is_active_sidebar( 'sidebar-4' ) && function_exists( 'is_summary_page') && is_summary_page() ) {
-		dynamic_sidebar( 'sidebar-4' );
-	}
-	if ( is_child_theme() && is_active_sidebar( 'sidebar-5' ) && is_single() ) {
-		dynamic_sidebar( 'sidebar-5' );
+	if ( is_child_theme() && is_active_sidebar( 'sidebar-mobile-single' ) && is_single() ) {
+		dynamic_sidebar( 'sidebar-mobile-single' );
 	}
 });
 

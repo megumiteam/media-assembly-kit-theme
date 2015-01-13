@@ -1,17 +1,19 @@
-#pickup-box {
+#pickup-post {
 	padding-top: 25px;
-	background: $color__common-background;
 
 	ul {
 		@extend %ul;
 	}
 	li {
-		margin-top: 1px;
+		border-bottom: solid 1px $color__common-border;
 
 		.title {
 			@include fz(14);
-			color: $color__text-pickup-box-title;
+			color: $color__body-text;
+			font-weight: bold;
 			margin: 0;
+			padding-top: 5px;
+			padding-bottom: 5px;
 			padding-left: 10px;
 
 			p {
@@ -30,8 +32,8 @@
 			}
 			.title {
 				width: 100%;
-				margin: 0 0 0 -107px;
-				padding: 0 0 0 117px;
+				margin-left: -107px;
+				padding-left: 117px;
 				float: left;
 			}
 			.thumbnail {

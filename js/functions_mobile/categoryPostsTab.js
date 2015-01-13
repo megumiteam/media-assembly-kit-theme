@@ -1,6 +1,6 @@
-// categoryPostsTab
+// categoryPostsTab(categoryInductionBoxSet)
 (function($){
-window.categoryPostsTabSet = function() {
+window.categoryInductionBoxSet = function() {
 
 	var categoryPostsTab     = $('#category-posts-tab');
 	if ( categoryPostsTab[0] ) {

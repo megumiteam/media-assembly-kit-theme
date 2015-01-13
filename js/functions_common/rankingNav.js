@@ -8,7 +8,6 @@ window.rankingNavSet = function() {
 		rankingNav.on( 'click', function() {
 			if ( ! $(this).hasClass( 'current') ) {
 				var target = $(this).attr( 'data-target' );
-				console.log(target);
 				rankingNav.removeClass( 'current' );
 				$(this).addClass( 'current' );
 				rankingList.removeClass( 'current' );

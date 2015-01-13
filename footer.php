@@ -10,8 +10,9 @@
 
 		<?php do_action( 'mak_after_content' ); ?>
 	</div><!-- #content -->
-	<?php do_action( 'mak_content_footer' ); ?>
-	<?php mak_editor_choice(); ?>
+
+	<?php do_action( 'mak_footer_before' ); ?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php do_action( 'mak_footer' ); ?>
 		<div id="in-footer">

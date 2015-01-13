@@ -1,16 +1,18 @@
 #masthead {
+	margin-bottom: 15px;
+	position: relative;
 
 	a {
 		color: $color__link-masthead-mobile;
 	}
 	& .header-meta a {
-		color: $color__text-header-meta;
+		color: $color__link-masthead-mobile;
 	}
 }
 .site-title {
 	width: $boxsize__width-site-title-mobile;
 	height: $boxsize__height-site-title-mobile;
-	margin: 17px auto 0;
+	margin: 15px auto 0 10px;
 	overflow: hidden;
 
 	a {
@@ -20,3 +22,20 @@
 		display: block;
 	}
 }
+
+#button-box {
+	@extend %clearfix;
+	position: absolute;
+	top: 3px;
+	right: 10px;
+
+	a {
+		@include border-radius;
+		padding: 5px 12px;
+		display: inline-block;
+		background: $color__background-button-box;
+		color: $color__text-button-box;
+	}
+
+}
+

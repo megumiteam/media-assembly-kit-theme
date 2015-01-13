@@ -19,7 +19,11 @@ get_header(); ?>
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
-			<?php mak_related_post_list(); ?>
+			<?php
+				mak_related_post_list();
+				mak_single_ad();
+				mak_pickup();
+			?>
 			<?php do_action( 'mak_after_main' ); ?>
 		</main><!-- #main -->
 	</div>

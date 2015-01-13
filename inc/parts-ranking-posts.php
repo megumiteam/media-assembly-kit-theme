@@ -26,11 +26,11 @@ function mak_get_ranking_posts( $args = array() ) {
 
 function mak_ranking_widgets() {
 	unregister_widget( 'WP_Widget_Simple_GA_Ranking' );
-	register_widget( 'Venustap_Widget_Ranking' );
+	register_widget( 'MAK_Widget_Ranking' );
 }
 add_action( 'widgets_init', 'mak_ranking_widgets' );
 
-class Venustap_Widget_Ranking extends WP_Widget {
+class MAK_Widget_Ranking extends WP_Widget {
 
 	function __construct() {
 		$widget_ops = array( 'classname' => 'widget-ranking', 'description' => __( 'Ranking Widget', 'mak' ) );
