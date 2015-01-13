@@ -1,7 +1,7 @@
 extends ../extends/_layout_mobile
 
 block vars
-	- var sitename = 'Mama’s Money（マママネー）';
+	- var sitename = 'Media UI Framework';
 	- var title    = 'post';
 	- var type     = 'single';
 	- var post     = 'post';
@@ -49,6 +49,11 @@ block main
 				include ../includes/_loader
 
 		footer.entry-footer
-				include ../includes/_social-share-box
+			include ../includes/_social-share-box
+
+	#single-ads
+	#single-nav-box
+	#related-post-box
+	#pickup-post-box
 
 block main_bottom

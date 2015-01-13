@@ -47,6 +47,7 @@
 		width: 200px;
 		li {
 			text-align: left;
+			float: none;
 			border-left: 1px solid $color__border-global-nav-box;
 			&:first-child {
 				border-left: none;

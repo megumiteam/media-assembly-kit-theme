@@ -341,7 +341,10 @@ function mediaAdSet_Single( ua ) {
 	}
 	var ad = "";
 	if ( ua === 'mobile' ) {
-		ad = '<div class="mad mad-new-post ad">' + MediaAd.mak_ad_mobile_single_bottom + '</div>';
+		ad = '<div class="mad-single-box">' + "\n" +
+				'<div class="mad mad-single-bottom">' + MediaAd.mak_ad_mobile_single_bottom + '</div>' + "\n" +
+				'</div>' + "\n" +
+			'</div>' + "\n";
 	} else {
 		ad = '<div class="mad-single-box">' + "\n" +
 				'<div class="mad mad-single-left">' + "\n" + MediaAd.mak_ad_pc_single_left + '</div>' + "\n" +
@@ -350,7 +353,7 @@ function mediaAdSet_Single( ua ) {
 			'</div>' + "\n";
 	}
 
-	$('#mad-box-set').html(ad);
+	$('#single-ads').html(ad);
 
 	return;
 }
@@ -457,26 +460,8 @@ window.wpjsonRoot = function( ua, type ) {
 	}
 
 	// Google Analytics
-	if ( archive === false ) {
-		$.ajax({
-			type:  "GET",
-			url:   root + 'mak_themeoption/google_analytics_code/' + type,
-			async: false
-		}).done(function(data, status, xhr) {
-			if ( data.length === 0 || data === false ) {
-				console.log( 'wpjson Google Analytics error' );
-				return;
-			}
-			if ( data.value !== '' ) {
-				$('head').append( data.value );
-			}
-		}).fail(function(xhr, status, error) {
-			console.log( 'wpjson Google Analytics fail' );
-		});
-	} else {
-		if ( ThemeOption.google_analytics_code !== '' ) {
-			$('head').append( ThemeOption.google_analytics_code );
-		}
+	if ( ThemeOption.google_analytics_code !== '' ) {
+		$('head').append( ThemeOption.google_analytics_code );
 	}
 
 	// Google Webmaster Tools
@@ -635,7 +620,6 @@ window.wpjsonRoot = function( ua, type ) {
 
 // Widget Area
 window.wpjsonWidgets = function( wid, pos, ua, pid ) {
-
 	if ( typeof wid === 'undefined' ) {
 		wid = 'sidebar-pc-home';
 	}
@@ -654,6 +638,7 @@ window.wpjsonWidgets = function( wid, pos, ua, pid ) {
 		type:    'GET',
 		url:     root + 'mak_sidebar/' + wid
 	}).done(function(data, status, xhr) {
+
 		if ( data.length === 0 || data === false ) {
 			WidgetArea.empty();
 			return;
@@ -662,13 +647,6 @@ window.wpjsonWidgets = function( wid, pos, ua, pid ) {
 
 		// after
 		rankingNavSet();
-
-		// Related widget
-		var Related = WidgetArea.find( '#related-post-box' );
-		if ( Related[0] && pid > 0 ) {
-			wpjsonRelated( ua, pid );
-		}
-
 		trunk8Set();
 
 	}).fail(function(xhr, status, error) {
@@ -680,7 +658,7 @@ window.wpjsonWidgets = function( wid, pos, ua, pid ) {
 
 // PickUp
 window.wpjsonPickup = function() {
-	var PickUpArea = $('#pickup-box-set');
+	var PickUpArea = $('#pickup-post-box');
 	var wpjsonPickUpAreaObj = $.ajax({
 		type:    'GET',
 		url:     root + 'mak_pickup/'
@@ -753,11 +731,9 @@ window.wpjsonHome = function( ua, pagenum ) {
 
 		// Slide
 		if ( ua === 'pc' ) {
-			var slideApi   = 'mak_slide/' + ua;
-	
 			var wpjsonSlideObj = $.ajax({
 				type:    'GET',
-				url:     root + 'mak_slide/' + ua
+				url:     root + 'mak_slide/'
 			}).done(function(data, status, xhr) {
 	
 				if ( data.content.length === 0 ) {
@@ -777,7 +753,9 @@ window.wpjsonHome = function( ua, pagenum ) {
 
 		// Category induction Box
 		if ( ua === 'mobile' ) {
-			$('#post-box').remove();
+			if ( pagenum === '' ) {
+				$('#post-box').remove();
+			}
 			var wpjsonCategoryObj = $.ajax({
 				type:    'GET',
 				url:     root + 'mak_cat_tab/' + ua
@@ -1029,7 +1007,11 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 
 			if ( ua === 'mobile' ) {
 				if ( page === 1 ) {
-					archivenav = '<p class="first-next"><a href="' + basepath + 'page/2' + searchstr + '">もっと読む</a></p>';
+					if ( home === true ) {
+						archivenav = '';
+					} else {
+						archivenav = '<p class="first-next"><a href="' + basepath + 'page/2' + searchstr + '">もっと読む</a></p>';
+					}
 				} else {
 					if ( page < TotalPages ) {
 						archivenext = '<p class="next"><a href="' + basepath + 'page/' + ( page + 1 ) + searchstr + '">次のページ<i class="fa fa-chevron-right"></i></a></p>';
@@ -1109,6 +1091,7 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 	return;
 };
 
+// post
 window.wpjson = function( objtype, endpoint, filter, ua ) {
 
 	if ( typeof objtype === 'undefined' ) {
@@ -1278,14 +1261,16 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 				navNext +
 			'</nav>' + "\n";
 
-			$( 'footer.entry-footer' ).append( entryFooter );
+			$( '#single-nav-box' ).append( entryFooter );
 		}
 
 		// after
 		imagePopupSet();
 		entryContentiflameSet();
 		trunk8Set();
-		// wpcf7Submit();
+		wpjsonRelated( ua, ID );
+		mediaAdSet_Single( ua );
+		wpjsonPickup();
 
 		// ogp
 		ogp_set( 'single', excerpt, tagitems, thumbnailULR );

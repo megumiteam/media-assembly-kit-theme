@@ -1,7 +1,7 @@
 extends ../extends/_layout
 
 block vars
-	- var sitename = 'Mama’s Money（マママネー）';
+	- var sitename = 'Media UI Framework';
 	- var title    = 'post';
 	- var type     = 'single';
 	- var post     = 'post';
@@ -31,7 +31,6 @@ block append wp_footer
 			wpjsonRoot();
 			wpjson( 'post', 'posts', '/'+id );
 			wpjsonWidgets( 'sidebar-pc' );
-			wpjsonWidgets( 'pc-single-bottom', '#single-widget-area', 'pc', id );
 		})(jQuery);
 
 //- main content
@@ -50,9 +49,10 @@ block main
 		footer.entry-footer
 			include ../includes/_social-share-box
 
-	#related-post
+	#single-nav-box
+	#related-post-box
 	#single-ads
-	#pickup-post-area
+	#pickup-post-box
 
 block main_bottom
 

@@ -554,27 +554,28 @@ object {
 /* line 48, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul li {
   text-align: left;
+  float: none;
   border-left: 1px solid #ffc790;
 }
-/* line 51, ../sass/header/pc/_global-nav.scss */
+/* line 52, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul li:first-child {
   border-left: none;
 }
-/* line 55, ../sass/header/pc/_global-nav.scss */
+/* line 56, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul a {
   padding: 10px 20px;
   background: transparent;
 }
-/* line 58, ../sass/header/pc/_global-nav.scss */
+/* line 59, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul a:hover {
   text-decoration: underline;
 }
-/* line 62, ../sass/header/pc/_global-nav.scss */
+/* line 63, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul ul {
   left: 200px;
   top: 0;
 }
-/* line 69, ../sass/header/pc/_global-nav.scss */
+/* line 70, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul > li:hover > ul {
   display: block;
 }
@@ -1100,14 +1101,18 @@ object {
 #footer-nav-box li:nth-child(2n) {
   float: right;
 }
+/* line 43, ../sass/footer/pc/_colophon.scss */
+#footer-nav-box li ul {
+  display: none;
+}
 
-/* line 46, ../sass/footer/pc/_colophon.scss */
+/* line 49, ../sass/footer/pc/_colophon.scss */
 #copyright-area {
   width: 330px;
   float: right;
 }
 
-/* line 50, ../sass/footer/pc/_colophon.scss */
+/* line 53, ../sass/footer/pc/_colophon.scss */
 #copyright,
 #license {
   font-size: 11px;
@@ -1115,13 +1120,13 @@ object {
   margin-bottom: 0;
 }
 
-/* line 57, ../sass/footer/pc/_colophon.scss */
+/* line 60, ../sass/footer/pc/_colophon.scss */
 #copyright small {
   font-size: 11px;
   font-size: 1.1rem;
 }
 
-/* line 63, ../sass/footer/pc/_colophon.scss */
+/* line 66, ../sass/footer/pc/_colophon.scss */
 #license strong {
   font-weight: normal;
 }
@@ -1459,13 +1464,13 @@ object {
 /* Slide */
 /* line 1, ../sass/modules/pc/_slide.scss */
 #slide-box-out {
-  min-height: 350px;
+  min-height: 300px;
   position: relative;
 }
 
 /* line 5, ../sass/modules/pc/_slide.scss */
 #slide-box {
-  height: 350px;
+  height: 300px;
   overflow: hidden;
   background: #9a764b;
   position: relative;

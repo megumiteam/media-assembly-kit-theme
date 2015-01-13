@@ -40,6 +40,9 @@
 		&:nth-child(2n) {
 			float: right;
 		}
+		ul {
+			display: none;
+		}
 	}
 }
 
