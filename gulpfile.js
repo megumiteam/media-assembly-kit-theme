@@ -115,7 +115,7 @@ gulp.task('jade', function() {
 
 // watch
 gulp.task( 'watch', function () {
-	gulp.watch( 'js/*.js', ['js'] );
+	gulp.watch( ['js/mak_pc.js', 'js/mak_mobile.js', 'js/functions_common/*.js', 'js/functions_pc/*.js', 'js/functions_mobile/*.js', 'js/wpjson.js' ], ['js'] );
 	gulp.watch( 'sass/{,*/}{,*/}*.scss', ['compass'] );
 	gulp.watch( 'images/{,*/}{,*/}*.*', ['images'] );
 });
