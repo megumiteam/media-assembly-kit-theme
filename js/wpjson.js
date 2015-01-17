@@ -1303,7 +1303,7 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 				navNext +
 			'</nav>' + "\n";
 
-			$( '#single-nav-box' ).append( entryFooter );
+			$( '#single-nav-box' ).html( entryFooter );
 		}
 
 		// after
