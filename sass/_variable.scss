@@ -1,26 +1,26 @@
 // body
 $font__main: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', Arial, sans-serif;
 $color__body-text: #444444;
-$color__body-background: #fff7d8;
+$color__body-background: #ededed;
 $color__link: $color__body-text;
 
 $color__common-background: white;
-$color__common-border: #a69f9e;
+$color__common-border: #444444;
 
 // %title-type
-$color__text-title-type: #403f3f;
-$color__text-title-type-first: #f99e24;
+$color__text-title-type: $color__body-text;
+$color__text-title-type-first: #1c1c1c;
 $color__background-title-type: white image-url('background/obi.png') repeat-x left bottom;
 $color__background-title-type-span: transparent;
 
 // %title-type-mob
 $color__text-title-type-mob: white;
-$color__background-title-type-mob: #9a764b;
+$color__background-title-type-mob: #403f3f;
 
 // %dropshadow-box
 $default-box-shadow-blur: 0;
 $default-box-shadow-color: rgba( 194, 194, 194, .6 );
-$color__border-dropshadow-box: #f99e24;
+$color__border-dropshadow-box: #444444;
 $color__background-dropshadow-box: $color__common-background;
 
 // %hr-border-bottom
@@ -29,11 +29,11 @@ $style__border-hr-border-bottom: dotted;
 
 // %dlbtn
 $color__text-dlbtn: white;
-$color__background-dlbtn: #656565;
+$color__background-dlbtn: #444444;
 
 // form
 $color__button-border: $color__common-border;
-$color__button-background: #e6e6e6;
+$color__button-background: #ededed;
 
 $color__button-border-hover: $color__button-border;
 $color__button-border-focus: $color__button-border;
@@ -50,32 +50,32 @@ $color__input-text-focus: $color__body-text;
 // .site-title
 // pc
 $boxsize__width-site-title-pc: 250px;
-$boxsize__height-site-title-pc: 39px;
+$boxsize__height-site-title-pc: 57px;
 $image__site-title-pc: 'site-logo.png';
 $image__site-title-pc-2x: 'site-logo@2x.png';
 // mobile
-$boxsize__width-site-title-mobile: 240px;
-$boxsize__height-site-title-mobile: 37px;
+$boxsize__width-site-title-mobile: 250px;
+$boxsize__height-site-title-mobile: 57px;
 $image__site-title-mobile: 'site-logo.png';
 $image__site-title-mobile-2x: 'site-logo@2x.png';
 $color__link-masthead-mobile: $color__body-text;
-$color__background-button-box: #f99e24;
+$color__background-button-box: #1c1c1c;
 $color__text-button-box: white;
 
 // #global-nav-box (pc only)
-$color__background-global-nav-box: #f6ad64;
-$color__background-global-nav-box-secondary: #ffbc7a;
+$color__background-global-nav-box: #1c1c1c;
+$color__background-global-nav-box-secondary: #393939;
 $color__text-global-nav-box: white;
-$color__border-global-nav-box: #ffc790;
+$color__border-global-nav-box: #000;
 $color__background-global-nav-box-hover: $color__background-global-nav-box-secondary;
 $color__background-global-nav-box-current: $color__background-global-nav-box-secondary;
 
 // #khm-15
 // pc
-$color__text-khm-15-pc: #0c0407;
-$color__link-khm-15-pc: #f99e24;
+$color__text-khm-15-pc: #666;
+$color__link-khm-15-pc: $color__body-text;
 // mobile
-$color__text-khm-15-mobile: #a0a0a0;
+$color__text-khm-15-mobile: #666;
 $color__link-khm-15-mobile: $color__link-khm-15-pc;
 
 //
@@ -84,31 +84,31 @@ $color__link-khm-15-mobile: $color__link-khm-15-pc;
 
 // .archive-title
 // pc
-$color__text-archive-title-pc: #0c0407;
+$color__text-archive-title-pc: $color__text-title-type;
 // mobile
 $color__text-archive-title-mobile: white;
-$color__background-archive-title-mobile: #f99e24;
+$color__background-archive-title-mobile: #1c1c1c;
 
 // #archive-nav
 // pc
 $color__text-archive-nav-current: white;
-$color__background-archive-nav-current: #f99e24;
+$color__background-archive-nav-current: #1c1c1c;
 // mobile
 $color__text-archive-nav-a: white;
-$color__background-archive-nav-a: #f99e24;
+$color__background-archive-nav-a: #1c1c1c;
 
 // .entry-title
-$color__text-entry-title: #0c0407;
+$color__text-entry-title: #1c1c1c;
 $color__link-entry-title: $color__text-entry-title;
-$color__link-entry-title-hover-background: #f3edde;
+$color__link-entry-title-hover-background: #ededed;
 $color__text-entry-title-mobile: white;
-$color__background-entry-title-mobile: #f99e24;
+$color__background-entry-title-mobile: #1c1c1c;
 
 // .entry-meta
 // pc
 $color__text-entry-meta-pc: #707070;
 $color__link-entry-meta-pc: $color__text-entry-meta-pc;
-$color__link-entry-meta-pc-hover: #f99e24;
+$color__link-entry-meta-pc-hover: #000;
 // mobile
 $color__text-entry-meta-mobile: $color__body-text;
 $color__link-entry-meta-mobile: $color__text-entry-meta-mobile;
@@ -118,29 +118,29 @@ $color__link-color-cat: white;
 $color__background-color-cat: #999;
 
 // .social-entry-box
-$color__background-social-entry-box: #f3edde;
-$color__border-social-entry-box: #c4c3bf;
+$color__background-social-entry-box: #ededed;
+$color__border-social-entry-box: #666;
 
 // .entry-summary
 $color__text-entry-summary: #707070;
 
 // .entry-content
-$color__link-entry-content: #f99e24;
+$color__link-entry-content: blue;
 $color__border-entry-content-thumbnail: none;
-$color__background-entry-content-blockquote: #f3edde;
+$color__background-entry-content-blockquote: #ededed;
 
 // #more-link-box
 $color__link-more-link-box: white;
-$color__background-more-link-box: #f99e24;
+$color__background-more-link-box: #1c1c1c;
 
 // #single-nav
 $color__link-single-nav: white;
-$color__background-single-nav: #f99e24;
-$color__background-single-nav-hover: #ffbc7a;
+$color__background-single-nav: #1c1c1c;
+$color__background-single-nav-hover: #1c1c1c;
 
 // .not-found search-form
-$color__background-404-search-form-pc: #f3edde;
-$color__background-404-search-form-mobile: #f3edde;
+$color__background-404-search-form-pc: #ededed;
+$color__background-404-search-form-mobile: #ededed;
 
 //
 // #secondary
@@ -148,14 +148,14 @@ $color__background-404-search-form-mobile: #f3edde;
 
 // #ranking-nav
 $color__text-ranking-nav: white;
-$color__background-ranking-nav: #9a764b;
-$color__background-ranking-nav-current: #f99e24;
+$color__background-ranking-nav: #393939;
+$color__background-ranking-nav-current: #1c1c1c;
 $color__text-ranking-number: white;
-$color__background-ranking-number: #c7ba9a;
-$color__background-ranking-number-top: #f8d32f;
+$color__background-ranking-number: #393939;
+$color__background-ranking-number-top: #1c1c1c;
 
 // .widget_categories (mobile only)
-$color__background-widget_categories-a: #fff7d8;
+$color__background-widget_categories-a: #ededed;
 
 //
 // #colophon footer
@@ -163,7 +163,7 @@ $color__background-widget_categories-a: #fff7d8;
 
 // footer background
 $color__background-colophon-pc: $color__common-background;
-$color__background-colophon-mobile: #eceae6;
+$color__background-colophon-mobile: #ededed;
 
 // .footer-site (pc only)
 $boxsize__width-footer-site-title-pc: $boxsize__width-site-title-pc;
@@ -176,22 +176,23 @@ $color__background-colophon-search-foam-box: $color__common-background;
 $color__border-colophon-search-foam-box: #c9c9c9;
 
 // #footer-nav-box
-$color__text-footer-nav-box-arrow: #f99e24;
+$color__text-footer-nav-box-arrow: #1c1c1c;
 
 //
 // Modules
 //
 
 // #slide-box
-$color__background-slide-box: #9a764b;
+$color__background-slide-box: #1c1c1c;
 $color__text-slide: white;
-$color__background-slide: #9a764b;
+$color__background-slide: #1c1c1c;
 $color__background-slide-thumbnail: white;
+$color__background-slide-view-more: #8a8a8a;
 
 // #category-posts-tab (mobile only)
 $color__text-category-posts-nav: white;
-$color__background-category-posts-nav: #f6ad64;
-$color__border-category-posts-nav: #ffd3a8;
-$color__text-category-posts-nav-current: #f99e24;
-$color__background-category-posts-nav-current: #ffdebe;
+$color__background-category-posts-nav: #1c1c1c;
+$color__border-category-posts-nav: #393939;
+$color__text-category-posts-nav-current: white;
+$color__background-category-posts-nav-current: #393939;
 $color__border-category-posts-nav-current: $color__background-category-posts-nav-current;

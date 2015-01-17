@@ -32,12 +32,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-size: 3rem;
   line-height: 1;
   padding-bottom: 24px;
-  color: #403f3f;
+  color: #444444;
   background: white url('../images/background/obi.png?1420451087') repeat-x left bottom;
 }
 /* line 24, ../sass/sass_function/_extend.scss */
 .parts-title:first-letter, .home .archive-title:first-letter, .widget-title:first-letter {
-  color: #f99e24;
+  color: #1c1c1c;
 }
 /* line 27, ../sass/sass_function/_extend.scss */
 .parts-title span, .home .archive-title span, .widget-title span {
@@ -47,7 +47,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* line 43, ../sass/sass_function/_extend.scss */
 #main, #global-nav-box, .parts-box, .widget, #related-post, #pickup-post, #whats-new-post {
   background: white;
-  border-top: 1px solid #f99e24;
+  border-top: 1px solid #444444;
   -moz-box-shadow: 0px 0px 0 rgba(194, 194, 194, 0.6);
   -webkit-box-shadow: 0px 0px 0 rgba(194, 194, 194, 0.6);
   box-shadow: 0px 0px 0 rgba(194, 194, 194, 0.6);
@@ -55,13 +55,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* line 51, ../sass/sass_function/_extend.scss */
 .description, .archive-article, .single-article .entry-content, .page-article .entry-title, .not-found .entry-title, .widget.widget-induction li, .widget.writer-list li, #related-post ul li, .mad-halfway-box {
-  border-bottom: 1px dotted #a69f9e;
+  border-bottom: 1px dotted #444444;
 }
 
 /* line 68, ../sass/sass_function/_extend.scss */
 .not-found .search-form, .widget_search .search-form {
   padding: 6px 25px;
-  background: #f3edde;
+  background: #ededed;
   display: inline-block;
 }
 /* line 74, ../sass/sass_function/_extend.scss */
@@ -108,7 +108,7 @@ body {
   -webkit-hyphens: auto;
   hyphens: auto;
   color: #444444;
-  background: #fff7d8;
+  background: #ededed;
   word-wrap: break-word;
   line-height: 1.6;
   margin: 0;
@@ -152,9 +152,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #a69f9e;
+  border-color: #444444;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #ededed;
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -171,7 +171,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #a69f9e;
+  border-color: #444444;
   background-color: white;
 }
 
@@ -184,7 +184,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #a69f9e;
+  border-color: #444444;
   background-color: white;
 }
 
@@ -224,7 +224,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #a69f9e;
+  border: 1px solid #444444;
   border-radius: 3px;
   max-width: 100%;
 }
@@ -487,15 +487,15 @@ object {
 /* line 1, ../sass/header/pc/_masthead.scss */
 .site-title {
   width: 250px;
-  height: 39px;
+  height: 57px;
   margin: 17px auto;
   overflow: hidden;
 }
 /* line 7, ../sass/header/pc/_masthead.scss */
 .site-title a {
   width: 250px;
-  padding-top: 39px;
-  background: url('../images/site-logo.png?1421157088');
+  padding-top: 57px;
+  background: url('../images/site-logo.png?1421471782');
   display: block;
 }
 
@@ -503,7 +503,7 @@ object {
 /* line 1, ../sass/header/pc/_global-nav.scss */
 #global-nav-box {
   border: none;
-  background: #f6ad64;
+  background: #1c1c1c;
 }
 
 /* line 6, ../sass/header/pc/_global-nav.scss */
@@ -514,7 +514,7 @@ object {
 #global-nav-box > ul li {
   text-align: center;
   float: left;
-  border-left: 1px solid #ffc790;
+  border-left: 1px solid #000;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -529,21 +529,21 @@ object {
   line-height: 1;
   color: white;
   padding: 17px 0;
-  background: #f6ad64;
+  background: #1c1c1c;
   display: block;
 }
 /* line 28, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul a:hover {
-  background: #ffbc7a;
+  background: #393939;
 }
 /* line 34, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul .current-menu-item a {
-  background: #ffbc7a;
+  background: #393939;
 }
 /* line 38, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul {
   display: none;
-  background: #ffbc7a;
+  background: #393939;
   float: left;
   position: absolute;
   top: 49px;
@@ -555,7 +555,7 @@ object {
 #global-nav-box > ul ul li {
   text-align: left;
   float: none;
-  border-left: 1px solid #ffc790;
+  border-left: 1px solid #000;
 }
 /* line 52, ../sass/header/pc/_global-nav.scss */
 #global-nav-box > ul ul li:first-child {
@@ -583,7 +583,7 @@ object {
 /* khm-15 */
 /* line 2, ../sass/header/pc/_khm-15.scss */
 #khm-15 a {
-  color: #f99e24;
+  color: #444444;
 }
 /* line 6, ../sass/header/pc/_khm-15.scss */
 #khm-15 ul {
@@ -592,7 +592,7 @@ object {
 }
 /* line 10, ../sass/header/pc/_khm-15.scss */
 #khm-15 li {
-  color: #0c0407;
+  color: #666;
   margin-right: 5px;
   display: inline-block;
 }
@@ -621,7 +621,7 @@ object {
   font-size: 3.2rem;
   line-height: 1;
   padding-bottom: 29px;
-  color: #0c0407;
+  color: #444444;
   background: white url('../images/background/obi.png?1420451087') repeat-x left bottom;
 }
 /* line 12, ../sass/main/pc/_archive.scss */
@@ -718,12 +718,12 @@ object {
 /* line 101, ../sass/main/pc/_archive.scss */
 #archive-nav a:hover {
   color: white;
-  background-color: #f99e24;
+  background-color: #1c1c1c;
 }
 /* line 106, ../sass/main/pc/_archive.scss */
 #archive-nav .current {
   color: white;
-  background-color: #f99e24;
+  background-color: #1c1c1c;
 }
 /* line 110, ../sass/main/pc/_archive.scss */
 #archive-nav .dots {
@@ -756,11 +756,11 @@ object {
 /* Single */
 /* line 8, ../sass/main/pc/_single.scss */
 .home .entry-title a, .archive .entry-title a, .search .entry-title a, #whats-new-post .entry-title a {
-  color: #0c0407;
+  color: #1c1c1c;
 }
 /* line 11, ../sass/main/pc/_single.scss */
 .home .entry-title a:hover, .archive .entry-title a:hover, .search .entry-title a:hover, #whats-new-post .entry-title a:hover {
-  background: #f3edde;
+  background: #ededed;
 }
 
 /* line 19, ../sass/main/pc/_single.scss */
@@ -769,7 +769,7 @@ object {
 }
 /* line 21, ../sass/main/pc/_single.scss */
 .entry-meta a:hover {
-  color: #f99e24;
+  color: #000;
 }
 
 /* line 30, ../sass/main/pc/_single.scss */
@@ -783,18 +783,18 @@ object {
 .single-article .entry-title {
   font-size: 32px;
   font-size: 3.2rem;
-  color: #0c0407;
+  color: #1c1c1c;
   background: white url('../images/background/obi.png?1420451087') repeat-x left bottom;
   padding-bottom: 30px;
   clear: both;
 }
 /* line 43, ../sass/main/pc/_single.scss */
 .single-article .entry-title a {
-  color: #0c0407;
+  color: #1c1c1c;
 }
 /* line 45, ../sass/main/pc/_single.scss */
 .single-article .entry-title a:hover {
-  background: #f3edde;
+  background: #ededed;
 }
 /* line 50, ../sass/main/pc/_single.scss */
 .single-article .entry-meta {
@@ -820,7 +820,7 @@ object {
 /* line 71, ../sass/main/pc/_single.scss */
 .social-entry-box {
   padding: 10px 18px;
-  background: #f3edde;
+  background: #ededed;
 }
 /* line 76, ../sass/main/pc/_single.scss */
 .social-entry-box p {
@@ -828,7 +828,7 @@ object {
   font-size: 2.1rem;
   line-height: 1;
   margin: 0 19px 0 0;
-  border-right: 1px #c4c3bf solid;
+  border-right: 1px #666 solid;
   padding: 0 19px 0 0;
   display: inline-block;
 }
@@ -905,7 +905,7 @@ object {
   -webkit-border-radius: 8px;
   border-radius: 8px;
   padding: 9px 0;
-  background: #f99e24;
+  background: #1c1c1c;
   display: inline-block;
 }
 /* line 164, ../sass/main/pc/_single.scss */
@@ -945,12 +945,12 @@ object {
   -webkit-border-radius: 8px;
   border-radius: 8px;
   padding: 9px 0;
-  background: #f99e24;
+  background: #1c1c1c;
   display: block;
 }
 /* line 206, ../sass/main/pc/_single.scss */
 #single-nav a:hover {
-  background: #ffbc7a;
+  background: #1c1c1c;
 }
 
 /* Page */
@@ -958,7 +958,7 @@ object {
 .page-article .entry-title {
   font-size: 32px;
   font-size: 3.2rem;
-  color: #0c0407;
+  color: #1c1c1c;
   padding-bottom: 15px;
   clear: both;
 }
@@ -968,7 +968,7 @@ object {
 .not-found .entry-title {
   font-size: 32px;
   font-size: 3.2rem;
-  color: #0c0407;
+  color: #1c1c1c;
   padding-bottom: 15px;
   clear: both;
 }
@@ -980,7 +980,7 @@ object {
 /* entry-content */
 /* line 4, ../sass/main/pc/_entry-content.scss */
 .entry-content a {
-  color: #f99e24;
+  color: blue;
 }
 /* line 7, ../sass/main/pc/_entry-content.scss */
 .entry-content a:hover {
@@ -1003,7 +1003,7 @@ object {
 }
 /* line 24, ../sass/main/pc/_entry-content.scss */
 .entry-content .thumbnail a {
-  color: #f99e24;
+  color: blue;
   text-decoration: none;
 }
 /* line 27, ../sass/main/pc/_entry-content.scss */
@@ -1024,7 +1024,7 @@ object {
   margin-right: 0;
   margin-left: 0;
   padding: 30px 80px;
-  background: #f3edde;
+  background: #ededed;
   margin-bottom: 1em;
   position: relative;
 }
@@ -1066,14 +1066,14 @@ object {
   position: relative;
   z-index: 1;
   width: 250px;
-  height: 39px;
+  height: 57px;
   overflow: hidden;
 }
 /* line 13, ../sass/footer/pc/_colophon.scss */
 .footer-site-title a {
   width: 250px;
-  padding-top: 39px;
-  background: url('../images/site-logo.png?1421157088');
+  padding-top: 57px;
+  background: url('../images/site-logo.png?1421471782');
   display: block;
 }
 
@@ -1095,7 +1095,7 @@ object {
   content: '\f0da';
   font-family: 'FontAwesome';
   margin-right: 7px;
-  color: #f99e24;
+  color: #1c1c1c;
 }
 /* line 40, ../sass/footer/pc/_colophon.scss */
 #footer-nav-box li:nth-child(2n) {
@@ -1272,7 +1272,7 @@ object {
 }
 /* line 85, ../sass/widget/_pc.scss */
 .widget.widget-induction li a:hover .content p {
-  background: #f3edde;
+  background: #ededed;
 }
 /* line 93, ../sass/widget/_pc.scss */
 .widget.widget-induction li.thumbnail-true a {
@@ -1324,7 +1324,7 @@ object {
 }
 /* line 142, ../sass/widget/_pc.scss */
 .widget.writer-list li a:hover span {
-  background: #f3edde;
+  background: #ededed;
 }
 /* line 147, ../sass/widget/_pc.scss */
 .widget.writer-list li .author-data {
@@ -1366,12 +1366,12 @@ object {
   color: white;
   text-align: center;
   margin: 0;
-  background: #9a764b;
+  background: #393939;
   float: left;
 }
 /* line 188, ../sass/widget/_pc.scss */
 .widget-ranking #ranking-nav p.current {
-  background: #f99e24;
+  background: #1c1c1c;
 }
 /* line 193, ../sass/widget/_pc.scss */
 .widget-ranking ol {
@@ -1394,7 +1394,7 @@ object {
   font-family: 'Open Sans';
   margin-right: 0;
   color: white;
-  background: #c7ba9a;
+  background: #393939;
   display: block;
   position: absolute;
   top: 0;
@@ -1402,7 +1402,7 @@ object {
 }
 /* line 222, ../sass/widget/_pc.scss */
 .widget-ranking li.ranking-1:before, .widget-ranking li.ranking-2:before, .widget-ranking li.ranking-3:before {
-  background: #f8d32f;
+  background: #1c1c1c;
 }
 /* line 232, ../sass/widget/_pc.scss */
 .widget-ranking .ranking-1:before {
@@ -1472,7 +1472,7 @@ object {
 #slide-box {
   height: 300px;
   overflow: hidden;
-  background: #9a764b;
+  background: #1c1c1c;
   position: relative;
 }
 
@@ -1486,7 +1486,7 @@ object {
 }
 /* line 18, ../sass/modules/pc/_slide.scss */
 #slide li {
-  background: #9a764b;
+  background: #1c1c1c;
 }
 /* line 22, ../sass/modules/pc/_slide.scss */
 #slide .slide-content {
@@ -1498,7 +1498,7 @@ object {
 #slide .slide-content .view-more a {
   display: inline-block;
   color: white;
-  background: #f49d7a;
+  background: #8a8a8a;
   padding: 0.75em 2em;
 }
 /* line 35, ../sass/modules/pc/_slide.scss */
@@ -1682,20 +1682,20 @@ object {
   /* masthead */
   /* line 6, ../sass/ratio/_pc.scss */
   .site-title a {
-    background-image: url('../images/site-logo@2x.png?1421157088');
-    -moz-background-size: 250px 39px;
-    -o-background-size: 250px 39px;
-    -webkit-background-size: 250px 39px;
-    background-size: 250px 39px;
+    background-image: url('../images/site-logo@2x.png?1421471784');
+    -moz-background-size: 250px 57px;
+    -o-background-size: 250px 57px;
+    -webkit-background-size: 250px 57px;
+    background-size: 250px 57px;
   }
 
   /* line 14, ../sass/ratio/_pc.scss */
   .footer-site-title a {
-    background-image: url('../images/site-logo@2x.png?1421157088');
-    -moz-background-size: 250px 39px;
-    -o-background-size: 250px 39px;
-    -webkit-background-size: 250px 39px;
-    background-size: 250px 39px;
+    background-image: url('../images/site-logo@2x.png?1421471784');
+    -moz-background-size: 250px 57px;
+    -o-background-size: 250px 57px;
+    -webkit-background-size: 250px 57px;
+    background-size: 250px 57px;
   }
 }
 

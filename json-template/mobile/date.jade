@@ -1,0 +1,69 @@
+extends ../extends/_layout_mobile
+
+block vars
+	- var sitename = 'Media Blogger';
+	- var title    = 'archive';
+	- var type     = 'archive';
+	- var post     = 'archive';
+
+//- scripts
+block append wp_head
+
+block append before_body
+
+block append before_page
+
+block append after_header
+
+block append header_content
+
+block append before_content
+
+block append wp_footer
+	script.
+		(function($) {
+			// Common
+			wpjsonRoot( 'mobile' );
+			wpjsonWidgets( 'sidebar-mobile' );
+
+			// archive
+			$(window).load( function() {
+				// ハッシュ変更時に実行する関数を登録
+				HashObserve.addFunc(function(now_hash, prev_hash){
+					if ( now_hash !== prev_hash ) {
+						// archive
+						var lpath	= location.pathname.split("/");
+						var lpathend = lpath[lpath.length-1];
+						if ( lpathend === '' ) {
+							lpath.pop();
+						}
+						var taxonomy = lpath[lpath.length-1];
+						var hashobj  = location.hash.split("/");
+						var term	 = hashobj[1];
+						var page	 = '';
+						if ( hashobj.length > 2 ) {
+							page	 = hashobj[3];
+						}
+						wpjsonPosts( 'mobile', taxonomy, term, page );
+					}
+				});
+				
+				// 監視を開始
+				setInterval(HashObserve.observe, 1000/30);
+			});
+
+		})(jQuery);
+
+//- main content
+block main
+
+	//- Post List
+	header.archive-header
+		h1.archive-title: span
+
+	#post-box
+		include ../includes/_loader
+
+block main_bottom
+	#mad-nav-top
+	nav#archive-nav
