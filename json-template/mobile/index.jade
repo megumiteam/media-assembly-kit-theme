@@ -21,17 +21,37 @@ block append before_content
 block append wp_footer
 	script.
 		(function($) {
-			var lpath    = location.pathname.split("/");
+			// Common
+			wpjsonRoot( 'mobile' );
+			
+			// HOME
+			var lpath    = location.hash.split("/");
 			var lpathend = lpath[lpath.length-1];
 			if ( lpathend === '' ) {
 				lpath.pop();
 			}
 			var page    = lpath[lpath.length-2];
-			var pagenum = '';
+			var pagenum = "";
 			if ( page == 'page' ) {
-				pagenum     = lpath[lpath.length-1];
+				pagenum     = lpathend;
 			}
-			wpjsonRoot( 'mobile' );
+			$(window).load( function() {
+				// ハッシュ変更時に実行する関数を登録
+				HashObserve.addFunc(function(now_hash, prev_hash){
+					pagenum = "";
+					var hashobj  = location.hash.split("/");
+					if ( hashobj.length > 1 ) {
+						pagenum	 = hashobj[2];
+					}
+					if ( now_hash !== prev_hash ) {
+						wpjsonPosts( '', '', '', pagenum, true );
+						wpjsonHome( '', pagenum );
+					}
+				});
+				
+				// 監視を開始
+				setInterval(HashObserve.observe, 1000/30);
+			});
 			wpjsonPosts( 'mobile', '', '', pagenum, true );
 			wpjsonHome( 'mobile', pagenum );
 			wpjsonWidgets( 'sidebar-mobile' );

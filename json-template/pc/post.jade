@@ -22,15 +22,32 @@ block append before_content
 block append wp_footer
 	script.
 		(function($) {
+			// Common
+			wpjsonRoot();
+			wpjsonWidgets( 'sidebar-pc' );
+	      
+			// post
+			$(window).load( function() {
+				// ハッシュ変更時に実行する関数を登録
+				HashObserve.addFunc(function(now_hash, prev_hash){
+					if ( now_hash !== prev_hash ) {
+						// post
+						var hashobj  = location.hash.split("/");
+						var id	 = hashobj[1];
+						wpjson( 'post', 'posts', '/'+id );
+					}
+				});
+				
+				// 監視を開始
+				setInterval(HashObserve.observe, 1000/30);
+			});
 			var lpath    = location.pathname.split("/");
 			var lpathend = lpath[lpath.length-1];
 			if ( lpathend === '' ) {
 				lpath.pop();
 			}
 			var id = lpath[lpath.length-1];
-			wpjsonRoot();
-			wpjson( 'post', 'posts', '/'+id );
-			wpjsonWidgets( 'sidebar-pc' );
+		
 		})(jQuery);
 
 //- main content
