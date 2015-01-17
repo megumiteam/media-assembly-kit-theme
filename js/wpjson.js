@@ -1262,7 +1262,7 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 			});
 			catitems = catitems.join(", ");
 			catnavs  = catnavs.join(", ");
-			$( '.entry-meta p.posted-in-category .cat' ).html( catitems );
+			$( '.entry-meta p.posted-in-category .cats' ).html( catitems );
 			$( '#khm-15 li.cat span' ).html( catnavs );
 		} else {
 			$( '.entry-meta p.posted-in-category' ).remove();
