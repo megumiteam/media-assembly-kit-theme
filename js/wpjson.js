@@ -1262,7 +1262,7 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 			});
 			catitems = catitems.join(", ");
 			catnavs  = catnavs.join(", ");
-			$( '.entry-meta p.posted-in-category' ).html( catitems );
+			$( '.entry-meta p.posted-in-category .cat' ).html( catitems );
 			$( '#khm-15 li.cat span' ).html( catnavs );
 		} else {
 			$( '.entry-meta p.posted-in-category' ).remove();
@@ -1273,7 +1273,7 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 				tagitems.push( '<a href="' + this.link + '">' + this.name + '</a>' );
 			});
 			tagitems = tagitems.join(", ");
-			$( '.entry-meta p.posted-in-tags' ).html( tagitems );
+			$( '.entry-meta p.posted-in-tags .tags' ).html( tagitems );
 		} else {
 			$( '.entry-meta p.posted-in-tags' ).remove();
 		}
