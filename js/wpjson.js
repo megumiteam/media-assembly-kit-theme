@@ -1251,11 +1251,6 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 		$( '#social-entry-box p.facebook-button .count' ).attr( 'data-url', snsurl.replace('#!', '?_escaped_fragment_=') );
 
 		$( '#social-entry-box p.line a' ).attr( 'href', 'http://line.me/R/msg/text/?' + snstitle + '%0D%0A' + snsurl );
-/*
-		$( '#social-entry-box .count' ).each( function() {
-			$( this ).attr( 'data-url', snsurl.replace('#', '%23') );
-		});
-*/
 
 		if ( categories ) {
 			$.each( categories, function() {
@@ -1322,6 +1317,9 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 		// sns
 		twitterCount();
 		facebookCount();
+		
+		// scrollTop
+		$('body').scrollTop(0);
 	}).fail(function(xhr, status, error) {
 		entryBox.children('.loading').html( 'error' );
 	});

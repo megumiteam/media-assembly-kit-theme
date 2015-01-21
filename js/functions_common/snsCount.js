@@ -4,6 +4,7 @@ window.twitterCount = function() {
 	var socialBox     = $('.social-entry-box');
 	var socialTwitter = $('.twitter-count');
 	var url           = socialTwitter.attr( 'data-url' );
+	socialTwitter.text('0');
 	$.ajax({
 		url:'http://urls.api.twitter.com/1/urls/count.json?url=' + url,
 		type:"get",
@@ -18,6 +19,7 @@ window.facebookCount = function() {
 	var socialBox      = $('.social-entry-box');
 	var socialFacebook = $('.facebook-count');
 	var url            = socialFacebook.attr( 'data-url' );
+	socialFacebook.text('0');
 	$.ajax({
 		url:'http://graph.facebook.com/?id=' + url,
 		type:"get",
