@@ -36,18 +36,6 @@ function mak_site_option_output() {
 		$output .= $google_analytics_code . "\n";
 	}
 
-	// Google Webmaster Tools
-	$google_webmaster_code = get_option( 'google_webmaster_code', '' );
-	if ( $google_webmaster_code ) {
-		$output .= '<meta name="google-site-verification" content="' . $google_webmaster_code . '" />' . "\n";
-	}
-
-	// Bing Webmaster Center
-	$bing_webmaster_code = get_option( 'bing_webmaster_code', '' );
-	if ( $bing_webmaster_code ) {
-		$output .= '<meta name="msvalidate.01" content="' . $bing_webmaster_code . '" />' . "\n";
-	}
-
 	echo $output;
 }
 add_action( 'wp_head', 'mak_site_option_output' );

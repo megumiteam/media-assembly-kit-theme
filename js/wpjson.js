@@ -494,18 +494,8 @@ window.wpjsonRoot = function( ua, type ) {
 		$('head').append( ThemeOption.google_analytics_code );
 	}
 
-	// Google Webmaster Tools
-	if ( ThemeOption.google_webmaster_code !== '' ) {
-		$('head').append( '<meta name="google-site-verification" content="' + ThemeOption.google_webmaster_code + '" />' );
-	}
-
-	// Bing Webmaster Center
-	if ( ThemeOption.bing_webmaster_code !== '' ) {
-		$('head').append( '<meta name="msvalidate.01" content="' + ThemeOption.bing_webmaster_code + '" />' );
-	}
-
 	// copyright
-	var copyright		= ThemeOption.copyright;
+	var copyright        = ThemeOption.copyright;
 	var copyright_year   = ThemeOption.copyright_year;
 	var mobile_copyright = ThemeOption.mobile_copyright;
 	if ( ua !== 'mobile' ) {

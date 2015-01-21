@@ -212,30 +212,6 @@ function mak_theme_options_fields() {
 			'name' => 'google_analytics_code',
 		)
 	);
-	add_settings_field(
-		'google_webmaster_code',
-		__( 'Google Webmaster Tools Verification', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'siteoption',
-		array(
-			'class' => 'regular-text',
-			'name'  => 'google_webmaster_code',
-			'desc'  => __( 'Enter your meta key "content" value to verify your site.', 'mak' ),
-		)
-	);
-	add_settings_field(
-		'bing_webmaster_code',
-		__( 'Bing Webmaster Center Verification', 'mak' ),
-		'mak_text_field',
-		'mak_theme_options',
-		'siteoption',
-		array(
-			'class' => 'regular-text',
-			'name'  => 'bing_webmaster_code',
-			'desc'  => __( 'Enter your meta key "content" value to verify your site.', 'mak' ),
-		)
-	);
 
 	// Background
 	add_settings_section(
@@ -629,8 +605,6 @@ function mak_register_setting() {
 	register_setting( 'mak_theme_options', 'favicon_image', 'intval' );
 	register_setting( 'mak_theme_options', 'apple_touch_icon_image', 'intval' );
 	register_setting( 'mak_theme_options', 'google_analytics_code' );
-	register_setting( 'mak_theme_options', 'google_webmaster_code', 'esc_html' );
-	register_setting( 'mak_theme_options', 'bing_webmaster_code', 'esc_html' );
 
 	// Background
 	register_setting( 'mak_theme_options', 'background_image', 'intval' );
