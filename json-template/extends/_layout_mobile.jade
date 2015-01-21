@@ -1,11 +1,17 @@
+- var ver = 201501211100
 doctype html
 block vars
 html(lang="ja", xmlns:og="http://ogp.me/ns#", xmlns:fb="http://www.facebook.com/2008/fbml", xmlns:mixi="http://mixi-platform.com/ns#")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(name="fragment", content="!")
-		title #{title} | #{sitename}
+		if type == 'home'
+			meta(name="fragment", content="!")
+
+		if type == 'home'
+			title #{sitename} | #{title}
+		else 
+			title #{title} | #{sitename}
 		link#normalize-css(rel="stylesheet", href="/assets/lib/normalize.css")
 		link#open-sans-Oswald-css(rel="stylesheet", href="//fonts.googleapis.com/css?family=Nunito:400,700,300")
 		link#font-awesome-css(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css")
@@ -13,7 +19,7 @@ html(lang="ja", xmlns:og="http://ogp.me/ns#", xmlns:fb="http://www.facebook.com/
 		if type == 'single'
 			link#mak-css(rel="stylesheet", href="/assets/lib/magnific-popup.css")
 
-		link#mak-css(rel="stylesheet", href="/assets/css/mobile.css")
+		link#mak-css(rel="stylesheet", href="/assets/css/mobile.css?ver=#{ver}")
 
 		script(src="/wp-includes/js/jquery/jquery.js?ver=1.11.1")
 		script(src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1")
@@ -53,9 +59,11 @@ html(lang="ja", xmlns:og="http://ogp.me/ns#", xmlns:fb="http://www.facebook.com/
 			script(src="/assets/lib/jquery.bxslider.min.js")
 			script(src="/assets/lib/trunk8.js")
 			script(src="/assets/lib/slide-pan-pan.js")
+			script(src="/assets/lib/writeCapture.js")
+			script(src="/assets/lib/jquery.writeCapture.js")
 			if type == 'single'
 				script(src="/assets/lib/jquery.fitvids.js")
 				script(src="/assets/lib/jquery.magnific-popup.min.js")
-			script(src="/assets/js/mobile.min.js?ver=0.7.2")
-			script(src="/assets/js/wpjson.min.js?ver=0.7.2")
+			script(src="/assets/js/mobile.min.js?ver=#{ver}")
+			script(src="/assets/js/wpjson.min.js?ver=#{ver}")
 
