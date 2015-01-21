@@ -1166,10 +1166,6 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 
 		var items = [];
 
-		if ( objtype === 'page' ) {
-			data = data[0];
-		}
-
 		ID           = data.ID;
 		title        = data.title;
 		date         = data.date;

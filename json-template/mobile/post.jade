@@ -33,21 +33,14 @@ block append wp_footer
 					if ( now_hash !== prev_hash ) {
 						// post
 						var hashobj  = location.hash.split("/");
-						var id	 = hashobj[1];
+						var id	 = hashobj.pop();
 						wpjson( 'post', 'posts', '/'+id, 'mobile' );
 					}
 				});
 				
 				// 監視を開始
 				setInterval(HashObserve.observe, 1000/30);
-			});
-			var lpath    = location.pathname.split("/");
-			var lpathend = lpath[lpath.length-1];
-			if ( lpathend === '' ) {
-				lpath.pop();
-			}
-			var id = lpath[lpath.length-1];
-		
+			});		
 		})(jQuery);
 
 //- main content

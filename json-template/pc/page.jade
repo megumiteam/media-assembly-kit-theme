@@ -30,23 +30,18 @@ block append wp_footer
 			$(window).load( function() {
 				// ハッシュ変更時に実行する関数を登録
 				HashObserve.addFunc(function(now_hash, prev_hash){
-					if ( now_hash !== prev_hash ) {
-						// post
-						var hashobj  = location.hash.split("/");
-						var id	 = hashobj[1];
-						wpjson( 'page', 'posts', '/?type=page&filter[pagename]='+id );
+				if ( now_hash !== prev_hash ) {
+					// page
+					var hashobj  = location.hash.split("/");
+					hashobj.shift();
+					var id	 = hashobj.join('/');
+					wpjson( 'page', 'pages', '/' + id );
 					}
 				});
 				
 				// 監視を開始
 				setInterval(HashObserve.observe, 1000/30);
 			});
-			var lpath    = location.pathname.split("/");
-			var lpathend = lpath[lpath.length-1];
-			if ( lpathend === '' ) {
-				lpath.pop();
-			}
-			var id = lpath[lpath.length-1];
 		
 		})(jQuery);
 
