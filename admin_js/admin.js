@@ -49,7 +49,11 @@
 					if ( $('div#' + id + '-image-view')[0] ) {
 						$('div#' + id + '-image-view').remove();
 					}
-					imageBox.append('<div id="' + id + '-image-view"><img src="'+file.toJSON().sizes.full.url+'" style="max-width: 150px; height: auto;" /></div>');
+					if (file.toJSON().sizes !== undefined) {
+						imageBox.append('<div id="' + id + '-image-view"><img src="'+file.toJSON().sizes.full.url+'" style="max-width: 150px; height: auto;" /></div>');
+					} else {
+						imageBox.append('<div id="' + id + '-image-view">ID :' + file.toJSON().id + '</div>');
+					}
 					$('input#' + target).val(file.toJSON().id);
 					deleteButton.show();
 				});
