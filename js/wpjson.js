@@ -225,7 +225,7 @@ function post_list_tml() {
 		'<header class="entry-header">' +
 			'<p class="posted-in-category color-cat">' + categoryArray + '</p>' +
 			'<h1 class="entry-title"><a href="' + permalink + '">' +  title + '</a></h1>' +
-			'<p class="entry-date"><time datetime="' + date + '">' + dateja + '</time></p>' +
+			'<p class="entry-date"><time datetime="' + date + '"><a href="' + permalink + '">' + dateja + '</a></time></p>' +
 		'</header><!-- .entry-header -->' +
 		'<section class="entry-summary trunk8" data-lines="2">' + excerpt +
 /* 			'<p title="' + excerpt + '">' + excerpt + '</p>'+ */
@@ -249,7 +249,7 @@ function post_list_tml_mobile() {
 		imgtml +
 		'<header class="entry-header">' +
 			'<h1 class="entry-title trunk8" data-lines="3">' +  title + '</h1>' +
-			'<p class="entry-date"><time datetime="' + date + '">' + dateja + '</time></p>' +
+			'<p class="entry-date"><time datetime="' + date + '"><a href="' + permalink + '">' + dateja + '</a></time></p>' +
 		'</header>' +
 	'</a></article>';
 
@@ -295,7 +295,6 @@ window.ogp_set = function( pagetype, excerpt, tagogps, thumbnailULR ) {
 	var ogtags  = [];
 
 	var ogtitle     = $('title').html();
-	var ogtype      = ( pagetype === 'single' ) ? 'article' : 'website';
 	var description = ThemeOption.site_description;
 	if ( ThemeOption.ogp_description !== "" ) {
 		description = ThemeOption.ogp_description;
@@ -329,30 +328,31 @@ window.ogp_set = function( pagetype, excerpt, tagogps, thumbnailULR ) {
 	}
 
 	// output
-	ogtags.push("<!-- OGP and meta -->");
-	ogtags.push('<meta property="og:title" content="' + ogtitle + '">');
-	ogtags.push('<meta property="og:type" content="' + ogtype + '">');
+	$("meta[property='og:title']").attr( 'content', ogtitle );
+
 	if ( description.length !== 0 ) {
-		ogtags.push('<meta property="og:description" content="' + description + '">');
-		ogtags.push('<meta name="description" content="' + description + '">');
+		$("meta[property='og:description']").attr( 'content', description );
+		$("meta[name='description']").attr( 'content', description );
 	}
 	if ( keyword.length !== 0 ) {
-		ogtags.push('<meta name="keywords" content="' + keyword + '">');
+		$("meta[name='keywords']").attr( 'content', keyword );
 	}
-	ogtags.push('<meta property="og:url" content="' + ogurl + '">');
+	$("meta[property='og:url']").attr( 'content', ogurl );
 	if ( ogimage.length !== 0 ) {
-		ogtags.push('<meta property="og:image" content="' + ogimage + '">');
+		$("meta[property='og:image']").attr( 'content', ogimage );
 	}
-	ogtags.push('<meta property="og:site_name" content="' + site_name + '">');
-	ogtags.push('<meta property="og:locale" content="ja_JP">');
+	$("meta[property='og:site_name']").attr( 'content', site_name );
+/*
 	if ( app_id.length !== 0 ) {
 		ogtags.push('<meta property="fb:app_id" content="' + app_id + '">');
 	}
-	ogtags.push("<!-- / OGP and meta -->");
+*/
 
+/*
 	ogtags = ogtags.join("\n");
 
 	$('head').append( ogtags );
+*/
 
 	// fbscript
 	var appId   = '';
@@ -360,7 +360,7 @@ window.ogp_set = function( pagetype, excerpt, tagogps, thumbnailULR ) {
 		appId = '&appId=' + app_id;
 	}
 	var fb_root = '<div id="fb-root"></div>\n<script src="//connect.facebook.net/ja_JP/all.js"></script>\n<script>(function(d, s, id) {\nvar js, fjs = d.getElementsByTagName(s)[0];\nif (d.getElementById(id)) return;\njs = d.createElement(s); js.id = id; js.async = true;\njs.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1' + appId + '&version=v2.0";\nfjs.parentNode.insertBefore(js, fjs);\n}(document, \'script\', \'facebook-jssdk\'));</script>';
-	$('#before_body').append(fb_root);
+	$('#before_body').html(fb_root);
 
 	return;
 };
@@ -482,11 +482,11 @@ window.wpjsonRoot = function( ua, type ) {
 
 	// favicon
 	if ( ThemeOption.favicon_image_url !== '' ) {
-		$('head').append( '<link rel="shortcut icon" href="' + ThemeOption.favicon_image_url + '" />' );
+		$('#shortcut-icon').attr( 'href', ThemeOption.favicon_image_url );
 	}
 	// apple-touch-icon
 	if ( ThemeOption.apple_touch_icon_image_url !== '' ) {
-		$('head').append( '<link rel="apple-touch-icon" href="' + ThemeOption.apple_touch_icon_image_url + '" />' );
+		$('#apple-touch-icon').attr( 'href', ThemeOption.apple_touch_icon_image_url );
 	}
 
 	// Google Analytics
@@ -626,12 +626,12 @@ window.wpjsonRoot = function( ua, type ) {
 
 	// Ad Common
 	if ( ua === 'mobile' ) {
-		$('head').append(MediaAd.mak_ad_general_mobile_header);
-		$('body').append(MediaAd.mak_ad_general_mobile_footer);
+		$('head').writeCapture().append(MediaAd.mak_ad_general_mobile_header);
+		$('body').writeCapture().append(MediaAd.mak_ad_general_mobile_footer);
 		mediaAdSet_mobile_common_header();
 	} else {
-		$('head').append(MediaAd.mak_ad_general_pc_header);
-		$('body').append(MediaAd.mak_ad_general_pc_footer);
+		$('head').writeCapture().append(MediaAd.mak_ad_general_pc_header);
+		$('body').writeCapture().append(MediaAd.mak_ad_general_pc_footer);
 		$('#ad-before-footer').writeCapture().html(MediaAd.mak_ad_pc_before_footer);
 	}
 
@@ -663,11 +663,13 @@ window.wpjsonWidgets = function( wid, pos, ua, pid ) {
 			WidgetArea.empty();
 			return;
 		}
-		WidgetArea.writeCapture().html(data.content);
+		$.writeCapture.html( WidgetArea, data.content, function() {
 
-		// after
-		rankingNavSet();
-		trunk8Set();
+			// after
+			rankingNavSet();
+			trunk8Set();
+	
+		});
 
 	}).fail(function(xhr, status, error) {
 		WidgetArea.empty();
@@ -940,10 +942,11 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 			date       = this.date;
 			date       = date.substr(0,19) + '+09:00';
 			permalink  = this.link;
-			// add summary
-			// permalink = permalink.replace( new RegExp( location.hostname + '(\/\\d+)', 'g'), location.hostname + "/summary$1" );
 			dateja     = post_date_format( date );
-			excerpt    = this.excerpt;
+			excerpt    = '';
+			if ( this.excerpt != null ) {
+				excerpt    = this.excerpt;
+			}
 			entryclass = 'thumbnail-false';
 			thumbnail  = '';
 			if ( this.featured_image !== null && this.featured_image.source !== undefined ) {
@@ -957,15 +960,18 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 			if ( this.terms.category !== undefined ) {
 				categoryArray = this.terms.category;
 				$.each(categoryArray, function( i ) {
-					categoryColorStyle = "";
-					categoryColor = ThemeOption['cat_' + this.ID + '_color'];
-					if ( categoryColor !== '' || categoryColor !== undefined ) {
-						categoryColorStyle = ' style="background: ' + categoryColor + ';"';
+					if ( this.parent == null ) {
+						categoryColorStyle = "";
+						categoryColor = ThemeOption['cat_' + this.ID + '_color'];
+						if ( categoryColor !== '' || categoryColor !== undefined ) {
+							categoryColorStyle = ' style="background: ' + categoryColor + ';"';
+						}
+						categoryArray[i] = '<a href="' + this.link + '" title="View all posts in ' + i + this.name + '"' + categoryColorStyle + '>' + this.name + '</a>';
+					} else {
+						categoryArray[i] = '';
 					}
-					categoryArray[i] = '<a href="' + this.link + '" title="View all posts in ' + i + this.name + '"' + categoryColorStyle + '>' + this.name + '</a>';
 				});
-				//categoryArray = categoryArray.join("\n");
-				categoryArray = categoryArray[0];
+				categoryArray = categoryArray.join("\n");
 			}
 
 			// output
@@ -986,9 +992,9 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 				halfway_number = halfway_number - 1;
 				if ( i === halfway_number ) {
 					if ( archive === true ) {
-						items.push( mediaAdSet_Archive(ua) );
+						items.push( '<div id="mad-box-archive"></div>' );
 					} else {
-						items.push( mediaAdSet_Home(ua) );
+						items.push( '<div id="mad-box-archive"></div>' );
 					}
 				}
 
@@ -996,7 +1002,12 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 		});
 
 		items = items.join("\n");
-		postBox.writeCapture().html(items);
+		postBox.html(items);
+		if ( archive === true ) {
+			$('#mad-box-archive').writeCapture().html(mediaAdSet_Archive(ua));
+		} else {
+			$('#mad-box-archive').writeCapture().html(mediaAdSet_Home(ua));
+		}
 
 		// page link
 		var TotalPages  = xhr.getResponseHeader('X-WP-TotalPages');
@@ -1024,7 +1035,6 @@ window.wpjsonPosts = function( ua, tax, slug, page, home ) {
 				if ( location.hash !== '') {
 					basepath = basepath.replace( '/' + location.hash, "" );
 				}
-				console.log('basepath : ' + basepath);
 				baehash = '#!/';
 			} else {
 				basepath = basepath.replace( /page\/.*/, "" );
@@ -1198,7 +1208,6 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 				async: false
 			}).done(function(data, status, xhr) {
 				if (data.prev.length === 0 || data.prev.permalink === undefined ) {
-					console.log('prev obj error');
 					return;
 				}
 				PrevLink = data.prev.permalink;
@@ -1209,7 +1218,6 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 				async: false
 			}).done(function(data, status, xhr) {
 				if (data.next.length === 0 || data.next.permalink === undefined ) {
-					console.log('next obj error');
 					return;
 				}
 				NextLink = data.next.permalink;
