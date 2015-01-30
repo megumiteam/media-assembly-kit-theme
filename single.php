@@ -22,7 +22,6 @@ get_header(); ?>
 			<?php
 				mak_related_post_list();
 				mak_single_ad();
-				mak_pickup();
 			?>
 			<?php do_action( 'mak_after_main' ); ?>
 		</main><!-- #main -->

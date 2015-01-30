@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2015-01-13 14:29:09+00:00\n"
+"POT-Creation-Date: 2015-01-30 09:31:10+00:00\n"
 "Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -69,6 +69,58 @@ msgstr "消去"
 msgid "Page %s"
 msgstr "ページ %s"
 
+#: inc/manage-acf-field-group.php:14
+msgid "Slide content"
+msgstr "スライドコンテンツ"
+
+#: inc/manage-acf-field-group.php:18 inc/manage-acf-field-group.php:83
+msgid "Choise post"
+msgstr "投稿を選択"
+
+#: inc/manage-acf-field-group.php:39
+msgid "Slide image"
+msgstr "スライドイメージ"
+
+#: inc/manage-acf-field-group.php:42
+msgid "W: 700px H: 350px"
+msgstr "幅: 700px 高さ: 350px"
+
+#: inc/manage-acf-field-group.php:71
+msgid "Featured content"
+msgstr "誘導枠コンテンツ"
+
+#: inc/manage-acf-field-group.php:75
+msgid "Use post"
+msgstr "投稿を使う"
+
+#: inc/manage-acf-field-group.php:115
+msgid "Featured image"
+msgstr "画像"
+
+#: inc/manage-acf-field-group.php:135
+msgid "Link URL"
+msgstr "リンクURL"
+
+#: inc/manage-acf-field-group.php:158
+msgid "Link target"
+msgstr "リンクターゲット"
+
+#: inc/manage-acf-field-group.php:172
+msgid "Open link in a new window/tab"
+msgstr "リンクを新ウィンドウまたはタブで開く"
+
+#: inc/manage-acf-field-group.php:177
+msgid "Excerpt"
+msgstr "抜粋"
+
+#: inc/manage-acf-field-group.php:180
+msgid ""
+"Use the post if not filled out, gets more posts. It is useful if you want to "
+"explain properly."
+msgstr ""
+"投稿を使うの場合、記入されていない場合は、投稿より取得します。より、適切に説"
+"明したい場合に有用です。"
+
 #: inc/manage-custom-taxonomy-field.php:34
 #: inc/manage-custom-taxonomy-field.php:64
 msgid "Options"
@@ -91,8 +143,8 @@ msgid "Slide"
 msgstr "スライド"
 
 #: inc/manage-post-type.php:44
-msgid "Pickups"
-msgstr "ピックアップ"
+msgid "Featured"
+msgstr "誘導枠"
 
 #: inc/manage-theme-options.php:22 inc/manage-theme-options.php:28
 #: inc/manage-theme-options.php:40
@@ -159,179 +211,167 @@ msgstr "apple-touch-icon 画像"
 msgid "Google Analytics Code"
 msgstr "Google Analytics コード"
 
-#: inc/manage-theme-options.php:217
-msgid "Google Webmaster Tools Verification"
-msgstr "Google Webmaster Tools 認証"
-
-#: inc/manage-theme-options.php:224 inc/manage-theme-options.php:236
-msgid "Enter your meta key \"content\" value to verify your site."
-msgstr "認証用の meta \"content\" の値を入力してください。"
-
-#: inc/manage-theme-options.php:229
-msgid "Bing Webmaster Center Verification"
-msgstr "Bing Webmaster Center 認証"
-
-#: inc/manage-theme-options.php:243
+#: inc/manage-theme-options.php:219
 msgid "PC Background"
 msgstr "PC 背景"
 
-#: inc/manage-theme-options.php:249 inc/manage-theme-options.php:353
+#: inc/manage-theme-options.php:225 inc/manage-theme-options.php:329
 msgid "Background Image"
 msgstr "背景画像"
 
-#: inc/manage-theme-options.php:260 inc/manage-theme-options.php:364
+#: inc/manage-theme-options.php:236 inc/manage-theme-options.php:340
 msgid "Background Color"
 msgstr "背景色"
 
-#: inc/manage-theme-options.php:271 inc/manage-theme-options.php:375
+#: inc/manage-theme-options.php:247 inc/manage-theme-options.php:351
 msgid "Background Repeat"
 msgstr "背景画像のリピート"
 
-#: inc/manage-theme-options.php:278 inc/manage-theme-options.php:382
+#: inc/manage-theme-options.php:254 inc/manage-theme-options.php:358
 msgid "No Repeat"
 msgstr "no-repeat"
 
-#: inc/manage-theme-options.php:279 inc/manage-theme-options.php:383
+#: inc/manage-theme-options.php:255 inc/manage-theme-options.php:359
 msgid "Repeat Horizontally"
 msgstr "repeat-x"
 
-#: inc/manage-theme-options.php:280 inc/manage-theme-options.php:384
+#: inc/manage-theme-options.php:256 inc/manage-theme-options.php:360
 msgid "Repeat Vertically"
 msgstr "repeat-y"
 
-#: inc/manage-theme-options.php:281 inc/manage-theme-options.php:385
+#: inc/manage-theme-options.php:257 inc/manage-theme-options.php:361
 msgid "Repeat All"
 msgstr "Repeat All"
 
-#: inc/manage-theme-options.php:287 inc/manage-theme-options.php:391
+#: inc/manage-theme-options.php:263 inc/manage-theme-options.php:367
 msgid "Background Position"
 msgstr "背景画像の表示開始位置"
 
-#: inc/manage-theme-options.php:294 inc/manage-theme-options.php:398
+#: inc/manage-theme-options.php:270 inc/manage-theme-options.php:374
 msgid "Top Left"
 msgstr ""
 
-#: inc/manage-theme-options.php:295 inc/manage-theme-options.php:399
+#: inc/manage-theme-options.php:271 inc/manage-theme-options.php:375
 msgid "Top Center"
 msgstr "Top Left"
 
-#: inc/manage-theme-options.php:296 inc/manage-theme-options.php:400
+#: inc/manage-theme-options.php:272 inc/manage-theme-options.php:376
 msgid "Top Right"
 msgstr "Top Right"
 
-#: inc/manage-theme-options.php:297 inc/manage-theme-options.php:401
+#: inc/manage-theme-options.php:273 inc/manage-theme-options.php:377
 msgid "Middle Left"
 msgstr "Middle Left"
 
-#: inc/manage-theme-options.php:298 inc/manage-theme-options.php:402
+#: inc/manage-theme-options.php:274 inc/manage-theme-options.php:378
 msgid "Middle Center"
 msgstr "Middle Center"
 
-#: inc/manage-theme-options.php:299 inc/manage-theme-options.php:403
+#: inc/manage-theme-options.php:275 inc/manage-theme-options.php:379
 msgid "Middle Right"
 msgstr "Middle Right"
 
-#: inc/manage-theme-options.php:300 inc/manage-theme-options.php:404
+#: inc/manage-theme-options.php:276 inc/manage-theme-options.php:380
 msgid "Bottom Left"
 msgstr "Bottom Left"
 
-#: inc/manage-theme-options.php:301 inc/manage-theme-options.php:405
+#: inc/manage-theme-options.php:277 inc/manage-theme-options.php:381
 msgid "Bottom Center"
 msgstr "Bottom Center"
 
-#: inc/manage-theme-options.php:302 inc/manage-theme-options.php:406
+#: inc/manage-theme-options.php:278 inc/manage-theme-options.php:382
 msgid "Bottom Right"
 msgstr "Bottom Right"
 
-#: inc/manage-theme-options.php:308 inc/manage-theme-options.php:412
+#: inc/manage-theme-options.php:284 inc/manage-theme-options.php:388
 msgid "Background Attachment"
 msgstr "背景画像の固定・移動"
 
-#: inc/manage-theme-options.php:315 inc/manage-theme-options.php:419
+#: inc/manage-theme-options.php:291 inc/manage-theme-options.php:395
 msgid "Scroll Normally"
 msgstr "スクロール"
 
-#: inc/manage-theme-options.php:316 inc/manage-theme-options.php:420
+#: inc/manage-theme-options.php:292 inc/manage-theme-options.php:396
 msgid "Fixed in Place"
 msgstr "固定"
 
-#: inc/manage-theme-options.php:322
+#: inc/manage-theme-options.php:298
 msgid "Background Link URL"
 msgstr "背景リンク先"
 
-#: inc/manage-theme-options.php:333
+#: inc/manage-theme-options.php:309
 msgid "Background Link Target"
 msgstr "背景リンクターゲット"
 
-#: inc/manage-theme-options.php:347
+#: inc/manage-theme-options.php:323
 msgid "Mobile Background"
 msgstr "モバイル背景"
 
-#: inc/manage-theme-options.php:428
+#: inc/manage-theme-options.php:404
 msgid "Social"
 msgstr "ソーシャル"
 
-#: inc/manage-theme-options.php:434
+#: inc/manage-theme-options.php:410
 msgid "Twitter URL"
 msgstr "Twitter URL"
 
-#: inc/manage-theme-options.php:445
+#: inc/manage-theme-options.php:421
 msgid "Twitter via"
 msgstr "Twitter via"
 
-#: inc/manage-theme-options.php:456
+#: inc/manage-theme-options.php:432
 msgid "Facebook URL"
 msgstr "Facebook ページ"
 
-#: inc/manage-theme-options.php:467
+#: inc/manage-theme-options.php:443
 msgid "YouTube URL"
 msgstr "YouTube URL"
 
-#: inc/manage-theme-options.php:478
+#: inc/manage-theme-options.php:454
 msgid "Pinterest URL"
 msgstr "Pinterest URL"
 
-#: inc/manage-theme-options.php:489
+#: inc/manage-theme-options.php:465
 msgid "appId"
 msgstr "Facebook appid"
 
-#: inc/manage-theme-options.php:500
+#: inc/manage-theme-options.php:476
 msgid "OGP Title"
 msgstr "OGP タイトルの設定"
 
-#: inc/manage-theme-options.php:512
+#: inc/manage-theme-options.php:488
 msgid "OGP Description"
 msgstr "OGP ディスクリプションの設定"
 
-#: inc/manage-theme-options.php:523
+#: inc/manage-theme-options.php:499
 msgid "OGP Keyword"
 msgstr "OGP キーワードの設定"
 
-#: inc/manage-theme-options.php:534
+#: inc/manage-theme-options.php:510
 msgid "OGP Image"
 msgstr "OGP 画像の設定"
 
-#: inc/manage-theme-options.php:547
+#: inc/manage-theme-options.php:523
 msgid "Category"
 msgstr "カテゴリー"
 
-#: inc/manage-theme-options.php:559
+#: inc/manage-theme-options.php:535
 msgid "%s Category Color"
 msgstr "%s の色"
 
-#: inc/manage-theme-options.php:573
+#: inc/manage-theme-options.php:549
 msgid "Other"
 msgstr "その他"
 
-#: inc/manage-theme-options.php:579
+#: inc/manage-theme-options.php:555
 msgid "Copyright"
 msgstr "Copyright"
 
-#: inc/manage-theme-options.php:591
+#: inc/manage-theme-options.php:567
 msgid "Mobile Copyright"
 msgstr "Mobile Copyright"
 
-#: inc/manage-theme-options.php:603
+#: inc/manage-theme-options.php:579
 msgid "Copyright Year"
 msgstr "Copyright Year"
 

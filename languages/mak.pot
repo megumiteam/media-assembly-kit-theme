@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2015-01-13 14:29:09+00:00\n"
+"POT-Creation-Date: 2015-01-30 09:31:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -67,6 +67,56 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
+#: inc/manage-acf-field-group.php:14
+msgid "Slide content"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:18 inc/manage-acf-field-group.php:83
+msgid "Choise post"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:39
+msgid "Slide image"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:42
+msgid "W: 700px H: 350px"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:71
+msgid "Featured content"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:75
+msgid "Use post"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:115
+msgid "Featured image"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:135
+msgid "Link URL"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:158
+msgid "Link target"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:172
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:177
+msgid "Excerpt"
+msgstr ""
+
+#: inc/manage-acf-field-group.php:180
+msgid ""
+"Use the post if not filled out, gets more posts. It is useful if you want to "
+"explain properly."
+msgstr ""
+
 #: inc/manage-custom-taxonomy-field.php:34
 #: inc/manage-custom-taxonomy-field.php:64
 msgid "Options"
@@ -89,7 +139,7 @@ msgid "Slide"
 msgstr ""
 
 #: inc/manage-post-type.php:44
-msgid "Pickups"
+msgid "Featured"
 msgstr ""
 
 #: inc/manage-theme-options.php:22 inc/manage-theme-options.php:28
@@ -157,179 +207,167 @@ msgstr ""
 msgid "Google Analytics Code"
 msgstr ""
 
-#: inc/manage-theme-options.php:217
-msgid "Google Webmaster Tools Verification"
-msgstr ""
-
-#: inc/manage-theme-options.php:224 inc/manage-theme-options.php:236
-msgid "Enter your meta key \"content\" value to verify your site."
-msgstr ""
-
-#: inc/manage-theme-options.php:229
-msgid "Bing Webmaster Center Verification"
-msgstr ""
-
-#: inc/manage-theme-options.php:243
+#: inc/manage-theme-options.php:219
 msgid "PC Background"
 msgstr ""
 
-#: inc/manage-theme-options.php:249 inc/manage-theme-options.php:353
+#: inc/manage-theme-options.php:225 inc/manage-theme-options.php:329
 msgid "Background Image"
 msgstr ""
 
-#: inc/manage-theme-options.php:260 inc/manage-theme-options.php:364
+#: inc/manage-theme-options.php:236 inc/manage-theme-options.php:340
 msgid "Background Color"
 msgstr ""
 
-#: inc/manage-theme-options.php:271 inc/manage-theme-options.php:375
+#: inc/manage-theme-options.php:247 inc/manage-theme-options.php:351
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/manage-theme-options.php:278 inc/manage-theme-options.php:382
+#: inc/manage-theme-options.php:254 inc/manage-theme-options.php:358
 msgid "No Repeat"
 msgstr ""
 
-#: inc/manage-theme-options.php:279 inc/manage-theme-options.php:383
+#: inc/manage-theme-options.php:255 inc/manage-theme-options.php:359
 msgid "Repeat Horizontally"
 msgstr ""
 
-#: inc/manage-theme-options.php:280 inc/manage-theme-options.php:384
+#: inc/manage-theme-options.php:256 inc/manage-theme-options.php:360
 msgid "Repeat Vertically"
 msgstr ""
 
-#: inc/manage-theme-options.php:281 inc/manage-theme-options.php:385
+#: inc/manage-theme-options.php:257 inc/manage-theme-options.php:361
 msgid "Repeat All"
 msgstr ""
 
-#: inc/manage-theme-options.php:287 inc/manage-theme-options.php:391
+#: inc/manage-theme-options.php:263 inc/manage-theme-options.php:367
 msgid "Background Position"
 msgstr ""
 
-#: inc/manage-theme-options.php:294 inc/manage-theme-options.php:398
+#: inc/manage-theme-options.php:270 inc/manage-theme-options.php:374
 msgid "Top Left"
 msgstr ""
 
-#: inc/manage-theme-options.php:295 inc/manage-theme-options.php:399
+#: inc/manage-theme-options.php:271 inc/manage-theme-options.php:375
 msgid "Top Center"
 msgstr ""
 
-#: inc/manage-theme-options.php:296 inc/manage-theme-options.php:400
+#: inc/manage-theme-options.php:272 inc/manage-theme-options.php:376
 msgid "Top Right"
 msgstr ""
 
-#: inc/manage-theme-options.php:297 inc/manage-theme-options.php:401
+#: inc/manage-theme-options.php:273 inc/manage-theme-options.php:377
 msgid "Middle Left"
 msgstr ""
 
-#: inc/manage-theme-options.php:298 inc/manage-theme-options.php:402
+#: inc/manage-theme-options.php:274 inc/manage-theme-options.php:378
 msgid "Middle Center"
 msgstr ""
 
-#: inc/manage-theme-options.php:299 inc/manage-theme-options.php:403
+#: inc/manage-theme-options.php:275 inc/manage-theme-options.php:379
 msgid "Middle Right"
 msgstr ""
 
-#: inc/manage-theme-options.php:300 inc/manage-theme-options.php:404
+#: inc/manage-theme-options.php:276 inc/manage-theme-options.php:380
 msgid "Bottom Left"
 msgstr ""
 
-#: inc/manage-theme-options.php:301 inc/manage-theme-options.php:405
+#: inc/manage-theme-options.php:277 inc/manage-theme-options.php:381
 msgid "Bottom Center"
 msgstr ""
 
-#: inc/manage-theme-options.php:302 inc/manage-theme-options.php:406
+#: inc/manage-theme-options.php:278 inc/manage-theme-options.php:382
 msgid "Bottom Right"
 msgstr ""
 
-#: inc/manage-theme-options.php:308 inc/manage-theme-options.php:412
+#: inc/manage-theme-options.php:284 inc/manage-theme-options.php:388
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/manage-theme-options.php:315 inc/manage-theme-options.php:419
+#: inc/manage-theme-options.php:291 inc/manage-theme-options.php:395
 msgid "Scroll Normally"
 msgstr ""
 
-#: inc/manage-theme-options.php:316 inc/manage-theme-options.php:420
+#: inc/manage-theme-options.php:292 inc/manage-theme-options.php:396
 msgid "Fixed in Place"
 msgstr ""
 
-#: inc/manage-theme-options.php:322
+#: inc/manage-theme-options.php:298
 msgid "Background Link URL"
 msgstr ""
 
-#: inc/manage-theme-options.php:333
+#: inc/manage-theme-options.php:309
 msgid "Background Link Target"
 msgstr ""
 
-#: inc/manage-theme-options.php:347
+#: inc/manage-theme-options.php:323
 msgid "Mobile Background"
 msgstr ""
 
-#: inc/manage-theme-options.php:428
+#: inc/manage-theme-options.php:404
 msgid "Social"
 msgstr ""
 
-#: inc/manage-theme-options.php:434
+#: inc/manage-theme-options.php:410
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/manage-theme-options.php:445
+#: inc/manage-theme-options.php:421
 msgid "Twitter via"
 msgstr ""
 
-#: inc/manage-theme-options.php:456
+#: inc/manage-theme-options.php:432
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/manage-theme-options.php:467
+#: inc/manage-theme-options.php:443
 msgid "YouTube URL"
 msgstr ""
 
-#: inc/manage-theme-options.php:478
+#: inc/manage-theme-options.php:454
 msgid "Pinterest URL"
 msgstr ""
 
-#: inc/manage-theme-options.php:489
+#: inc/manage-theme-options.php:465
 msgid "appId"
 msgstr ""
 
-#: inc/manage-theme-options.php:500
+#: inc/manage-theme-options.php:476
 msgid "OGP Title"
 msgstr ""
 
-#: inc/manage-theme-options.php:512
+#: inc/manage-theme-options.php:488
 msgid "OGP Description"
 msgstr ""
 
-#: inc/manage-theme-options.php:523
+#: inc/manage-theme-options.php:499
 msgid "OGP Keyword"
 msgstr ""
 
-#: inc/manage-theme-options.php:534
+#: inc/manage-theme-options.php:510
 msgid "OGP Image"
 msgstr ""
 
-#: inc/manage-theme-options.php:547
+#: inc/manage-theme-options.php:523
 msgid "Category"
 msgstr ""
 
-#: inc/manage-theme-options.php:559
+#: inc/manage-theme-options.php:535
 msgid "%s Category Color"
 msgstr ""
 
-#: inc/manage-theme-options.php:573
+#: inc/manage-theme-options.php:549
 msgid "Other"
 msgstr ""
 
-#: inc/manage-theme-options.php:579
+#: inc/manage-theme-options.php:555
 msgid "Copyright"
 msgstr ""
 
-#: inc/manage-theme-options.php:591
+#: inc/manage-theme-options.php:567
 msgid "Mobile Copyright"
 msgstr ""
 
-#: inc/manage-theme-options.php:603
+#: inc/manage-theme-options.php:579
 msgid "Copyright Year"
 msgstr ""
 

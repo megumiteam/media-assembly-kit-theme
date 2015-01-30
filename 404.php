@@ -29,7 +29,6 @@ get_header(); ?>
 				<?php endif; ?>
 				<?php do_action( 'mak_after_404_entry' ); ?>
 			</article><!-- .error-404 -->
-			<?php mak_pickup(); ?>
 			<?php mak_whats_new(); ?>
 			<?php do_action( 'mak_after_main' ); ?>
 		</main><!-- #main -->

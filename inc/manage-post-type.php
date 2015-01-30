@@ -40,9 +40,9 @@ function mak_custom_post_type_set() {
 	);
 	mak_custom_post_type( $label_name, $slug, $args );
 
-	// Pickup
-	$label_name = __( 'Pickups', 'mak' );
-	$slug       = 'pickup';
+	// Featured
+	$label_name = __( 'Featured', 'mak' );
+	$slug       = 'featured';
 	$args       = array(
 		'public'          => false,
 		'show_ui'         => true,

@@ -11,11 +11,11 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 	// Slide
 	register_field_group(array (
 		'id' => 'acf_slide',
-		'title' => 'スライドコンテンツ',
+		'title' => __( 'Slide content', 'mak' ),
 		'fields' => array (
 			array (
 				'key' => 'field_slide_post',
-				'label' => '投稿を選択',
+				'label' => __( 'Choise post', 'mak' ),
 				'name' => 'select_post',
 				'type' => 'relationship',
 				'return_format' => 'id',
@@ -36,10 +36,10 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 			),
 			array (
 				'key' => 'field_slide_image',
-				'label' => 'スライドイメージ',
+				'label' => __( 'Slide image', 'mak' ),
 				'name' => 'slide_image',
 				'type' => 'image',
-				'instructions' => '700x350 の大きさで上げて下さい。',
+				'instructions' => __( 'W: 700px H: 350px', 'mak' ), //。
 				'save_format' => 'id',
 				'preview_size' => 'thumbnail',
 				'library' => 'uploadedTo',
@@ -65,16 +65,35 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 		'menu_order' => 0,
 	));
 
-	// Pickup
+	// Featured
 	register_field_group(array (
-		'id' => 'acf_pickup',
-		'title' => 'ピックアップコンテンツ追加',
+		'id' => 'acf_featured',
+		'title' => __( 'Featured content', 'mak' ),
 		'fields' => array (
 			array (
-				'key' => 'field_pickup_post',
-				'label' => '投稿を選択',
-				'name' => 'select_post',
+				'key' => ' field__is_posts',
+				'label' => __( 'Use post', 'mak' ),
+				'name' => '_is_posts',
+				'type' => 'true_false',
+				'message' => '',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field__select_post',
+				'label' => __( 'Choise post', 'mak' ),
+				'name' => '_select_post',
 				'type' => 'relationship',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => ' field__is_posts',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
 				'return_format' => 'id',
 				'post_type' => array (
 					0 => 'post',
@@ -92,13 +111,78 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 				'max' => 1,
 			),
 			array (
-				'key' => 'field_pickup_thumbnail',
-				'label' => '画像',
+				'key' => 'field__thumbnail_id',
+				'label' => __( 'Featured image', 'mak' ),
 				'name' => '_thumbnail_id',
 				'type' => 'image',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => ' field__is_posts',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
 				'save_format' => 'id',
 				'preview_size' => 'thumbnail',
-				'library' => 'uploadedTo',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_other_link_url',
+				'label' => __( 'Link URL', 'mak' ),
+				'name' => '_other_link_url',
+				'type' => 'text',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => ' field__is_posts',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field__other_link_target',
+				'label' => __( 'Link target', 'mak' ),
+				'name' => '_other_link_target',
+				'type' => 'true_false',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => ' field__is_posts',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'message' => __( 'Open link in a new window/tab', 'mak' ),
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field__custom_content',
+				'label' => __( 'Excerpt', 'mak' ),
+				'name' => '_custom_content',
+				'type' => 'textarea',
+				'instructions' => __( 'Use the post if not filled out, gets more posts. It is useful if you want to explain properly.', 'mak' ),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
 			),
 		),
 		'location' => array (
@@ -106,7 +190,7 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'pickup',
+					'value' => 'featured',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -120,6 +204,5 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 		),
 		'menu_order' => 0,
 	));
-
 
 }
