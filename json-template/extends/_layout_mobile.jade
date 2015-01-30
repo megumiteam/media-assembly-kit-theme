@@ -74,7 +74,8 @@ html(lang="ja", xmlns:og="http://ogp.me/ns#", xmlns:fb="http://www.facebook.com/
 			script(src="/assets/lib/imagesloaded.pkgd.min.js")
 			script(src="/assets/lib/jquery.bxslider.min.js")
 			script(src="/assets/lib/trunk8.js")
-			script(src="/assets/lib/slide-pan-pan.js")
+			if type == 'home'
+				script(src="/assets/lib/slide-pan-pan.js")
 			script(src="/assets/lib/writeCapture.js")
 			script(src="/assets/lib/jquery.writeCapture.js")
 			if type == 'single'
