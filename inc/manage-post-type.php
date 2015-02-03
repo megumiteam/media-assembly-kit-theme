@@ -34,7 +34,7 @@ function mak_custom_post_type_set() {
 		'hierarchical'    => true,
 		'capability_type' => 'post',
 		'capabilities'    => $contact_capabilities,
-		'supports'        => array( 'title', 'custom-fields' ),
+		'supports'        => array( 'title' ),
 		'roles'           => array( 'administrator' ),
 		'menu_icon'       => 'dashicons-images-alt2',
 	);
@@ -49,7 +49,7 @@ function mak_custom_post_type_set() {
 		'hierarchical'    => true,
 		'capability_type' => 'post',
 		'capabilities'    => $contact_capabilities,
-		'supports'        => array( 'title' ),
+		'supports'        => array( 'title', 'page-attributes' ),
 		'roles'           => array( 'administrator' ),
 		'menu_icon'       => 'dashicons-pressthis',
 	);

@@ -679,6 +679,7 @@ window.wpjsonWidgets = function( wid, pos, ua, pid ) {
 };
 
 // PickUp
+/*
 window.wpjsonPickup = function() {
 	var PickUpArea = $('#pickup-post-box');
 	var wpjsonPickUpAreaObj = $.ajax({
@@ -700,6 +701,7 @@ window.wpjsonPickup = function() {
 
 	return;
 };
+*/
 
 // Related Posts
 window.wpjsonRelated = function( ua, id ) {
@@ -1307,7 +1309,7 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 		trunk8Set();
 		wpjsonRelated( ua, ID );
 		mediaAdSet_Single( ua );
-		wpjsonPickup();
+		//wpjsonPickup();
 
 		// ogp
 		ogp_set( 'single', excerpt, tagitems, thumbnailULR );
@@ -1318,6 +1320,7 @@ window.wpjson = function( objtype, endpoint, filter, ua ) {
 		
 		// scrollTop
 		$('body').scrollTop(0);
+
 	}).fail(function(xhr, status, error) {
 		entryBox.children('.loading').html( 'error' );
 	});
