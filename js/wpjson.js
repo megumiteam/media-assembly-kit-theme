@@ -639,7 +639,7 @@ window.wpjsonRoot = function( ua, type ) {
 // Widget Area
 window.wpjsonWidgets = function( wid, pos, ua, pid ) {
 	if ( typeof wid === 'undefined' ) {
-		wid = 'sidebar-pc-home';
+		wid = 'sidebar-pc';
 	}
 	if ( typeof pos === 'undefined' ) {
 		pos = '#secondary';

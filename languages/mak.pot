@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2015-02-04 03:25:16+00:00\n"
+"POT-Creation-Date: 2015-02-04 03:34:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -372,18 +372,14 @@ msgid "Copyright Year"
 msgstr ""
 
 #: inc/manage_widget_area.php:13
-msgid "PC HOME Sideber"
-msgstr ""
-
-#: inc/manage_widget_area.php:22
 msgid "PC Sideber"
 msgstr ""
 
-#: inc/manage_widget_area.php:31
+#: inc/manage_widget_area.php:22
 msgid "Mobile"
 msgstr ""
 
-#: inc/manage_widget_area.php:40
+#: inc/manage_widget_area.php:31
 msgid "Mobile Single"
 msgstr ""
 

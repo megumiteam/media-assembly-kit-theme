@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2015-02-04 03:25:16+00:00\n"
+"POT-Creation-Date: 2015-02-04 03:34:16+00:00\n"
 "Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -376,18 +376,14 @@ msgid "Copyright Year"
 msgstr "Copyright Year"
 
 #: inc/manage_widget_area.php:13
-msgid "PC HOME Sideber"
-msgstr "PC HOME サイドバー"
-
-#: inc/manage_widget_area.php:22
 msgid "PC Sideber"
 msgstr "PC サイドバー"
 
-#: inc/manage_widget_area.php:31
+#: inc/manage_widget_area.php:22
 msgid "Mobile"
 msgstr "モバイルエリア"
 
-#: inc/manage_widget_area.php:40
+#: inc/manage_widget_area.php:31
 msgid "Mobile Single"
 msgstr "モバイルシングルエリア"
 
@@ -616,4 +612,3 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "DigitalCube Co.,Ltd"
 msgstr ""
-

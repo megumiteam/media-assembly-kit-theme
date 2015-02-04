@@ -207,10 +207,24 @@ add_action( 'mak_before_main', function(){
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #  36. mak_secondary
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+add_action( 'mak_secondary', function(){
+	if ( !is_child_theme() && is_active_sidebar( 'sidebar-pc' ) ) {
+		dynamic_sidebar( 'sidebar-pc' );
+	}
+	if ( is_child_theme() && is_active_sidebar( 'sidebar-mobile' ) && !is_single() ) {
+		dynamic_sidebar( 'sidebar-mobile' );
+	}
+	if ( is_child_theme() && is_active_sidebar( 'sidebar-mobile-single' ) && is_single() ) {
+		dynamic_sidebar( 'sidebar-mobile-single' );
+	}
+});
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #  37. mak_after_content
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+add_action( 'mak_after_content', function(){
+	get_sidebar();
+} );
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #  38. mak_content_footer

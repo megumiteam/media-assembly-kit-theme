@@ -10,15 +10,6 @@
 function mak_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => __( 'PC HOME Sideber', 'mak' ),
-		'id'            => 'sidebar-pc-home',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h1 class="widget-title"><span>',
-		'after_title'   => '</span></h1>',
-	) );
-
-	register_sidebar( array(
 		'name'          => __( 'PC Sideber', 'mak' ),
 		'id'            => 'sidebar-pc',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',

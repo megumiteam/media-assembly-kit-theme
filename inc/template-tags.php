@@ -466,24 +466,6 @@ function mak_get_single_ad() {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 8. Side tags
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-add_action( 'mak_secondary', function(){
-	if ( !is_child_theme() && is_active_sidebar( 'sidebar-pc-home' ) && is_home() ) {
-		dynamic_sidebar( 'sidebar-pc-home' );
-	}
-	if ( !is_child_theme() && is_active_sidebar( 'sidebar-pc' ) && !is_home() ) {
-		dynamic_sidebar( 'sidebar-pc' );
-	}
-	if ( is_child_theme() && is_active_sidebar( 'sidebar-mobile' ) && !is_single() ) {
-		dynamic_sidebar( 'sidebar-mobile' );
-	}
-	if ( is_child_theme() && is_active_sidebar( 'sidebar-mobile-single' ) && is_single() ) {
-		dynamic_sidebar( 'sidebar-mobile-single' );
-	}
-});
-
-add_action( 'mak_after_content', function(){
-	get_sidebar();
-} );
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 # 9. Footer tags
