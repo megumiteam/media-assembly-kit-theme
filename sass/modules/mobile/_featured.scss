@@ -1,0 +1,27 @@
+#pickup-post {
+	padding-top: 25px;
+}
+
+#featured-list {
+	@extend %ul;
+	li {
+		@extend %clearfix;
+		border-bottom: solid 1px $color__common-border;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+	}
+	.title {
+		@include fz(14);
+		font-weight: bold;
+		float: left;
+		margin: 0 0 0 (-100px);
+		padding-left: 100px;
+		width: 100%;
+	}
+	.thumbnail {
+		float: right;
+		width: 90px;
+		margin: 0;
+		margin-left: 10px;
+	}
+}

@@ -11,14 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ・－－ ・ －・・・ －・ ・・ ・・・ －  */
 /* line 2, ../sass/sass_function/_extend.scss */
-.not-found .search-form:after, .widget_search .search-form:after, #content:after, #button-box:after, .archive-article.thumbnail-true:after, #archive-nav:after, .single-article .entry-meta:after, .social-entry-box:after, .social-share-box:after, #single-nav:after, .global-social-button-box:after, #footer-nav-box ul:after, .widget.widget-induction li.thumbnail-true a:after, .widget.writer-list li a:after, .widget-ranking #ranking-nav:after, .widget.widget_categories ul:after, #category-posts-tab-nav ul:after, #related-post li.thumbnail-true a:after, #pickup-post li.thumbnail-true a:after {
+.not-found .search-form:after, .widget_search .search-form:after, #content:after, #button-box:after, .archive-article.thumbnail-true:after, #archive-nav:after, .single-article .entry-meta:after, .social-entry-box:after, .social-share-box:after, #single-nav:after, .global-social-button-box:after, #footer-nav-box ul:after, .widget.widget-induction li.thumbnail-true a:after, .widget.writer-list li a:after, .widget-ranking #ranking-nav:after, .widget.widget_categories ul:after, #category-posts-tab-nav ul:after, #related-post li.thumbnail-true a:after, #featured-list li:after {
   display: table;
   clear: both;
   content: "";
 }
 
 /* line 9, ../sass/sass_function/_extend.scss */
-#khm-15 ul, .widget.widget-induction ul, .widget.writer-list ul, #related-post ul, #pickup-post ul {
+#khm-15 ul, .widget.widget-induction ul, .widget.writer-list ul, #related-post ul, #featured-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1442,55 +1442,34 @@ body.single #khm-15 li.current_item, #khm-15 li.current_item:after {
   display: block;
 }
 
-/* Pickup */
-/* line 1, ../sass/modules/mobile/_pickup.scss */
+/* Featured */
+/* line 1, ../sass/modules/mobile/_featured.scss */
 #pickup-post {
   padding-top: 25px;
 }
-/* line 7, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li {
+
+/* line 7, ../sass/modules/mobile/_featured.scss */
+#featured-list li {
   border-bottom: solid 1px #444444;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
-/* line 10, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li .title {
+/* line 13, ../sass/modules/mobile/_featured.scss */
+#featured-list .title {
   font-size: 14px;
   font-size: 1.4rem;
-  color: #444444;
   font-weight: bold;
-  margin: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-}
-/* line 19, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li .title p {
-  margin: 0;
-}
-/* line 23, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li:first-child {
-  margin-top: 0;
-}
-/* line 28, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li.thumbnail-true a {
-  overflow: hidden;
-  display: block;
-}
-/* line 33, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li.thumbnail-true .title {
-  width: 100%;
-  margin-left: -107px;
-  padding-left: 117px;
   float: left;
+  margin: 0 0 0 -100px;
+  padding-left: 100px;
+  width: 100%;
 }
-/* line 39, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li.thumbnail-true .thumbnail {
-  width: 95px;
-  margin: 0;
+/* line 21, ../sass/modules/mobile/_featured.scss */
+#featured-list .thumbnail {
   float: right;
-}
-/* line 44, ../sass/modules/mobile/_pickup.scss */
-#pickup-post li.thumbnail-true .thumbnail img {
-  display: block;
+  width: 90px;
+  margin: 0;
+  margin-left: 10px;
 }
 
 /* What's New */

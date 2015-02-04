@@ -67,11 +67,11 @@ if ( function_exists( 'register_field_group' ) && function_exists('mak_options_c
 
 	// Featured
 	register_field_group(array (
-		'id' => 'acf_featured',
+		'id' => 'acf_featured-content',
 		'title' => __( 'Featured content', 'mak' ),
 		'fields' => array (
 			array (
-				'key' => ' field__is_posts',
+				'key' => 'field__is_posts',
 				'label' => __( 'Use post', 'mak' ),
 				'name' => '_is_posts',
 				'type' => 'true_false',

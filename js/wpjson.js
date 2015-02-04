@@ -3,33 +3,31 @@ var root = 'http://' + location.hostname + '/wp-json/';
  * ハッシュ監視クラス(static class)
  */
 var HashObserve = {
-    funcList: [],   // ハッシュ変更時に実行する関数リスト
-    prevHash: "",   // 前回のハッシュ
-    
-    /**
-     * 監視
-     */
-    observe: function()
-    {
-        // 前回のハッシュと比較
-        if (HashObserve.prevHash!==window.location.hash) {
-            // 登録されている関数を実行
-            for (var i=0; i<HashObserve.funcList.length; ++i) {
-                HashObserve.funcList[i](window.location.hash, HashObserve.prevHash);
-            }
-            // 前回のハッシュを更新
-            HashObserve.prevHash=window.location.hash;
-        }
-    },
-    
-    /**
-     * ハッシュ変更時に実行する関数を登録
-     * @param {Object} fn
-     */
-    addFunc: function(fn)
-    {
-        HashObserve.funcList.push(fn);
-    }
+	funcList: [],   // ハッシュ変更時に実行する関数リスト
+	prevHash: "",   // 前回のハッシュ
+	
+	/**
+	 * 監視
+	 */
+	observe: function() {
+		// 前回のハッシュと比較
+		if (HashObserve.prevHash!==window.location.hash) {
+			// 登録されている関数を実行
+			for (var i=0; i<HashObserve.funcList.length; ++i) {
+				HashObserve.funcList[i](window.location.hash, HashObserve.prevHash);
+			}
+			// 前回のハッシュを更新
+			HashObserve.prevHash=window.location.hash;
+		}
+	},
+	
+	/**
+	 * ハッシュ変更時に実行する関数を登録
+	 * @param {Object} fn
+	 */
+	addFunc: function(fn) {
+		HashObserve.funcList.push(fn);
+	}
 };
 
 (function($){

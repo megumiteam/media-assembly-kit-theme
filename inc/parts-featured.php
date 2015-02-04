@@ -74,10 +74,10 @@ function mak_featured_post_widget( $args = array(), $instance  = array()) {
 function mak_get_featured_post_widget( $args = array(), $instance  = array()) {
 	$output    = '';
 	$default = array(
-		'before_widget' => '<aside class="widget-writer-list">',
+		'before_widget' => '<aside class="widget-featured">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
 		'title'         => '',
 		'limit'         => 4,
 		'post_id'       => '',
@@ -96,31 +96,26 @@ function mak_get_featured_post_widget( $args = array(), $instance  = array()) {
 	$posts = mak_get_featured_posts( $args );
 	if ( empty( $posts ) )
 		return;
-	$title     = apply_filters( 'widget_title', $title, $instance );
-	if ( in_array( $id, array( 'sidebar-5', 'sidebar-6', 'sidebar-7' ) ) ) {
-		$size   = 'post-thumbnail-mobile';
-		$width  = 200;
-		$height = 200;
-		$after_title = '<i class="fa fa-caret-down"></i>' . $after_title;
-	} else {
-		$size   = 'widget-thumbnail-square';
-		$width  = 96;
-		$height = 96;
-	}
+	$title  = apply_filters( 'widget_title', $title, $instance );
+	$size   = 'square-90-image';
+	$width  = 90;
+	$height = 90;
+
 	$output .= $before_widget;
 	$output .= $before_title . $title . $after_title;
-	$output .= '<ul>' . "\n";
+	$output .= '<ul id="featured-list">' . "\n";
 	foreach ( $posts as $post ) {
 		setup_postdata( $post );
 		$post_id = $post->ID;
 		$target  = '';
+
 		if ( get_field( '_is_posts', $post_id ) ) {
 			$post_id = get_field( '_select_post', $post_id );
 			$post_id = reset( $post_id );
 			$link    = get_permalink( $post_id );
 		} else {
-			$link   = get_field( '_custom_url', $post_id );
-			$target = get_field( '_link_target', $post_id );
+			$link   = get_field( '_other_link_url', $post_id );
+			$target = get_field( '_other_link_target', $post_id );
 		}
 		$title         = apply_filters( 'the_title', get_the_title( $post_id ) );
 		$link          = esc_url( apply_filters( 'the_permalink', $link ) );
@@ -131,8 +126,8 @@ function mak_get_featured_post_widget( $args = array(), $instance  = array()) {
 			'size'          => $size,
 			'width'         => $width,
 			'height'        => $height,
-			'src'           => get_template_directory_uri() . '/images/others/noimage-' . $width . 'x' . $height . '.png',
-			'link'          => false,
+			'src'           => "http://placehold.it/{$width}x{$height}&text=no Image",
+			'html'          => false,
 		);
 		$image   = mak_get_entry_thumbnail( $args );
 		if ( is_child_theme() ) {
