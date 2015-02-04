@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2015-01-30 09:31:10+00:00\n"
+"POT-Creation-Date: 2015-02-04 03:25:16+00:00\n"
 "Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
 "Language-Team: \n"
 "Language: JAPANESE\n"
@@ -249,11 +249,11 @@ msgstr "背景画像の表示開始位置"
 
 #: inc/manage-theme-options.php:270 inc/manage-theme-options.php:374
 msgid "Top Left"
-msgstr ""
+msgstr "Top Left"
 
 #: inc/manage-theme-options.php:271 inc/manage-theme-options.php:375
 msgid "Top Center"
-msgstr "Top Left"
+msgstr "Top Center"
 
 #: inc/manage-theme-options.php:272 inc/manage-theme-options.php:376
 msgid "Top Right"
@@ -399,9 +399,25 @@ msgstr "トップ"
 msgid "The following articles list"
 msgstr "もっと読む"
 
-#: inc/parts-pickup.php:35
-msgid "Pickup"
-msgstr "ピックアップ"
+#: inc/parts-featured.php:29
+msgid "Featured Post Widget"
+msgstr "誘導枠ウィジェット"
+
+#: inc/parts-featured.php:30
+msgid "Featured post"
+msgstr "誘導枠"
+
+#: inc/parts-featured.php:50
+msgid "Select a Page:"
+msgstr "ページ選択:"
+
+#: inc/parts-featured.php:58
+msgid "Select Page"
+msgstr "ページ選択"
+
+#: inc/parts-featured.php:65 inc/parts-ranking-posts.php:62
+msgid "Number to show:"
+msgstr "表示する数:"
 
 #: inc/parts-ranking-posts.php:36
 msgid "Ranking Widget"
@@ -415,10 +431,6 @@ msgstr "ランキング"
 #: inc/parts-ranking-posts.php:59
 msgid "Title:"
 msgstr "タイトル:"
-
-#: inc/parts-ranking-posts.php:62
-msgid "Number to show:"
-msgstr "表示する数:"
 
 #: inc/parts-ranking-posts.php:127
 msgid "For You"
@@ -604,3 +616,4 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "DigitalCube Co.,Ltd"
 msgstr ""
+

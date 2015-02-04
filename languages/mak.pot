@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Media Assembly Kit 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/media-assembly-kit\n"
-"POT-Creation-Date: 2015-01-30 09:31:10+00:00\n"
+"POT-Creation-Date: 2015-02-04 03:25:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -395,8 +395,24 @@ msgstr ""
 msgid "The following articles list"
 msgstr ""
 
-#: inc/parts-pickup.php:35
-msgid "Pickup"
+#: inc/parts-featured.php:29
+msgid "Featured Post Widget"
+msgstr ""
+
+#: inc/parts-featured.php:30
+msgid "Featured post"
+msgstr ""
+
+#: inc/parts-featured.php:50
+msgid "Select a Page:"
+msgstr ""
+
+#: inc/parts-featured.php:58
+msgid "Select Page"
+msgstr ""
+
+#: inc/parts-featured.php:65 inc/parts-ranking-posts.php:62
+msgid "Number to show:"
 msgstr ""
 
 #: inc/parts-ranking-posts.php:36
@@ -410,10 +426,6 @@ msgstr ""
 
 #: inc/parts-ranking-posts.php:59
 msgid "Title:"
-msgstr ""
-
-#: inc/parts-ranking-posts.php:62
-msgid "Number to show:"
 msgstr ""
 
 #: inc/parts-ranking-posts.php:127
