@@ -53,6 +53,7 @@ function mak_setup() {
 	add_image_size( 'square-100-image', 100, 70, true );
 	add_image_size( 'square-90-image', 90, 60, true );
 	add_image_size( 'square-70-image', 70, 70, true );
+	add_image_size( 'square-320-image', 320, 240, true );
 	add_image_size( 'slide-main-image', 700, 350, true );
 
 	// This theme uses wp_nav_menu() in one location.

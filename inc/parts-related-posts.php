@@ -35,9 +35,9 @@ function mak_get_related_post_list( $args = array() ) {
 	$id      = '';
 	$default = array(
 		'device'        => 'pc',
-		'before_widget' => '<aside id="related-post">',
+		'before_widget' => '<aside id="related-post" class="widget widget-related-post">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="parts-title"><span>',
+		'before_title'  => '<h1 class="parts-title widget-title"><span>',
 		'after_title'   => '</span></h1>',
 		'title'         => __( 'Related posts', 'mak' ),
 	);
@@ -61,32 +61,33 @@ function mak_get_related_post_list( $args = array() ) {
 		$height = 200;
 		$lines  = 3;
 	} else {
-		$size   = 'square-90-image';
-		$width  = 90;
-		$height = 60;
+		$size   = 'square-320-image';
+		$width  = 320;
+		$height = 240;
 		$lines  = 2;
 	}
 
 	$output .= $before_widget;
 	$output .= $before_title . $title . $after_title . "\n";
-	$output .= '<ul>' . "\n";
+	$output .= '<ul class="post-list">' . "\n";
 	foreach ( $ids as $id ) {
 		$post_id = $id['ID'];
 		$title   = apply_filters( 'the_title', get_the_title( $post_id ) );
 		$link    = esc_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) );
 		$args    = array(
-			'id'     => $post_id,
-			'size'   => $size,
-			'width'  => $width,
-			'height' => $height,
-			'src'    => 'http://placehold.it/' . $width . 'x' . $height,
-			'link'   => false
+			'id'      => $post_id,
+			'size'    => $size,
+			'width'   => $width,
+			'height'  => $height,
+			'src'     => 'http://placehold.it/' . $width . 'x' . $height,
+			'noimage' => true,
+			'link'    => false
 		);
 		$image   = mak_get_entry_thumbnail( $args );
-		$class   = $image ? ' class="thumbnail-true"' : '';
+		$class   = $image ? ' class="post hentry thumbnail-true"' : ' class="post hentry"';
 		$output .= '<li' . $class . '><a href="' . $link . '">'
 		. $image . "\n"
-		. '<h2 class="title trunk8" data-lines="' . $lines . '">' . "\n"
+		. '<h2 class="title trunk8 entry-title" data-lines="' . $lines . '">' . "\n"
 		. $title . "\n"
 		. '</h2>' . "\n"
 		. '</a></li>' . "\n";

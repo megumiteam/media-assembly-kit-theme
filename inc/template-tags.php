@@ -276,17 +276,17 @@ function mak_get_entry_thumbnail( $args = array() ) {
 		$output .= '</a>' . "\n";
 		$output .= '</div>' . "\n";
 	} elseif ( !$link ) {
-		$output .= '<p class="thumbnail">' . "\n";
+		$output .= '<div class="thumbnail">' . "\n";
 		$output .= $image;
-		$output .= '</p>' . "\n";
+		$output .= '</div>' . "\n";
 	} elseif( !$html ) {
 		$output .= $image;
 	} else {
-		$output .= '<p class="thumbnail">' . "\n";
+		$output .= '<div class="thumbnail">' . "\n";
 		$output .= '<a href="' . get_permalink( $id ) . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'mak' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">' . "\n";
 		$output .= $image;
 		$output .= '</a>' . "\n";
-		$output .= '</p>' . "\n";
+		$output .= '</div>' . "\n";
 	}
 	return $output;
 }
