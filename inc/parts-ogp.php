@@ -17,6 +17,9 @@ function mak_add_metatags() {
 	$description = esc_attr( get_option( 'ogp_description', get_bloginfo( 'description', 'display' ) ) );
 	$keyword     = esc_attr( get_option( 'ogp_keyword' ) );
 	$ogurl       = ( empty( $_SERVER["HTTPS"] ) ? "http://" : "https://" ) . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+	if ( is_single() ) {
+		$ogurl   = ( empty( $_SERVER["HTTPS"] ) ? "http://" : "https://" ) . $_SERVER["HTTP_HOST"] . '/post/?_escaped_fragment_=%2F' . get_the_id();
+	}
 	$ogimage_id  = get_option( 'ogp_image' );
 	if ( $ogimage_id ) {
 		$image   = wp_get_attachment_image_src( $ogimage_id, 'full' );
