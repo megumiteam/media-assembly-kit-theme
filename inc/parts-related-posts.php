@@ -73,7 +73,8 @@ function mak_get_related_post_list( $args = array() ) {
 	foreach ( $ids as $id ) {
 		$post_id = $id['ID'];
 		$title   = apply_filters( 'the_title', get_the_title( $post_id ) );
-		$link    = esc_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) );
+		//$link    = esc_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) );
+		$link    = esc_url( home_url( '/post/#!/' .  $post_id ) );
 		$args    = array(
 			'id'      => $post_id,
 			'size'    => $size,

@@ -72,10 +72,10 @@ function mak_ranking_post_widget( $args = array(), $instance = array() ) {
 function mak_get_ranking_post_widget( $args = array(), $instance = array() ) {
 	$output  = '';
 	$default = array(
-		'before_widget' => '<aside class="widget-ranking">',
+		'before_widget' => '<aside class="widget widget-ranking">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
 		'limit'         => 10,
 		'title'         => __( 'Ranking', 'mak' ),
 	);
@@ -123,10 +123,13 @@ function mak_get_ranking_post_widget( $args = array(), $instance = array() ) {
 	$count   = 1;
 	$output .= $before_widget;
 	$output .= $before_title . $title . $after_title;
+/*
 	$output .= '<nav id="ranking-nav">' . "\n";
 	$output .= '<p class="current" data-target="for-you">' . __( 'For You', 'mak' ) . '</p>' . "\n";
 	$output .= '<p data-target="total">' . __( 'Total', 'mak' ) . '</p>' . "\n";
 	$output .= '</nav>' . "\n";
+*/
+/*
 	$output .= '<ol id="for-you" class="current">' . "\n";
 	foreach ( $ids as $id ) {
 		$title = apply_filters( 'the_title', get_the_title( $id ) );
@@ -137,11 +140,13 @@ function mak_get_ranking_post_widget( $args = array(), $instance = array() ) {
 		$count++;
 	}
 	$output .= '</ol>' . "\n";
+*/
 	$count   = 1;
 	$output .= '<ol id="total">' . "\n";
 	foreach ( $total_ids as $id ) {
 		$title = apply_filters( 'the_title', get_the_title( $id ) );
-		$link  = esc_url( apply_filters( 'the_permalink', mak_get_summary_permalink( $id ) ) );
+		//$link  = esc_url( apply_filters( 'the_permalink', mak_get_summary_permalink( $id ) ) );
+		$link    = esc_url( home_url( '/post/#!/' .  $id ) );
 		$output .= '<li class="ranking-' . $count . '">' . "\n";
 		$output .= '<a href="' . $link . '" class="trunk8" data-lines="' . $lines . '">' . $title . '</a>' . "\n";
 		$output .= '</li>' . "\n";

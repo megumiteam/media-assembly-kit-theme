@@ -22,7 +22,7 @@ function mak_theme_options_admin_menu() {
 	$hook = add_theme_page( __( 'Theme Options', 'mak' ), __( 'Theme Options', 'mak' ), 'edit_users', 'theme-options', 'mak_options_page' );
 	add_action( 'admin_print_scripts-' . $hook, 'mak_admin_theme_options_scripts', 999 );
 }
-add_action( 'admin_menu', 'mak_theme_options_admin_menu' );
+//add_action( 'admin_menu', 'mak_theme_options_admin_menu' );
 
 function mak_theme_options_admin_bar_menu( $wp_admin_bar ){
 	$title = __( 'Theme Options', 'mak' );
@@ -33,7 +33,7 @@ function mak_theme_options_admin_bar_menu( $wp_admin_bar ){
 		'href'  => admin_url( 'themes.php?page=theme-options' ),
 	) );
 }
-add_action( 'admin_bar_menu', 'mak_theme_options_admin_bar_menu', 9999 );
+//add_action( 'admin_bar_menu', 'mak_theme_options_admin_bar_menu', 9999 );
 
 function mak_options_page() {
 	global $wp_settings_fields;
