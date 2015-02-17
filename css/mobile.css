@@ -1224,20 +1224,20 @@ body.single #khm-15 li.current_item, #khm-15 li.current_item:after {
   margin: 0;
   padding: 0 10px;
   list-style: none;
-  display: none;
+  /*
+  		&.current {
+  			display: block;
+  		}
+  */
 }
-/* line 158, ../sass/widget/_mobile.scss */
-.widget-ranking ol.current {
-  display: block;
-}
-/* line 162, ../sass/widget/_mobile.scss */
+/* line 164, ../sass/widget/_mobile.scss */
 .widget-ranking li {
   font-weight: normal;
   margin-bottom: 15px;
   padding: 3px 0 3px 29px;
   position: relative;
 }
-/* line 168, ../sass/widget/_mobile.scss */
+/* line 170, ../sass/widget/_mobile.scss */
 .widget-ranking li:before {
   width: 22px;
   text-align: center;
@@ -1250,62 +1250,62 @@ body.single #khm-15 li.current_item, #khm-15 li.current_item:after {
   top: 0;
   left: 0;
 }
-/* line 184, ../sass/widget/_mobile.scss */
+/* line 186, ../sass/widget/_mobile.scss */
 .widget-ranking li.ranking-1:before, .widget-ranking li.ranking-2:before, .widget-ranking li.ranking-3:before {
   background: #1c1c1c;
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-1:before {
   content: "1";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-2:before {
   content: "2";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-3:before {
   content: "3";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-4:before {
   content: "4";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-5:before {
   content: "5";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-6:before {
   content: "6";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-7:before {
   content: "7";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-8:before {
   content: "8";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-9:before {
   content: "9";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-10:before {
   content: "10";
 }
-/* line 194, ../sass/widget/_mobile.scss */
+/* line 196, ../sass/widget/_mobile.scss */
 .widget-ranking .ranking-11:before {
   content: "11";
 }
 
-/* line 203, ../sass/widget/_mobile.scss */
+/* line 205, ../sass/widget/_mobile.scss */
 .widget.widget_categories ul {
   margin: 0;
   padding: 0 10px;
   list-style: none;
 }
-/* line 209, ../sass/widget/_mobile.scss */
+/* line 211, ../sass/widget/_mobile.scss */
 .widget.widget_categories li {
   width: 32%;
   font-size: 9px;
@@ -1314,11 +1314,11 @@ body.single #khm-15 li.current_item, #khm-15 li.current_item:after {
   margin: 6px 2% 0 0;
   float: left;
 }
-/* line 216, ../sass/widget/_mobile.scss */
+/* line 218, ../sass/widget/_mobile.scss */
 .widget.widget_categories li:nth-child(3n) {
   margin-right: 0;
 }
-/* line 220, ../sass/widget/_mobile.scss */
+/* line 222, ../sass/widget/_mobile.scss */
 .widget.widget_categories a {
   text-decoration: none;
   text-align: center;

@@ -153,11 +153,13 @@
 		margin: 0;
 		padding: 0 10px;
 		list-style: none;
-		display: none;
+		// display: none;
 
+/*
 		&.current {
 			display: block;
 		}
+*/
 	}
 	li {
 		font-weight: normal;
