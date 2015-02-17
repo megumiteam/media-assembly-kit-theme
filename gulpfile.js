@@ -8,7 +8,7 @@ gulp.task( 'default', ['images', 'compass', 'js', 'jade'] );
 
 // init task
 gulp.task( 'init', function() {
-	runSequence( 'bower', 'lib', 'images', 'fonts', 'compass' );
+	runSequence( 'bower', 'lib', 'images', 'fonts' );
 });
 
 // bower_components 

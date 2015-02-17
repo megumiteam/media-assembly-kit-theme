@@ -98,3 +98,55 @@ function mak_nav_menu_css_class( $classes, $item, $args ) {
 }
 add_filter( 'nav_menu_css_class', 'mak_nav_menu_css_class', 10, 3 );
 
+// Rewrite Rules
+function custom_rewrite_basic() {
+  add_rewrite_rule('^post/(#!/[0-9]+)/?', 'index.php?p=$matches[1]', 'top');
+}
+// add_action('init', 'custom_rewrite_basic');
+
+/**
+ * Filter the permalink for a page.
+ */
+function mak_page_link( $link, $postID, $sample ) {
+	$link = str_replace( home_url( '/' ) , home_url( '/' ) . 'page/#!/', $link );
+
+	return $link;
+}
+add_filter( 'page_link', 'mak_page_link', 10, 3 );
+
+/**
+ * Filter the permalink for a post.
+ */
+function mak_post_link( $permalink, $post, $leavename ) {
+	$permalink = str_replace( 'archives/' , 'post/#!/', $permalink );
+
+	return $permalink;
+}
+add_filter( 'post_link', 'mak_post_link', 10, 3 );
+
+/**
+ * Filter the archive link content.
+ */
+function mak_get_archives_link( $link_html ) {
+	$link_html = str_replace( 'archives/date/' , 'date/#!/', $link_html );
+	return $link_html;
+}
+add_filter( 'get_archives_link', 'mak_get_archives_link', 10, 3 );
+
+/**
+ * Filters Filter the tag link.
+ */
+function mak_tag_link( $termlink, $termid ) {
+	$termlink = str_replace( 'archives/tag' , 'tag/#!', $termlink );
+	return $termlink;
+}
+add_filter( 'tag_link', 'mak_tag_link', 10, 2 );
+
+/**
+ * Filter the category link.
+ */
+function mak_category_link( $termlink, $termid ) {
+	$termlink = str_replace( 'archives/category' , 'category/#!', $termlink );
+	return $termlink;
+}
+add_filter( 'category_link', 'mak_category_link', 10, 2 );

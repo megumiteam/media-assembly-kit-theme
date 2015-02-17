@@ -715,7 +715,7 @@ window.wpjsonRelated = function( ua, id ) {
 	var RelatedArea = $('#related-post-box');
 	var wpjsonRelatedAreaObj = $.ajax({
 		type: 'GET',
-		url:  root + 'mak_related/' + ua + '/' + id
+		url:  root + 'mak_related/' + id
 	}).done(function(data, status, xhr) {
 		if ( data.content.length === 0 ) {
 			RelatedArea.remove();

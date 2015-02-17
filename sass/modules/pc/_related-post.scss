@@ -19,6 +19,9 @@
 				float: right;
 				margin-left: 0;
 			}
+			&:nth-child(2n+1) {
+				clear: both;
+			}
 			.title {
 				@include fz(14);
 				font-weight: normal;

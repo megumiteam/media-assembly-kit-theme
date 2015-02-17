@@ -61,9 +61,9 @@ function mak_get_related_post_list( $args = array() ) {
 		$height = 200;
 		$lines  = 3;
 	} else {
-		$size   = 'square-320-image';
-		$width  = 320;
-		$height = 240;
+		$size   = 'square-90-image';
+		$width  = 90;
+		$height = 60;
 		$lines  = 2;
 	}
 
